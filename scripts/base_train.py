@@ -56,7 +56,7 @@ resume_from_step = -1 # resume training from this step of the optimization (-1 =
 # Evaluation
 eval_every = 250 # every how many steps to evaluate the model for val bpb
 eval_tokens = 20*524288 # number of tokens to evaluate val loss on
-core_metric_every = 2000 # every how many steps to evaluate the core metric (-1 = disable)
+core_metric_every = -1 # every how many steps to evaluate the core metric (-1 = disable)
 core_metric_max_per_task = 500 # examples per task in estimating the core metric
 sample_every = 2000 # every how many steps to sample from the model
 save_every = 2000 # every how many steps to save model checkpoints (-1 = disable, and save only at the end of the run)
@@ -169,7 +169,9 @@ if resuming:
 # Initialize the DataLoaders for train/val
 tokens_dir = os.path.join(base_dir, "tokenized_data")
 dataloader_resume_state_dict = None if not resuming else meta_data["dataloader_state_dict"]
-train_loader = tokenizing_distributed_data_loader_with_state(device_batch_size, max_seq_len, split="train", device=device, resume_state_dict=dataloader_resume_state_dict)
+train_loader_gen = tokenizing_distributed_data_loader_with_state(device_batch_size, max_seq_len, split="train", device=device, resume_state_dict=dataloader_resume_state_dict)
+from nanochat.dataloader import ThreadedDataLoader
+train_loader = ThreadedDataLoader(train_loader_gen)
 build_val_loader = lambda: tokenizing_distributed_data_loader(device_batch_size, max_seq_len, split="val", device=device)
 x, y, dataloader_state_dict = next(train_loader) # kick off load of the very first batch of data
 

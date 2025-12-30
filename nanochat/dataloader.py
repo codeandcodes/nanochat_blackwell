@@ -88,7 +88,54 @@ def tokenizing_distributed_data_loader_with_state(B, T, split, tokenizer_threads
         state_dict = {"pq_idx": pq_idx, "rg_idx": rg_idx} # we need this in case we wish to approximately resume training
         yield inputs, targets, state_dict
 
-def tokenizing_distributed_data_loader(*args, **kwargs):
-    # helper function that only emits the inputs/targets and not the state_dict
-    for inputs, targets, state_dict in tokenizing_distributed_data_loader_with_state(*args, **kwargs):
-        yield inputs, targets
+import threading
+import queue
+
+class ThreadedDataLoader:
+    """
+    Wraps an iterator in a dedicated thread to prefetch data.
+    This ensures that the GPU (consuming data) never waits for the CPU (producing data).
+    """
+    def __init__(self, loader, maxsize=3):
+        self.loader = loader
+        self.queue = queue.Queue(maxsize=maxsize)
+        self.stop_event = threading.Event()
+        self.thread = threading.Thread(target=self._worker, daemon=True)
+        self.thread.start()
+
+    def _worker(self):
+        try:
+            for batch in self.loader:
+                if self.stop_event.is_set():
+                    break
+                self.queue.put(batch)
+        except Exception as e:
+            print(f"Error in data loader thread: {e}")
+        finally:
+            # Signal end of iteration
+            self.queue.put(None)
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        batch = self.queue.get()
+        if batch is None:
+            raise StopIteration
+        return batch
+
+    def __del__(self):
+        self.stop_event.set()
+
+def tokenizing_distributed_data_loader(B, T, split, tokenizer_threads=4, tokenizer_batch_size=128, device="cuda"):
+    """
+    Returns a ThreadedDataLoader that yields (inputs, targets).
+    The underlying generator is now run in a background thread.
+    """
+    loader = tokenizing_distributed_data_loader_with_state(B, T, split, tokenizer_threads, tokenizer_batch_size, device)
+    # We strip the state_dict from the output for the standard loader interface
+    def stripped_loader():
+        for inputs, targets, _ in loader:
+            yield inputs, targets
+    
+    return ThreadedDataLoader(stripped_loader())
