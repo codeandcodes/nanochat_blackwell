@@ -34,6 +34,32 @@ And then visit the URL shown. Make sure to access it correctly, e.g. on Lambda u
 
 ---
 
+## Single GPU Training
+
+If you are running on a single GPU workstation (like an RTX 6000 Ada/Blackwell), you can use the `speedrun_local.sh` script. This script is a modified version of `speedrun.sh` configured for single-GPU execution (`NPROC_PER_NODE=1`). It automatically handles gradient accumulation to ensure the effective batch size matches the baseline 8-GPU run.
+
+```bash
+bash speedrun_local.sh
+```
+
+## Checkpoint Evaluation
+
+To monitor the quality of the model generation during training without interrupting the main training process, you can use the `scripts/eval_checkpoints.py` script. This script:
+1.  Iterates through saved checkpoints.
+2.  Loads them on the **CPU** (to avoid affecting training VRAM).
+3.  Generates sample text for a set of fixed prompts.
+4.  Saves the output to `checkpoint_evals.txt`.
+
+Open a new terminal and run:
+
+```bash
+python -m scripts.eval_checkpoints
+```
+
+You can `tail -f checkpoint_evals.txt` to see the model getting smarter in real-time!
+
+---
+
 <img width="2672" height="1520" alt="image" src="https://github.com/user-attachments/assets/ed39ddf8-2370-437a-bedc-0f39781e76b5" />
 
 ---
