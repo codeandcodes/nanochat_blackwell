@@ -14,6 +14,41 @@ To get a sense of the endpoint of this repo, you can currently find [nanochat d3
 
 The fastest way to feel the magic is to run the speedrun script [speedrun.sh](speedrun.sh), which trains and inferences the $100 tier of nanochat. On an 8XH100 node at $24/hr, this gives a total run time of about 4 hours. Boot up a new 8XH100 GPU box from your favorite provider (e.g. I use and like [Lambda](https://lambda.ai/service/gpu-cloud)), and kick off the training script:
 
+### Docker Support (Blackwell & FP8)
+
+For users with newer bleeding-edge hardware (e.g., NVIDIA RTX PRO 6000 Blackwell), local CUDA dependencies can be tricky. We provide a Docker-based workflow that uses NVIDIA's official PyTorch containers to ensure compatibility and performance (including FP8 support).
+
+1.  **Launch the Container:**
+    ```bash
+    ./dev/docker_run.sh
+    ```
+    This drops you into an interactive bash session inside the container (`nvcr.io/nvidia/pytorch:25.12-py3` by default).
+
+2.  **Install Dependencies:**
+    Inside the container, run:
+    ```bash
+    pip install wandb tiktoken tokenizers datasets psutil
+    ```
+
+3.  **Run Training (FP8):**
+    ```bash
+    python -m scripts.base_train --use_fp8=True
+    ```
+    This enables NVIDIA Transformer Engine FP8 linear layers and autocasting.
+
+    ### Performance Note (Single GPU)
+    Our experiments on a single NVIDIA Blackwell GPU (e.g., RTX 6000 Ada/Blackwell) w/ the d20 model show:
+    - **Stability:** `BATCH_SIZE=20` is the optimal sweet spot, utilizing ~87GB VRAM.
+    - **Speed:** ~64k tokens/sec (FP8) vs ~76k tokens/sec (BF16). 
+    - **Why?** For smaller models (d20) on a single GPU, the overhead of FP8 casting and the need for smaller batch sizes (increased gradient accumulation steps) outweighs the raw compute advantage of FP8 Tensor Cores. FP8 is expected to outperform BF16 on larger models or multi-node training where memory bandwidth and network communication are tighter bottlenecks.
+    
+    To run the optimized FP8 speedrun:
+    ```bash
+    ./speedrun_docker_fp8.sh
+    ```
+
+---
+
 ```bash
 bash speedrun.sh
 ```
@@ -31,32 +66,6 @@ python -m scripts.chat_web
 ```
 
 And then visit the URL shown. Make sure to access it correctly, e.g. on Lambda use the public IP of the node you're on, followed by the port, so for example [http://209.20.xxx.xxx:8000/](http://209.20.xxx.xxx:8000/), etc. Then talk to your LLM as you'd normally talk to ChatGPT! Get it to write stories or poems. Ask it to tell you who you are to see a hallucination. Ask it why the sky is blue. Or why it's green. The speedrun is a 4e19 FLOPs capability model so it's a bit like talking to a kindergartener :).
-
----
-
-## Single GPU Training
-
-If you are running on a single GPU workstation (like an RTX 6000 Ada/Blackwell), you can use the `speedrun_local.sh` script. This script is a modified version of `speedrun.sh` configured for single-GPU execution (`NPROC_PER_NODE=1`). It automatically handles gradient accumulation to ensure the effective batch size matches the baseline 8-GPU run.
-
-```bash
-bash speedrun_local.sh
-```
-
-## Checkpoint Evaluation
-
-To monitor the quality of the model generation during training without interrupting the main training process, you can use the `scripts/eval_checkpoints.py` script. This script:
-1.  Iterates through saved checkpoints.
-2.  Loads them on the **CPU** (to avoid affecting training VRAM).
-3.  Generates sample text for a set of fixed prompts.
-4.  Saves the output to `checkpoint_evals.txt`.
-
-Open a new terminal and run:
-
-```bash
-python -m scripts.eval_checkpoints
-```
-
-You can `tail -f checkpoint_evals.txt` to see the model getting smarter in real-time!
 
 ---
 
