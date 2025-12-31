@@ -162,6 +162,9 @@ Generated: {timestamp}
 
     # bloat metrics: package all of the source code and assess its weight
     packaged = run_command('files-to-prompt . -e py -e md -e rs -e html -e toml -e sh --ignore "*target*" --cxml')
+    if packaged is None:
+        packaged = ""
+        print("Warning: files-to-prompt not found, skipping bloat metrics.")
     num_chars = len(packaged)
     num_lines = len(packaged.split('\n'))
     num_files = len([x for x in packaged.split('\n') if x.startswith('<source>')])
@@ -264,10 +267,10 @@ class Report:
             f.write("\n")
         return file_path
 
-    def generate(self):
+    def generate(self, output_filename="report.md"):
         """Generate the final report."""
         report_dir = self.report_dir
-        report_file = os.path.join(report_dir, "report.md")
+        report_file = os.path.join(report_dir, output_filename)
         print(f"Generating report to {report_file}")
         final_metrics = {} # the most important final metrics we'll add as table at the end
         start_time = None
@@ -354,8 +357,8 @@ class Report:
             else:
                 out_file.write("Total wall clock time: unknown\n")
         # also cp the report.md file to current directory
-        print(f"Copying report.md to current directory for convenience")
-        shutil.copy(report_file, "report.md")
+        print(f"Copying {output_filename} to current directory for convenience")
+        shutil.copy(report_file, output_filename)
         return report_file
 
     def reset(self):
@@ -401,8 +404,9 @@ if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser(description="Generate or reset nanochat training reports.")
     parser.add_argument("command", nargs="?", default="generate", choices=["generate", "reset"], help="Operation to perform (default: generate)")
+    parser.add_argument("--output", default="report.md", help="Output filename for the report (default: report.md)")
     args = parser.parse_args()
     if args.command == "generate":
-        get_report().generate()
+        get_report().generate(output_filename=args.output)
     elif args.command == "reset":
         get_report().reset()
