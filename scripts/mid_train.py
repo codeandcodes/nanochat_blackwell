@@ -21,14 +21,7 @@ from nanochat.tokenizer import get_token_bytes
 from nanochat.checkpoint_manager import save_checkpoint
 from nanochat.loss_eval import evaluate_bpb
 from nanochat.checkpoint_manager import load_model
-from nanochat.checkpoint_manager import load_model
 import torch.distributed as dist
-
-try:
-    import transformer_engine.pytorch as te
-    HAVE_TE = True
-except ImportError:
-    HAVE_TE = False
 
 from tasks.common import TaskMixture
 from tasks.gsm8k import GSM8K
@@ -39,9 +32,6 @@ from tasks.spellingbee import SimpleSpelling, SpellingBee
 
 # -----------------------------------------------------------------------------
 run = "dummy" # wandb run name default ("dummy" is special - we won't log to wandb)
-wandb_project = "nanochat-mid" # wandb project name
-log_file = "" # filename of the local log file
-use_fp8 = False # use Transformer Engine FP8 training
 device_type = "" # cuda|cpu|mps (empty => autodetect)
 model_tag = None # model tag to load the model from (base model or midtrained model)
 step = None # step to load the model from (base model or midtrained model)
@@ -73,7 +63,7 @@ get_max_memory = torch.cuda.max_memory_allocated if device_type == "cuda" else l
 
 # wandb logging init
 use_dummy_wandb = run == "dummy" or not master_process
-wandb_run = DummyWandb() if use_dummy_wandb else wandb.init(project=wandb_project, name=run, config=user_config)
+wandb_run = DummyWandb() if use_dummy_wandb else wandb.init(project="nanochat-mid", name=run, config=user_config)
 
 # Load the model and tokenizer
 model, tokenizer, meta = load_model("base", device, phase="train", model_tag=model_tag, step=step)
@@ -86,11 +76,7 @@ depth = model.config.n_layer
 num_flops_per_token = model.estimate_flops()
 tokens_per_fwdbwd = device_batch_size * max_seq_len # tokens per iteration for a single rank
 world_tokens_per_fwdbwd = tokens_per_fwdbwd * ddp_world_size # total tokens per iteration for all ranks
-if total_batch_size % world_tokens_per_fwdbwd != 0:
-    new_total_batch_size = (total_batch_size // world_tokens_per_fwdbwd + 1) * world_tokens_per_fwdbwd
-    print0(f"WARNING: total_batch_size {total_batch_size:,} is not divisible by tokens per micro-batch {world_tokens_per_fwdbwd:,}.")
-    print0(f"WARNING: Adjusting total_batch_size to {new_total_batch_size:,}")
-    total_batch_size = new_total_batch_size
+assert total_batch_size % world_tokens_per_fwdbwd == 0
 grad_accum_steps = total_batch_size // world_tokens_per_fwdbwd
 print0(f"Tokens / micro-batch / rank: {device_batch_size} x {max_seq_len} = {tokens_per_fwdbwd:,}")
 print0(f"Tokens / micro-batch: {world_tokens_per_fwdbwd:,}")
@@ -221,7 +207,7 @@ while True:
 
     # save checkpoint at the end of the run (only on master process)
     if master_process and last_step and not dry_run:
-        output_dirname = model_tag if model_tag else f"d{depth}" # e.g. d12
+        output_dirname = f"d{depth}" # e.g. d12
         checkpoint_dir = os.path.join(base_dir, "mid_checkpoints", output_dirname)
         save_checkpoint(
             checkpoint_dir,
@@ -252,14 +238,8 @@ while True:
     synchronize()
     t0 = time.time()
     for micro_step in range(grad_accum_steps):
-        if step == 0 and micro_step == 0:
-            print0("Compiling model (first forward pass)... this may take a minute or two.")
-        if use_fp8 and HAVE_TE:
-            with te.fp8_autocast(enabled=True):
-                loss = model(x, y)
-        else:
-            with autocast_ctx:
-                loss = model(x, y)
+        with autocast_ctx:
+            loss = model(x, y)
         train_loss = loss.detach() # for logging
         loss = loss / grad_accum_steps # each .backward() is a grad sum => normalize loss here
         loss.backward()

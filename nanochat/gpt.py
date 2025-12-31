@@ -21,15 +21,7 @@ import torch.nn.functional as F
 
 from nanochat.common import get_dist_info, print0
 from nanochat.muon import Muon, DistMuon
-from nanochat.common import get_dist_info, print0
-from nanochat.muon import Muon, DistMuon
 from nanochat.adamw import DistAdamW
-
-try:
-    import transformer_engine.pytorch as te
-    HAVE_TE = True
-except ImportError:
-    HAVE_TE = False
 
 @dataclass
 class GPTConfig:
@@ -39,8 +31,6 @@ class GPTConfig:
     n_head: int = 6 # number of query heads
     n_kv_head: int = 6 # number of key/value heads (GQA)
     n_embd: int = 768
-    use_fp8: bool = False # use Transformer Engine FP8 linear layers
-    gradient_checkpointing: bool = False # use activation checkpointing to save memory
 
 
 def norm(x):
@@ -68,20 +58,10 @@ class CausalSelfAttention(nn.Module):
         self.head_dim = self.n_embd // self.n_head
         assert self.n_embd % self.n_head == 0
         assert self.n_kv_head <= self.n_head and self.n_head % self.n_kv_head == 0
-        assert self.n_embd % self.n_head == 0
-        assert self.n_kv_head <= self.n_head and self.n_head % self.n_kv_head == 0
-        
-        self.use_fp8 = config.use_fp8 and HAVE_TE
-        if self.use_fp8:
-            self.c_q = te.Linear(self.n_embd, self.n_head * self.head_dim, bias=False)
-            self.c_k = te.Linear(self.n_embd, self.n_kv_head * self.head_dim, bias=False)
-            self.c_v = te.Linear(self.n_embd, self.n_kv_head * self.head_dim, bias=False)
-            self.c_proj = te.Linear(self.n_embd, self.n_embd, bias=False)
-        else:
-            self.c_q = nn.Linear(self.n_embd, self.n_head * self.head_dim, bias=False)
-            self.c_k = nn.Linear(self.n_embd, self.n_kv_head * self.head_dim, bias=False)
-            self.c_v = nn.Linear(self.n_embd, self.n_kv_head * self.head_dim, bias=False)
-            self.c_proj = nn.Linear(self.n_embd, self.n_embd, bias=False)
+        self.c_q = nn.Linear(self.n_embd, self.n_head * self.head_dim, bias=False)
+        self.c_k = nn.Linear(self.n_embd, self.n_kv_head * self.head_dim, bias=False)
+        self.c_v = nn.Linear(self.n_embd, self.n_kv_head * self.head_dim, bias=False)
+        self.c_proj = nn.Linear(self.n_embd, self.n_embd, bias=False)
 
     def forward(self, x, cos_sin, kv_cache):
         B, T, C = x.size()
@@ -132,15 +112,8 @@ class CausalSelfAttention(nn.Module):
 class MLP(nn.Module):
     def __init__(self, config):
         super().__init__()
-    def __init__(self, config):
-        super().__init__()
-        self.use_fp8 = config.use_fp8 and HAVE_TE
-        if self.use_fp8:
-            self.c_fc = te.Linear(config.n_embd, 4 * config.n_embd, bias=False)
-            self.c_proj = te.Linear(4 * config.n_embd, config.n_embd, bias=False)
-        else:
-            self.c_fc = nn.Linear(config.n_embd, 4 * config.n_embd, bias=False)
-            self.c_proj = nn.Linear(4 * config.n_embd, config.n_embd, bias=False)
+        self.c_fc = nn.Linear(config.n_embd, 4 * config.n_embd, bias=False)
+        self.c_proj = nn.Linear(4 * config.n_embd, config.n_embd, bias=False)
 
     def forward(self, x):
         x = self.c_fc(x)
@@ -285,19 +258,8 @@ class GPT(nn.Module):
         # Forward the trunk of the Transformer
         x = self.transformer.wte(idx)
         x = norm(x)
-        def run_block(block, x, cos_sin, kv_cache):
-             # Ensure correct context during recomputation
-             if self.config.use_fp8 and HAVE_TE:
-                 with te.fp8_autocast(enabled=True):
-                     return block(x, cos_sin, kv_cache)
-             else:
-                 return block(x, cos_sin, kv_cache)
-
         for block in self.transformer.h:
-            if self.config.gradient_checkpointing:
-                x = torch.utils.checkpoint.checkpoint(run_block, block, x, cos_sin, kv_cache, use_reentrant=False)
-            else:
-                x = block(x, cos_sin, kv_cache)
+            x = block(x, cos_sin, kv_cache)
         x = norm(x)
 
         # Forward the lm_head (compute logits)

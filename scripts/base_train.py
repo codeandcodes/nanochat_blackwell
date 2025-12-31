@@ -14,15 +14,8 @@ python -m scripts.base_train --depth=4 --max_seq_len=512 --device_batch_size=1 -
 import os
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 import time
-import time
 from contextlib import nullcontext
 
-try:
-    import transformer_engine.pytorch as te
-    HAVE_TE = True
-except ImportError:
-    HAVE_TE = False
-    
 import wandb
 import torch
 
@@ -69,10 +62,6 @@ sample_every = 2000 # every how many steps to sample from the model
 save_every = 2000 # every how many steps to save model checkpoints (-1 = disable, and save only at the end of the run)
 # Output
 model_tag = "" # optionally override the model tag for the output checkpoint directory name
-use_fp8 = False # use Transformer Engine FP8 training
-gradient_checkpointing = False # use activation checkpointing to save memory
-wandb_project = "nanochat" # wandb project name
-log_file = "" # filename of the local log file
 # now allow CLI to override the settings via the configurator lol
 config_keys = [k for k,v in globals().items() if not k.startswith('_') and isinstance(v, (int, float, bool, str))]
 exec(open(os.path.join('nanochat', 'configurator.py')).read()) # overrides from command line or config file
@@ -89,7 +78,7 @@ get_max_memory = torch.cuda.max_memory_allocated if device_type == "cuda" else l
 
 # wandb logging init
 use_dummy_wandb = run == "dummy" or not master_process
-wandb_run = DummyWandb() if use_dummy_wandb else wandb.init(project=wandb_project, name=run, config=user_config)
+wandb_run = DummyWandb() if use_dummy_wandb else wandb.init(project="nanochat", name=run, config=user_config)
 
 # Tokenizer will be useful for evaluation, also we need the vocab size
 tokenizer = get_tokenizer()
@@ -111,11 +100,7 @@ print0(f"num_kv_heads: {num_kv_heads}")
 # figure out the needed gradient accumulation to reach the desired total batch size
 tokens_per_fwdbwd = device_batch_size * max_seq_len # tokens per iteration for a single rank
 world_tokens_per_fwdbwd = tokens_per_fwdbwd * ddp_world_size # total tokens per iteration for all ranks
-if total_batch_size % world_tokens_per_fwdbwd != 0:
-    new_total_batch_size = (total_batch_size // world_tokens_per_fwdbwd + 1) * world_tokens_per_fwdbwd
-    print0(f"WARNING: total_batch_size {total_batch_size:,} is not divisible by tokens per micro-batch {world_tokens_per_fwdbwd:,}.")
-    print0(f"WARNING: Adjusting total_batch_size to {new_total_batch_size:,}")
-    total_batch_size = new_total_batch_size
+assert total_batch_size % world_tokens_per_fwdbwd == 0
 grad_accum_steps = total_batch_size // world_tokens_per_fwdbwd
 print0(f"Tokens / micro-batch / rank: {device_batch_size} x {max_seq_len} = {tokens_per_fwdbwd:,}")
 print0(f"Tokens / micro-batch: {world_tokens_per_fwdbwd:,}")
@@ -125,7 +110,7 @@ print0(f"Total batch size {total_batch_size:,} => gradient accumulation steps: {
 # Initialize the Model
 
 # Create a new model with random weights
-model_config_kwargs = dict(sequence_len=max_seq_len, vocab_size=vocab_size, n_layer=num_layers, n_head=num_heads, n_kv_head=num_kv_heads, n_embd=model_dim, use_fp8=use_fp8, gradient_checkpointing=gradient_checkpointing)
+model_config_kwargs = dict(sequence_len=max_seq_len, vocab_size=vocab_size, n_layer=num_layers, n_head=num_heads, n_kv_head=num_kv_heads, n_embd=model_dim)
 with torch.device("meta"):
     model_config = GPTConfig(**model_config_kwargs)
     model = GPT(model_config)
@@ -322,10 +307,7 @@ while True:
     synchronize()
     t0 = time.time()
     for micro_step in range(grad_accum_steps):
-        fp8_ctx = te.fp8_autocast(enabled=True) if (use_fp8 and HAVE_TE) else nullcontext()
-        if step == 0 and micro_step == 0:
-            print0("Compiling model (first forward pass)... this may take a minute or two.")
-        with autocast_ctx, fp8_ctx:
+        with autocast_ctx:
             loss = model(x, y)
         train_loss = loss.detach() # for logging
         loss = loss / grad_accum_steps # each .backward() is a grad sum => normalize loss here

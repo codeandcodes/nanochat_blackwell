@@ -15,14 +15,7 @@ os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 import wandb
 import torch
 import torch.distributed as dist
-import torch.distributed as dist
 from contextlib import nullcontext
-
-try:
-    import transformer_engine.pytorch as te
-    HAVE_TE = True
-except ImportError:
-    HAVE_TE = False
 
 from nanochat.common import compute_init, compute_cleanup, get_base_dir, print0, DummyWandb, autodetect_device_type
 from nanochat.checkpoint_manager import load_model
@@ -40,9 +33,6 @@ from tasks.spellingbee import SimpleSpelling, SpellingBee
 # -----------------------------------------------------------------------------
 # SFT Hyperparameters
 run = "dummy" # wandb run name default ("dummy" is special - we won't log to wandb)
-wandb_project = "nanochat-sft" # wandb project name
-log_file = "" # filename of the local log file
-use_fp8 = False # use Transformer Engine FP8 training
 # input model options
 source = "mid" # base|mid , which checkpoint to load the model from (base model or midtrained model)
 model_tag = None # model tag to load the model from (base model or midtrained model)
@@ -80,7 +70,7 @@ autocast_ctx = torch.amp.autocast(device_type=device_type, dtype=ptdtype) if dev
 
 # wandb logging init
 use_dummy_wandb = run == "dummy" or not master_process
-wandb_run = DummyWandb() if use_dummy_wandb else wandb.init(project=wandb_project, name=run, config=user_config, save_code=True)
+wandb_run = DummyWandb() if use_dummy_wandb else wandb.init(project="nanochat-sft", name=run, config=user_config, save_code=True)
 
 # Load the model and tokenizer
 model, tokenizer, meta = load_model(source, device, phase="train", model_tag=model_tag, step=step)
@@ -141,17 +131,7 @@ examples_per_step = device_batch_size * ddp_world_size
 print0(f"Target examples per step: {target_examples_per_step}")
 print0(f"Device batch size: {device_batch_size}")
 print0(f"Examples per step is device_batch_size * ddp_world_size: {examples_per_step}")
-# If the target examples per step is smaller than the smallest possible step (examples_per_step), then we must at least do 1 step.
-if target_examples_per_step < examples_per_step:
-    print0(f"WARNING: target_examples_per_step {target_examples_per_step} < examples_per_step {examples_per_step}. Increasing target to {examples_per_step}.")
-    target_examples_per_step = examples_per_step
-
-# Ensure divisibility
-if target_examples_per_step % examples_per_step != 0:
-    new_target = (target_examples_per_step // examples_per_step + 1) * examples_per_step
-    print0(f"WARNING: target_examples_per_step {target_examples_per_step} is not divisible by examples_per_step {examples_per_step}. Adjusting to {new_target}.")
-    target_examples_per_step = new_target
-
+assert target_examples_per_step % examples_per_step == 0, "Target examples per step must be divisible by examples per step"
 grad_accum_steps = target_examples_per_step // examples_per_step
 print0(f"=> Setting grad accum steps: {grad_accum_steps}")
 
@@ -197,13 +177,8 @@ for step in range(num_iterations):
         losses = []
         for _ in range(eval_steps):
             val_inputs, val_targets = next(val_loader)
-            with torch.no_grad():
-                if use_fp8 and HAVE_TE:
-                    with te.fp8_autocast(enabled=True):
-                         loss = model(val_inputs, val_targets)
-                else:
-                    with autocast_ctx:
-                        loss = model(val_inputs, val_targets)
+            with torch.no_grad(), autocast_ctx:
+                loss = model(val_inputs, val_targets)
             losses.append(loss)
         val_loss = torch.stack(losses).mean() # average over eval_steps
         if ddp:
@@ -238,15 +213,9 @@ for step in range(num_iterations):
     # evaluate the gradient
     num_tokens = torch.tensor(0, device=device) # the number of "active" tokens of supervision seen
     for micro_step in range(grad_accum_steps):
-        if step == 0 and micro_step == 0:
-            print0("Compiling model (first forward pass)... this may take a minute or two.")
         train_inputs, train_targets = next(train_loader)
-        if use_fp8 and HAVE_TE:
-            with te.fp8_autocast(enabled=True):
-                loss = model(train_inputs, train_targets)
-        else:
-            with autocast_ctx:
-                loss = model(train_inputs, train_targets)
+        with autocast_ctx:
+            loss = model(train_inputs, train_targets)
         train_loss = loss.detach() # for logging
         loss = loss / grad_accum_steps # each .backward() is a grad sum => normalize loss here
         loss.backward() # accumulate the gradient
@@ -281,8 +250,7 @@ for step in range(num_iterations):
 if master_process:
     base_dir = get_base_dir()
     depth = model.config.n_layer
-    if model_tag is None:
-        model_tag = f"d{depth}" # base the model tag on the depth of the base model
+    model_tag = f"d{depth}" # base the model tag on the depth of the base model
     checkpoint_dir = os.path.join(base_dir, "chatsft_checkpoints", model_tag)
     model_config_kwargs = model.config.__dict__ # slightly naughty, abusing the simplicity of GPTConfig, TODO nicer
     save_checkpoint(
