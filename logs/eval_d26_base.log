@@ -1,0 +1,54 @@
+2026-01-18 09:36:26,122 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-01-18 09:36:26,136 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /home/rocketegg/.cache/nanochat/base_checkpoints/d26 with step 40640
+2026-01-18 09:36:27,871 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 65536, 'n_layer': 26, 'n_head': 13, 'n_kv_head': 13, 'n_embd': 1664}
+Autodetected device type: cuda
+Evaluating: hellaswag_zeroshot (0-shot, type: multiple_choice)... accuracy: 0.5254 | centered: 0.3672 | time: 86.32s
+Evaluating: jeopardy (10-shot, type: language_modeling)... accuracy: 0.2277 | centered: 0.2277 | time: 17.87s
+Evaluating: bigbench_qa_wikidata (10-shot, type: language_modeling)... accuracy: 0.5803 | centered: 0.5803 | time: 151.24s
+Evaluating: arc_easy (10-shot, type: multiple_choice)... accuracy: 0.6940 | centered: 0.5920 | time: 44.35s
+Evaluating: arc_challenge (10-shot, type: multiple_choice)... accuracy: 0.4138 | centered: 0.2184 | time: 25.81s
+Evaluating: copa (0-shot, type: multiple_choice)... accuracy: 0.7100 | centered: 0.4200 | time: 0.69s
+Evaluating: commonsense_qa (10-shot, type: multiple_choice)... accuracy: 0.3333 | centered: 0.1667 | time: 36.13s
+Evaluating: piqa (10-shot, type: multiple_choice)... accuracy: 0.7111 | centered: 0.4222 | time: 26.94s
+Evaluating: openbook_qa (0-shot, type: multiple_choice)... accuracy: 0.3440 | centered: 0.1253 | time: 3.43s
+Evaluating: lambada_openai (0-shot, type: language_modeling)... accuracy: 0.4500 | centered: 0.4500 | time: 35.30s
+Evaluating: hellaswag (10-shot, type: multiple_choice)... accuracy: 0.5279 | centered: 0.3705 | time: 442.46s
+Evaluating: winograd (0-shot, type: schema)... accuracy: 0.6813 | centered: 0.3626 | time: 1.82s
+Evaluating: winogrande (0-shot, type: schema)... accuracy: 0.5549 | centered: 0.1097 | time: 8.32s
+Evaluating: bigbench_dyck_languages (10-shot, type: language_modeling)... accuracy: 0.0980 | centered: 0.0980 | time: 11.84s
+Evaluating: agi_eval_lsat_ar (3-shot, type: multiple_choice)... accuracy: 0.2609 | centered: 0.0761 | time: 9.50s
+Evaluating: bigbench_cs_algorithms (10-shot, type: language_modeling)... accuracy: 0.3848 | centered: 0.3848 | time: 14.34s
+Evaluating: bigbench_operators (10-shot, type: language_modeling)... accuracy: 0.2048 | centered: 0.2048 | time: 2.06s
+Evaluating: bigbench_repeat_copy_logic (10-shot, type: language_modeling)... accuracy: 0.0625 | centered: 0.0625 | time: 0.34s
+Evaluating: squad (10-shot, type: language_modeling)... accuracy: 0.3478 | centered: 0.3478 | time: 329.38s
+Evaluating: coqa (0-shot, type: language_modeling)... accuracy: 0.2604 | centered: 0.2604 | time: 84.80s
+Evaluating: boolq (10-shot, type: multiple_choice)... accuracy: 0.5942 | centered: -0.0679 | time: 130.26s
+Evaluating: bigbench_language_identification (10-shot, type: multiple_choice)... accuracy: 0.2536 | centered: 0.1789 | time: 793.78s
+================================================================================
+Model: base_model (step 40640)
+================================================================================
+Task                               , Accuracy  , Centered  
+hellaswag_zeroshot                 , 0.525393  , 0.367191  
+jeopardy                           , 0.227681  , 0.227681  
+bigbench_qa_wikidata               , 0.580286  , 0.580286  
+arc_easy                           , 0.694024  , 0.592031  
+arc_challenge                      , 0.413823  , 0.218430  
+copa                               , 0.710000  , 0.420000  
+commonsense_qa                     , 0.333333  , 0.166667  
+piqa                               , 0.711099  , 0.422198  
+openbook_qa                        , 0.344000  , 0.125333  
+lambada_openai                     , 0.450029  , 0.450029  
+hellaswag                          , 0.527883  , 0.370510  
+winograd                           , 0.681319  , 0.362637  
+winogrande                         , 0.554854  , 0.109708  
+bigbench_dyck_languages            , 0.098000  , 0.098000  
+agi_eval_lsat_ar                   , 0.260870  , 0.076087  
+bigbench_cs_algorithms             , 0.384848  , 0.384848  
+bigbench_operators                 , 0.204762  , 0.204762  
+bigbench_repeat_copy_logic         , 0.062500  , 0.062500  
+squad                              , 0.347777  , 0.347777  
+coqa                               , 0.260428  , 0.260428  
+boolq                              , 0.594190  , -0.067922 
+bigbench_language_identification   , 0.253600  , 0.178878  
+CORE                               ,           , 0.270821  
+

@@ -15,6 +15,7 @@ import math
 from functools import partial
 from dataclasses import dataclass
 
+import torch.utils.checkpoint
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -31,6 +32,7 @@ class GPTConfig:
     n_head: int = 6 # number of query heads
     n_kv_head: int = 6 # number of key/value heads (GQA)
     n_embd: int = 768
+    gradient_checkpointing: bool = False
 
 
 def norm(x):
@@ -259,7 +261,10 @@ class GPT(nn.Module):
         x = self.transformer.wte(idx)
         x = norm(x)
         for block in self.transformer.h:
-            x = block(x, cos_sin, kv_cache)
+            if self.config.gradient_checkpointing:
+                x = torch.utils.checkpoint.checkpoint(block, x, cos_sin, kv_cache, use_reentrant=False)
+            else:
+                x = block(x, cos_sin, kv_cache)
         x = norm(x)
 
         # Forward the lm_head (compute logits)

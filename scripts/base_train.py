@@ -62,6 +62,8 @@ sample_every = 2000 # every how many steps to sample from the model
 save_every = 2000 # every how many steps to save model checkpoints (-1 = disable, and save only at the end of the run)
 # Output
 model_tag = "" # optionally override the model tag for the output checkpoint directory name
+wandb_project = "nanochat"
+report_filename = "report.md"
 # now allow CLI to override the settings via the configurator lol
 config_keys = [k for k,v in globals().items() if not k.startswith('_') and isinstance(v, (int, float, bool, str))]
 exec(open(os.path.join('nanochat', 'configurator.py')).read()) # overrides from command line or config file
@@ -78,7 +80,8 @@ get_max_memory = torch.cuda.max_memory_allocated if device_type == "cuda" else l
 
 # wandb logging init
 use_dummy_wandb = run == "dummy" or not master_process
-wandb_run = DummyWandb() if use_dummy_wandb else wandb.init(project="nanochat", name=run, config=user_config)
+# wandb_project = "nanochat" # defined in User settings
+wandb_run = DummyWandb() if use_dummy_wandb else wandb.init(project=wandb_project, name=run, config=user_config)
 
 # Tokenizer will be useful for evaluation, also we need the vocab size
 tokenizer = get_tokenizer()
@@ -372,7 +375,8 @@ print0(f"Minimum validation bpb: {min_val_bpb:.4f}")
 
 # Log to report
 from nanochat.report import get_report
-get_report().log(section="Base model training", data=[
+# report_filename = "report.md" # defined in User settings
+get_report(filename=report_filename).log(section="Base model training", data=[
     user_config, # CLI args
     { # stats about the training setup
         "Number of parameters": num_params,

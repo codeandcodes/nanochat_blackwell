@@ -162,10 +162,16 @@ Generated: {timestamp}
 
     # bloat metrics: package all of the source code and assess its weight
     packaged = run_command('files-to-prompt . -e py -e md -e rs -e html -e toml -e sh --ignore "*target*" --cxml')
-    num_chars = len(packaged)
-    num_lines = len(packaged.split('\n'))
-    num_files = len([x for x in packaged.split('\n') if x.startswith('<source>')])
-    num_tokens = num_chars // 4 # assume approximately 4 chars per token
+    if packaged:
+        num_chars = len(packaged)
+        num_lines = len(packaged.split('\n'))
+        num_files = len([x for x in packaged.split('\n') if x.startswith('<source>')])
+        num_tokens = num_chars // 4 # assume approximately 4 chars per token
+    else:
+        num_chars = 0
+        num_lines = 0
+        num_files = 0
+        num_tokens = 0
 
     # count dependencies via uv.lock
     uv_lock_lines = 0
@@ -232,9 +238,10 @@ def extract_timestamp(content, prefix):
 class Report:
     """Maintains a bunch of logs, generates a final markdown report."""
 
-    def __init__(self, report_dir):
+    def __init__(self, report_dir, filename="report.md"):
         os.makedirs(report_dir, exist_ok=True)
         self.report_dir = report_dir
+        self.filename = filename
 
     def log(self, section, data):
         """Log a section of data to the report."""
@@ -267,7 +274,9 @@ class Report:
     def generate(self):
         """Generate the final report."""
         report_dir = self.report_dir
-        report_file = os.path.join(report_dir, "report.md")
+        # report_filename = os.environ.get("NANOCHAT_REPORT_FILENAME", "report.md")
+        # report_file = os.path.join(report_dir, report_filename)
+        report_file = os.path.join(report_dir, self.filename)
         print(f"Generating report to {report_file}")
         final_metrics = {} # the most important final metrics we'll add as table at the end
         start_time = None
@@ -354,8 +363,8 @@ class Report:
             else:
                 out_file.write("Total wall clock time: unknown\n")
         # also cp the report.md file to current directory
-        print(f"Copying report.md to current directory for convenience")
-        shutil.copy(report_file, "report.md")
+        print(f"Copying {self.filename} to current directory for convenience")
+        shutil.copy(report_file, self.filename)
         return report_file
 
     def reset(self):
@@ -366,7 +375,9 @@ class Report:
             if os.path.exists(file_path):
                 os.remove(file_path)
         # Remove report.md if it exists
-        report_file = os.path.join(self.report_dir, "report.md")
+        # report_filename = os.environ.get("NANOCHAT_REPORT_FILENAME", "report.md")
+        # report_file = os.path.join(self.report_dir, report_filename)
+        report_file = os.path.join(self.report_dir, self.filename)
         if os.path.exists(report_file):
             os.remove(report_file)
         # Generate and write the header section with start timestamp
@@ -387,13 +398,14 @@ class DummyReport:
     def reset(self, *args, **kwargs):
         pass
 
-def get_report():
+def get_report(filename="report.md"):
     # just for convenience, only rank 0 logs to report
     from nanochat.common import get_base_dir, get_dist_info
     ddp, ddp_rank, ddp_local_rank, ddp_world_size = get_dist_info()
     if ddp_rank == 0:
-        report_dir = os.path.join(get_base_dir(), "report")
-        return Report(report_dir)
+        report_dir_name = os.environ.get("NANOCHAT_REPORT_DIR", "report")
+        report_dir = os.path.join(get_base_dir(), report_dir_name)
+        return Report(report_dir, filename=filename)
     else:
         return DummyReport()
 
@@ -401,8 +413,9 @@ if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser(description="Generate or reset nanochat training reports.")
     parser.add_argument("command", nargs="?", default="generate", choices=["generate", "reset"], help="Operation to perform (default: generate)")
+    parser.add_argument("-f", "--filename", default="report.md", help="Filename of the report (default: report.md)")
     args = parser.parse_args()
     if args.command == "generate":
-        get_report().generate()
+        get_report(filename=args.filename).generate()
     elif args.command == "reset":
-        get_report().reset()
+        get_report(filename=args.filename).reset()

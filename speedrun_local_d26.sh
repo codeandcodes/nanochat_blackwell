@@ -3,18 +3,13 @@
 # Modified speedrun.sh for local single-GPU execution
 # Original: speedrun.sh
 
-# Default intermediate artifacts directory is in ~/.cache/nanochat
+# Default intermediate artifacts directory is in ~/.cache/nanochat_d26
 export OMP_NUM_THREADS=1
-export NANOCHAT_BASE_DIR="$HOME/.cache/nanochat"
+export NANOCHAT_BASE_DIR="$HOME/.cache/nanochat_d26"
 mkdir -p $NANOCHAT_BASE_DIR
 
-# Persistent Logging Setup
-mkdir -p logs
-TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
-LOG_FILE="logs/run_${TIMESTAMP}.log"
-echo "Logging execution to $LOG_FILE"
-exec > >(tee -a "$LOG_FILE") 2>&1
-
+# Redirect output to log file
+exec > >(tee speedrun_d26.log) 2>&1
 
 # -----------------------------------------------------------------------------
 # Python venv setup with uv
@@ -32,12 +27,12 @@ source .venv/bin/activate
 # wandb setup
 if [ -z "$WANDB_RUN" ]; then
     # by default use "dummy" : it's handled as a special case, skips logging to wandb
-    WANDB_RUN=dummy
+    WANDB_RUN=speedrun_d26_local
 fi
 
 # -----------------------------------------------------------------------------
 # Clear report
-python -m nanochat.report reset
+python -m nanochat.report reset --filename=report_d26.md
 
 # -----------------------------------------------------------------------------
 # Tokenizer
@@ -50,7 +45,7 @@ uv run maturin develop --release --manifest-path rustbpe/Cargo.toml
 
 # Download data shards
 python -m nanochat.dataset -n 8
-python -m nanochat.dataset -n 240 &
+python -m nanochat.dataset -n 450 &
 DATASET_DOWNLOAD_PID=$!
 
 # Train tokenizer
@@ -68,33 +63,43 @@ wait $DATASET_DOWNLOAD_PID
 # CUSTOMIZATION: Set to 1 for single-GPU execution
 NPROC_PER_NODE=1
 
-# pretrain the d20 model
+# pretrain the d26 model
 # Note: With 1 GPU instead of 8, this will take 8x longer to reach the same number of tokens.
-torchrun --standalone --nproc_per_node=$NPROC_PER_NODE -m scripts.base_train -- --depth=20 --run=$WANDB_RUN
+BASE_CKPT="$NANOCHAT_BASE_DIR/base_checkpoints/d26/model_040640.pt"
+if [ -f "$BASE_CKPT" ]; then
+    echo "Base checkpoint found at $BASE_CKPT, skipping base training..."
+else
+    torchrun --standalone --nproc_per_node=$NPROC_PER_NODE -m scripts.base_train -- --depth=26 --device_batch_size=20 --total_batch_size=532480 --run=$WANDB_RUN --wandb_project=d26 --report_filename=report_d26.md --save_every=1000
 
-# evaluate the model
-torchrun --standalone --nproc_per_node=$NPROC_PER_NODE -m scripts.base_loss
-# evaluate the model on CORE tasks
-torchrun --standalone --nproc_per_node=$NPROC_PER_NODE -m scripts.base_eval
+    # evaluate the model
+    torchrun --standalone --nproc_per_node=$NPROC_PER_NODE -m scripts.base_loss
+    # evaluate the model on CORE tasks
+    torchrun --standalone --nproc_per_node=$NPROC_PER_NODE -m scripts.base_eval
+fi
 
 # -----------------------------------------------------------------------------
 # Midtraining
 
-if [ ! -f "$NANOCHAT_BASE_DIR/identity_conversations.jsonl" ]; then
-    curl -L -o $NANOCHAT_BASE_DIR/identity_conversations.jsonl https://karpathy-public.s3.us-west-2.amazonaws.com/identity_conversations.jsonl
-fi
+MID_CKPT="$NANOCHAT_BASE_DIR/mid_checkpoints/d26/model_000801.pt"
+if [ -f "$MID_CKPT" ]; then
+    echo "Mid checkpoint found at $MID_CKPT, skipping mid training..."
+else
+    if [ ! -f "$NANOCHAT_BASE_DIR/identity_conversations.jsonl" ]; then
+        curl -L -o $NANOCHAT_BASE_DIR/identity_conversations.jsonl https://karpathy-public.s3.us-west-2.amazonaws.com/identity_conversations.jsonl
+    fi
 
-torchrun --standalone --nproc_per_node=$NPROC_PER_NODE -m scripts.mid_train -- --run=$WANDB_RUN
-torchrun --standalone --nproc_per_node=$NPROC_PER_NODE -m scripts.chat_eval -- -i mid
+    torchrun --standalone --nproc_per_node=$NPROC_PER_NODE -m scripts.mid_train -- --device_batch_size=20 --total_batch_size=532480 --run=$WANDB_RUN --wandb_project=d26 --report_filename=report_d26.md
+    torchrun --standalone --nproc_per_node=$NPROC_PER_NODE -m scripts.chat_eval -- -i mid
+fi
 
 # -----------------------------------------------------------------------------
 # Supervised Finetuning
 
-torchrun --standalone --nproc_per_node=$NPROC_PER_NODE -m scripts.chat_sft -- --run=$WANDB_RUN
+torchrun --standalone --nproc_per_node=$NPROC_PER_NODE -m scripts.chat_sft -- --device_batch_size=16 --run=$WANDB_RUN --wandb_project=d26 --report_filename=report_d26.md --target_examples_per_step=512 --gradient_checkpointing=True --embedding_lr=0.04 --matrix_lr=0.004 --unembedding_lr=0.0008 --num_epochs=10
 torchrun --standalone --nproc_per_node=$NPROC_PER_NODE -m scripts.chat_eval -- -i sft
 
 # -----------------------------------------------------------------------------
 # Generate report
-python -m nanochat.report generate
+python -m nanochat.report generate --filename=report_d26.md
 
 echo "Speedrun completed!"

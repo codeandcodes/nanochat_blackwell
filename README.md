@@ -42,6 +42,8 @@ If you are running on a single GPU workstation (like an RTX 6000 Ada/Blackwell),
 bash speedrun_local.sh
 ```
 
+**Note**: This script now automatically logs all output to `logs/run_<timestamp>.log` to prevent overwriting previous run data.
+
 ## Checkpoint Evaluation
 
 To monitor the quality of the model generation during training without interrupting the main training process, you can use the `scripts/eval_checkpoints.py` script. This script:
@@ -92,7 +94,36 @@ Total wall clock time: 3h51m
 
 ## Bigger models
 
-Unsurprisingly, $100 is not enough to train a highly performant ChatGPT clone. In fact, LLMs are famous for their multi-million dollar capex. For our purposes, I think there are two more scales of interest. First is the ~$300 tier d26 model (i.e. depth=26) that trains in ~12 hours, which slightly outperforms GPT-2 CORE score. Second is the $1000 tier (~41.6 hours), just because it's a nice round number. But both of these are not yet fully supported and therefore not attached here in the master branch yet.
+Unsurprisingly, $100 is not enough to train a highly performant ChatGPT clone. In fact, LLMs are famous for their multi-million dollar capex. For our purposes, I think there are two more scales of interest. First is the ~$300 tier d26 model (i.e. depth=26) that trains in ~12 hours (or ~157 hours on a single GPU), which significantly outperforms the d20 baseline.
+
+**d26 vs d20 Comparison**:
+*   **Size**: d26 is ~1.1B parameters (vs 560M for d20).
+*   **Performance**: +21% better on ARC reasoning, +183% better on Coding (HumanEval).
+*   **Compute**: 3.7x slower to train (~1.5e20 FLOPs), but produces a much more capable "Reasoning" model.
+*   **Recommendation**: Use d26 if reasoning capability is required; d20 remains excellent for high-throughput tasks.
+
+Second is the $1000 tier (~41.6 hours), just because it's a nice round number. But both of these are not yet fully supported and therefore not attached here in the master branch yet.
+
+### Training d26 (Single GPU)
+To train the d26 model on a single GPU (e.g. RTX 6000 Ada), use the provided `speedrun_local_d26.sh` script. This script is pre-configured with:
+*   `--depth=26`: Increased model depth.
+*   `--device_batch_size=20`: Adjusted to fit in 48GB VRAM (vs 32 for d20).
+*   `--device_batch_size=16`: Further reduced for SFT stage.
+
+```bash
+bash speedrun_local_d26.sh
+```
+
+### Evaluation & Comparison
+To compare models (e.g., d20 vs d26) side-by-side using the checkpoint artifacts, use the `run_eval_comparison.sh` script. This script:
+1.  Resets the report state.
+2.  Runs the full evaluation suite (Base, Mid, SFT) for the specified model tags.
+3.  Generates separate report files (e.g., `report_d26.md`, `report_d20.md`) in isolated directories to prevent data collision.
+4.  Logs detailed metrics to `logs/`.
+
+```bash
+bash run_eval_comparison.sh
+```
 
 That said, to give a sense, the example changes needed for the [speedrun.sh](speedrun.sh) file to train a GPT-2 grade model d26 only involve three changes:
 

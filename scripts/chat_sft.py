@@ -41,6 +41,7 @@ step = None # step to load the model from (base model or midtrained model)
 device_type = "" # cuda|cpu|mps (empty => autodetect)
 dtype = "bfloat16"
 device_batch_size = 4 # max to avoid OOM
+gradient_checkpointing = False # if True, use gradient checkpointing to save memory
 # optimization
 num_epochs = 1
 num_iterations = -1 # override number of iterations (-1 = disable, use num_epochs to derive it)
@@ -55,6 +56,9 @@ eval_every = 100
 eval_steps = 100
 eval_metrics_every = 200
 eval_metrics_max_problems = 1024
+wandb_project = "nanochat-sft"
+report_filename = "report.md"
+overfit_single_batch = False # if True, we overfit a single batch of data
 # now allow CLI to override the settings via the configurator lol
 config_keys = [k for k,v in globals().items() if not k.startswith('_') and isinstance(v, (int, float, bool, str))]
 exec(open(os.path.join('nanochat', 'configurator.py')).read()) # overrides from command line or config file
@@ -70,11 +74,13 @@ autocast_ctx = torch.amp.autocast(device_type=device_type, dtype=ptdtype) if dev
 
 # wandb logging init
 use_dummy_wandb = run == "dummy" or not master_process
-wandb_run = DummyWandb() if use_dummy_wandb else wandb.init(project="nanochat-sft", name=run, config=user_config, save_code=True)
+# wandb_project = "nanochat-sft" # defined in User settings
+wandb_run = DummyWandb() if use_dummy_wandb else wandb.init(project=wandb_project, name=run, config=user_config, save_code=True)
 
 # Load the model and tokenizer
 model, tokenizer, meta = load_model(source, device, phase="train", model_tag=model_tag, step=step)
 orig_model = model # original, uncompiled model
+model.config.gradient_checkpointing = gradient_checkpointing
 # model = torch.compile(model, dynamic=True) # doesn't work super well because of variable lengths of inputs
 engine = Engine(model, tokenizer) # will be used for inline model evaluation only
 
@@ -140,6 +146,14 @@ if num_iterations == -1:
     assert num_epochs > 0, "num_epochs must be positive if num_iterations is -1"
     num_iterations = (len(train_ds) // target_examples_per_step) * num_epochs
 train_loader = sft_data_generator(train_ds, batch_size=device_batch_size)
+if globals().get('overfit_single_batch', False):
+    print0("WARNING: Overfitting a single batch! This is for debugging only.")
+    first_batch = next(train_loader)
+    def cycle_first_batch():
+        while True:
+            yield first_batch
+    train_loader = cycle_first_batch()
+
 build_val_loader = lambda: sft_data_generator(val_ds, batch_size=device_batch_size)
 
 # -----------------------------------------------------------------------------
@@ -230,6 +244,8 @@ for step in range(num_iterations):
             group["lr"] = group["initial_lr"] * lrm
 
     # step the optimizers
+    # clip the gradient
+    grad_norm = torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
     for opt in optimizers:
         opt.step()
     model.zero_grad(set_to_none=True)
@@ -237,11 +253,13 @@ for step in range(num_iterations):
     # logging
     train_loss_item = train_loss.item()
     num_tokens_item = num_tokens.item()
-    print0(f"Step {step:05d}/{num_iterations:05d} | Training loss: {train_loss_item:.6f}| lrm: {lrm:.6f}| num_tokens: {num_tokens_item:,}")
+    grad_norm_item = grad_norm.item()
+    print0(f"Step {step:05d}/{num_iterations:05d} | Training loss: {train_loss_item:.6f}| lrm: {lrm:.6f}| grad_norm: {grad_norm_item:.4f}| num_tokens: {num_tokens_item:,}")
     wandb_run.log({
         "step": step,
         "lrm": lrm,
         "train_loss": train_loss_item,
+        "grad_norm": grad_norm_item,
         "num_tokens": num_tokens_item,
     })
     step += 1
@@ -269,7 +287,8 @@ if master_process:
 
 # Log to report
 from nanochat.report import get_report
-get_report().log(section="Chat SFT", data=[
+# report_filename = "report.md" # defined in User settings
+get_report(filename=report_filename).log(section="Chat SFT", data=[
     user_config, # CLI args
     {
         "Training rows": len(train_ds),

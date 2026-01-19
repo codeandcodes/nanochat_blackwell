@@ -1,0 +1,1237 @@
+Resolved 81 packages in 0.86ms
+error: Distribution `torch==2.10.0.dev20251211+cu130 @ registry+https://download.pytorch.org/whl/nightly/cu130` can't be installed because it doesn't have a source distribution or wheel for the current platform
+
+hint: You're on Linux (`manylinux_2_35_x86_64`), but `torch` (v2.10.0.dev20251211+cu130) only has wheels for the following platform: `win_amd64`; consider adding "sys_platform == 'linux' and platform_machine == 'x86_64'" to `tool.uv.required-environments` to ensure uv resolves to a version with compatible wheels
+Reset report and wrote header to /home/rocketegg/.cache/nanochat_d26/report/header.md
+info: downloading installer
+warn: It looks like you have an existing rustup settings file at:
+warn: /home/rocketegg/.rustup/settings.toml
+warn: Rustup will install the default toolchain as specified in the settings file,
+warn: instead of the one inferred from the default host triple.
+info: profile set to 'default'
+info: default host triple is x86_64-unknown-linux-gnu
+warn: Updating existing toolchain, profile choice will be ignored
+info: syncing channel updates for 'stable-x86_64-unknown-linux-gnu'
+info: default toolchain set to 'stable-x86_64-unknown-linux-gnu'
+
+  stable-x86_64-unknown-linux-gnu unchanged - rustc 1.92.0 (ded5c06cf 2025-12-08)
+
+
+Rust is installed now. Great!
+
+To get started you may need to restart your current shell.
+This would reload your PATH environment variable to include
+Cargo's bin directory ($HOME/.cargo/bin).
+
+To configure your current shell, you need to source
+the corresponding env file under $HOME/.cargo.
+
+This is usually done by running one of the following (note the leading DOT):
+. "$HOME/.cargo/env"            # For sh/bash/zsh/ash/dash/pdksh
+source "$HOME/.cargo/env.fish"  # For fish
+source $"($nu.home-path)/.cargo/env.nu"  # For nushell
+Uninstalled 1 package in 0.26ms
+Installed 1 package in 2ms
+📦 Including license file `LICENSE`
+🔗 Found pyo3 bindings
+🐍 Found CPython 3.10 at /home/rocketegg/workspace/nanochat/.venv/bin/python
+📡 Using build options bindings from pyproject.toml
+Audited 13 packages in 6ms
+    Finished `release` profile [optimized] target(s) in 0.01s
+📦 Built wheel for CPython 3.10 to /tmp/.tmpuVtQ8H/nanochat-0.1.0-cp310-cp310-linux_x86_64.whl
+✏️ Setting installed package as editable
+🛠 Installed nanochat-0.1.0
+Downloading 8 shards using 4 workers...
+Target directory: /home/rocketegg/.cache/nanochat_d26/base_data
+
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00000.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00003.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00005.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00006.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00007.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00001.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00002.parquet (already exists)
+Done! Downloaded: 8/8 shards to /home/rocketegg/.cache/nanochat_d26/base_data
+Downloading 450 shards using 4 workers...
+Target directory: /home/rocketegg/.cache/nanochat_d26/base_data
+
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00000.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00001.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00002.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00003.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00004.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00005.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00006.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00007.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00008.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00009.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00010.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00011.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00012.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00013.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00014.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00015.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00016.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00017.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00018.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00019.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00020.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00021.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00022.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00023.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00024.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00025.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00026.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00027.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00028.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00116.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00117.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00118.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00119.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00120.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00121.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00122.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00123.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00124.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00125.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00126.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00127.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00128.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00129.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00130.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00131.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00132.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00133.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00134.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00135.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00136.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00137.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00138.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00139.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00140.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00141.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00142.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00143.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00144.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00232.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00233.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00234.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00235.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00236.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00237.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00238.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00239.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00240.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00241.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00242.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00243.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00244.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00245.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00246.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00247.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00248.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00249.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00250.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00251.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00252.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00253.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00254.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00255.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00256.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00257.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00258.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00259.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00260.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00319.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00320.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00029.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00030.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00031.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00032.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00033.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00034.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00035.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00036.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00037.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00038.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00039.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00040.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00041.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00042.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00043.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00044.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00045.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00046.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00047.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00048.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00049.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00050.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00051.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00052.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00053.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00054.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00055.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00056.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00057.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00145.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00146.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00147.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00148.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00149.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00150.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00151.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00152.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00153.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00154.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00155.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00156.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00157.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00158.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00159.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00160.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00161.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00162.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00163.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00164.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00165.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00166.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00167.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00168.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00169.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00170.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00171.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00172.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00173.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00261.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00262.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00263.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00264.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00265.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00266.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00267.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00268.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00269.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00270.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00271.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00272.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00273.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00274.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00275.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00276.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00277.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00278.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00279.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00280.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00281.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00282.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00283.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00284.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00285.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00286.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00287.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00288.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00289.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00377.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00378.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00087.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00088.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00089.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00090.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00091.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00092.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00093.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00094.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00095.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00096.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00097.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00098.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00099.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00100.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00101.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00102.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00103.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00104.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00105.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00106.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00107.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00108.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00109.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00110.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00111.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00112.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00113.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00114.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00115.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00174.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00175.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00176.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00177.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00178.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00179.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00180.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00181.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00182.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00183.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00184.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00185.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00186.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00187.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00188.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00189.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00190.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00191.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00192.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00193.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00194.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00195.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00196.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00197.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00198.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00199.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00200.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00201.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00202.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00290.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00291.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00292.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00293.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00294.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00295.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00296.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00297.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00298.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00299.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00300.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00301.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00302.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00303.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00304.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00305.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00306.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00307.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00308.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00309.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00310.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00311.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00312.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00313.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00314.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00315.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00316.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00317.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00318.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00406.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00407.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00058.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00059.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00060.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00061.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00062.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00063.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00064.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00065.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00066.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00067.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00068.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00069.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00070.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00071.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00072.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00073.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00074.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00075.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00076.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00077.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00078.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00079.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00080.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00081.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00082.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00083.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00084.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00085.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00086.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00203.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00204.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00205.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00206.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00207.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00208.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00209.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00210.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00211.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00212.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00213.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00214.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00215.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00216.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00217.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00218.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00219.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00220.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00221.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00222.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00223.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00224.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00225.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00226.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00227.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00228.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00229.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00230.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00231.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00348.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00349.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00350.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00351.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00352.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00353.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00354.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00355.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00356.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00357.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00358.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00359.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00360.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00361.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00362.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00363.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00364.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00365.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00366.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00367.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00368.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00369.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00370.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00371.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00372.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00373.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00374.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00375.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00376.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00435.parquet (already exists)
+Skipping /home/rocketegg/.cache/nanochat_d26/base_data/shard_00436.parquet (already exists)
+2026-01-11 21:10:59,581 - rustbpe - [32m[1mINFO[0m - Processing sequences from iterator (buffer_size: 8192)
+Done! Downloaded: 450/450 shards to /home/rocketegg/.cache/nanochat_d26/base_data
+2026-01-11 21:11:33,517 - rustbpe - [32m[1mINFO[0m - Processed 532496 sequences total, 2233873 unique
+2026-01-11 21:11:33,609 - rustbpe - [32m[1mINFO[0m - Starting BPE training: 65271 merges to compute
+2026-01-11 21:11:33,609 - rustbpe - [32m[1mINFO[0m - Computing initial pair counts from 2233873 unique sequences
+2026-01-11 21:11:34,714 - rustbpe - [32m[1mINFO[0m - Building heap with 18337 unique pairs
+2026-01-11 21:11:34,715 - rustbpe - [32m[1mINFO[0m - Starting merge loop
+2026-01-11 21:11:37,160 - rustbpe - [32m[1mINFO[0m - Progress: [1m1%[0m (653/65271 merges) - Last merge: (32, 568) -> 908 (frequency: 255265)
+2026-01-11 21:11:37,508 - rustbpe - [32m[1mINFO[0m - Progress: [1m2%[0m (1306/65271 merges) - Last merge: (87, 101) -> 1561 (frequency: 110111)
+2026-01-11 21:11:37,700 - rustbpe - [32m[1mINFO[0m - Progress: [1m3%[0m (1959/65271 merges) - Last merge: (1347, 716) -> 2214 (frequency: 67040)
+2026-01-11 21:11:37,884 - rustbpe - [32m[1mINFO[0m - Progress: [1m4%[0m (2611/65271 merges) - Last merge: (714, 280) -> 2866 (frequency: 46401)
+2026-01-11 21:11:38,044 - rustbpe - [32m[1mINFO[0m - Progress: [1m5%[0m (3264/65271 merges) - Last merge: (1108, 289) -> 3519 (frequency: 34743)
+2026-01-11 21:11:38,170 - rustbpe - [32m[1mINFO[0m - Progress: [1m6%[0m (3917/65271 merges) - Last merge: (420, 262) -> 4172 (frequency: 27219)
+2026-01-11 21:11:38,265 - rustbpe - [32m[1mINFO[0m - Progress: [1m7%[0m (4569/65271 merges) - Last merge: (116, 97) -> 4824 (frequency: 22123)
+2026-01-11 21:11:38,387 - rustbpe - [32m[1mINFO[0m - Progress: [1m8%[0m (5222/65271 merges) - Last merge: (1381, 108) -> 5477 (frequency: 18395)
+2026-01-11 21:11:38,478 - rustbpe - [32m[1mINFO[0m - Progress: [1m9%[0m (5875/65271 merges) - Last merge: (3848, 5283) -> 6130 (frequency: 15547)
+2026-01-11 21:11:38,577 - rustbpe - [32m[1mINFO[0m - Progress: [1m10%[0m (6528/65271 merges) - Last merge: (324, 1426) -> 6783 (frequency: 13336)
+2026-01-11 21:11:38,641 - rustbpe - [32m[1mINFO[0m - Progress: [1m11%[0m (7180/65271 merges) - Last merge: (5059, 2488) -> 7435 (frequency: 11636)
+2026-01-11 21:11:38,720 - rustbpe - [32m[1mINFO[0m - Progress: [1m12%[0m (7833/65271 merges) - Last merge: (509, 273) -> 8088 (frequency: 10199)
+2026-01-11 21:11:38,772 - rustbpe - [32m[1mINFO[0m - Progress: [1m13%[0m (8486/65271 merges) - Last merge: (313, 7877) -> 8741 (frequency: 8981)
+2026-01-11 21:11:38,841 - rustbpe - [32m[1mINFO[0m - Progress: [1m14%[0m (9138/65271 merges) - Last merge: (4870, 109) -> 9393 (frequency: 8021)
+2026-01-11 21:11:38,899 - rustbpe - [32m[1mINFO[0m - Progress: [1m15%[0m (9791/65271 merges) - Last merge: (1045, 3484) -> 10046 (frequency: 7217)
+2026-01-11 21:11:38,956 - rustbpe - [32m[1mINFO[0m - Progress: [1m16%[0m (10444/65271 merges) - Last merge: (372, 34) -> 10699 (frequency: 6515)
+2026-01-11 21:11:39,000 - rustbpe - [32m[1mINFO[0m - Progress: [1m17%[0m (11097/65271 merges) - Last merge: (46, 8940) -> 11352 (frequency: 5894)
+2026-01-11 21:11:39,051 - rustbpe - [32m[1mINFO[0m - Progress: [1m18%[0m (11749/65271 merges) - Last merge: (296, 2782) -> 12004 (frequency: 5367)
+2026-01-11 21:11:39,092 - rustbpe - [32m[1mINFO[0m - Progress: [1m19%[0m (12402/65271 merges) - Last merge: (662, 9820) -> 12657 (frequency: 4972)
+2026-01-11 21:11:39,127 - rustbpe - [32m[1mINFO[0m - Progress: [1m20%[0m (13055/65271 merges) - Last merge: (265, 2166) -> 13310 (frequency: 4591)
+2026-01-11 21:11:39,172 - rustbpe - [32m[1mINFO[0m - Progress: [1m21%[0m (13707/65271 merges) - Last merge: (317, 380) -> 13962 (frequency: 4272)
+2026-01-11 21:11:39,228 - rustbpe - [32m[1mINFO[0m - Progress: [1m22%[0m (14360/65271 merges) - Last merge: (6986, 1695) -> 14615 (frequency: 3966)
+2026-01-11 21:11:39,270 - rustbpe - [32m[1mINFO[0m - Progress: [1m23%[0m (15013/65271 merges) - Last merge: (12113, 12401) -> 15268 (frequency: 3697)
+2026-01-11 21:11:39,309 - rustbpe - [32m[1mINFO[0m - Progress: [1m24%[0m (15666/65271 merges) - Last merge: (949, 12073) -> 15921 (frequency: 3446)
+2026-01-11 21:11:39,355 - rustbpe - [32m[1mINFO[0m - Progress: [1m25%[0m (16318/65271 merges) - Last merge: (420, 263) -> 16573 (frequency: 3226)
+2026-01-11 21:11:39,423 - rustbpe - [32m[1mINFO[0m - Progress: [1m26%[0m (16971/65271 merges) - Last merge: (342, 263) -> 17226 (frequency: 3027)
+2026-01-11 21:11:39,455 - rustbpe - [32m[1mINFO[0m - Progress: [1m27%[0m (17624/65271 merges) - Last merge: (441, 3460) -> 17879 (frequency: 2852)
+2026-01-11 21:11:39,501 - rustbpe - [32m[1mINFO[0m - Progress: [1m28%[0m (18276/65271 merges) - Last merge: (313, 13271) -> 18531 (frequency: 2699)
+2026-01-11 21:11:39,536 - rustbpe - [32m[1mINFO[0m - Progress: [1m29%[0m (18929/65271 merges) - Last merge: (45, 450) -> 19184 (frequency: 2546)
+2026-01-11 21:11:39,564 - rustbpe - [32m[1mINFO[0m - Progress: [1m30%[0m (19582/65271 merges) - Last merge: (428, 3299) -> 19837 (frequency: 2400)
+2026-01-11 21:11:39,586 - rustbpe - [32m[1mINFO[0m - Progress: [1m31%[0m (20235/65271 merges) - Last merge: (313, 274) -> 20490 (frequency: 2276)
+2026-01-11 21:11:39,617 - rustbpe - [32m[1mINFO[0m - Progress: [1m32%[0m (20887/65271 merges) - Last merge: (2804, 293) -> 21142 (frequency: 2155)
+2026-01-11 21:11:39,642 - rustbpe - [32m[1mINFO[0m - Progress: [1m33%[0m (21540/65271 merges) - Last merge: (629, 321) -> 21795 (frequency: 2049)
+2026-01-11 21:11:39,667 - rustbpe - [32m[1mINFO[0m - Progress: [1m34%[0m (22193/65271 merges) - Last merge: (10820, 363) -> 22448 (frequency: 1945)
+2026-01-11 21:11:39,695 - rustbpe - [32m[1mINFO[0m - Progress: [1m35%[0m (22845/65271 merges) - Last merge: (15499, 10886) -> 23100 (frequency: 1850)
+2026-01-11 21:11:39,715 - rustbpe - [32m[1mINFO[0m - Progress: [1m36%[0m (23498/65271 merges) - Last merge: (5037, 756) -> 23753 (frequency: 1758)
+2026-01-11 21:11:39,744 - rustbpe - [32m[1mINFO[0m - Progress: [1m37%[0m (24151/65271 merges) - Last merge: (1811, 1627) -> 24406 (frequency: 1673)
+2026-01-11 21:11:39,767 - rustbpe - [32m[1mINFO[0m - Progress: [1m38%[0m (24803/65271 merges) - Last merge: (10235, 3181) -> 25058 (frequency: 1598)
+2026-01-11 21:11:39,795 - rustbpe - [32m[1mINFO[0m - Progress: [1m39%[0m (25456/65271 merges) - Last merge: (16956, 1121) -> 25711 (frequency: 1525)
+2026-01-11 21:11:39,822 - rustbpe - [32m[1mINFO[0m - Progress: [1m40%[0m (26109/65271 merges) - Last merge: (2419, 636) -> 26364 (frequency: 1462)
+2026-01-11 21:11:39,845 - rustbpe - [32m[1mINFO[0m - Progress: [1m41%[0m (26762/65271 merges) - Last merge: (2549, 1122) -> 27017 (frequency: 1402)
+2026-01-11 21:11:39,871 - rustbpe - [32m[1mINFO[0m - Progress: [1m42%[0m (27414/65271 merges) - Last merge: (99, 1091) -> 27669 (frequency: 1343)
+2026-01-11 21:11:39,896 - rustbpe - [32m[1mINFO[0m - Progress: [1m43%[0m (28067/65271 merges) - Last merge: (216, 170) -> 28322 (frequency: 1288)
+2026-01-11 21:11:39,922 - rustbpe - [32m[1mINFO[0m - Progress: [1m44%[0m (28720/65271 merges) - Last merge: (402, 263) -> 28975 (frequency: 1233)
+2026-01-11 21:11:39,944 - rustbpe - [32m[1mINFO[0m - Progress: [1m45%[0m (29372/65271 merges) - Last merge: (19389, 466) -> 29627 (frequency: 1190)
+2026-01-11 21:11:39,967 - rustbpe - [32m[1mINFO[0m - Progress: [1m46%[0m (30025/65271 merges) - Last merge: (4600, 76) -> 30280 (frequency: 1145)
+2026-01-11 21:11:39,984 - rustbpe - [32m[1mINFO[0m - Progress: [1m47%[0m (30678/65271 merges) - Last merge: (304, 849) -> 30933 (frequency: 1100)
+2026-01-11 21:11:40,006 - rustbpe - [32m[1mINFO[0m - Progress: [1m48%[0m (31331/65271 merges) - Last merge: (5090, 596) -> 31586 (frequency: 1063)
+2026-01-11 21:11:40,023 - rustbpe - [32m[1mINFO[0m - Progress: [1m49%[0m (31983/65271 merges) - Last merge: (21702, 9305) -> 32238 (frequency: 1026)
+2026-01-11 21:11:40,040 - rustbpe - [32m[1mINFO[0m - Progress: [1m50%[0m (32636/65271 merges) - Last merge: (78, 11441) -> 32891 (frequency: 988)
+2026-01-11 21:11:40,061 - rustbpe - [32m[1mINFO[0m - Progress: [1m51%[0m (33289/65271 merges) - Last merge: (17782, 373) -> 33544 (frequency: 956)
+2026-01-11 21:11:40,079 - rustbpe - [32m[1mINFO[0m - Progress: [1m52%[0m (33941/65271 merges) - Last merge: (6872, 474) -> 34196 (frequency: 925)
+2026-01-11 21:11:40,097 - rustbpe - [32m[1mINFO[0m - Progress: [1m53%[0m (34594/65271 merges) - Last merge: (13160, 1816) -> 34849 (frequency: 893)
+2026-01-11 21:11:40,115 - rustbpe - [32m[1mINFO[0m - Progress: [1m54%[0m (35247/65271 merges) - Last merge: (336, 1855) -> 35502 (frequency: 865)
+2026-01-11 21:11:40,141 - rustbpe - [32m[1mINFO[0m - Progress: [1m55%[0m (35900/65271 merges) - Last merge: (446, 276) -> 36155 (frequency: 838)
+2026-01-11 21:11:40,155 - rustbpe - [32m[1mINFO[0m - Progress: [1m56%[0m (36552/65271 merges) - Last merge: (337, 1876) -> 36807 (frequency: 811)
+2026-01-11 21:11:40,168 - rustbpe - [32m[1mINFO[0m - Progress: [1m57%[0m (37205/65271 merges) - Last merge: (27812, 319) -> 37460 (frequency: 787)
+2026-01-11 21:11:40,182 - rustbpe - [32m[1mINFO[0m - Progress: [1m58%[0m (37858/65271 merges) - Last merge: (2181, 2035) -> 38113 (frequency: 763)
+2026-01-11 21:11:40,202 - rustbpe - [32m[1mINFO[0m - Progress: [1m59%[0m (38510/65271 merges) - Last merge: (529, 35912) -> 38765 (frequency: 739)
+2026-01-11 21:11:40,216 - rustbpe - [32m[1mINFO[0m - Progress: [1m60%[0m (39163/65271 merges) - Last merge: (1626, 758) -> 39418 (frequency: 717)
+2026-01-11 21:11:40,239 - rustbpe - [32m[1mINFO[0m - Progress: [1m61%[0m (39816/65271 merges) - Last merge: (2884, 36357) -> 40071 (frequency: 696)
+2026-01-11 21:11:40,251 - rustbpe - [32m[1mINFO[0m - Progress: [1m62%[0m (40469/65271 merges) - Last merge: (22732, 852) -> 40724 (frequency: 676)
+2026-01-11 21:11:40,286 - rustbpe - [32m[1mINFO[0m - Progress: [1m63%[0m (41121/65271 merges) - Last merge: (2718, 80) -> 41376 (frequency: 656)
+2026-01-11 21:11:40,305 - rustbpe - [32m[1mINFO[0m - Progress: [1m64%[0m (41774/65271 merges) - Last merge: (5190, 424) -> 42029 (frequency: 637)
+2026-01-11 21:11:40,322 - rustbpe - [32m[1mINFO[0m - Progress: [1m65%[0m (42427/65271 merges) - Last merge: (1598, 12834) -> 42682 (frequency: 619)
+2026-01-11 21:11:40,340 - rustbpe - [32m[1mINFO[0m - Progress: [1m66%[0m (43079/65271 merges) - Last merge: (1929, 2037) -> 43334 (frequency: 602)
+2026-01-11 21:11:40,350 - rustbpe - [32m[1mINFO[0m - Progress: [1m67%[0m (43732/65271 merges) - Last merge: (37877, 14879) -> 43987 (frequency: 585)
+2026-01-11 21:11:40,366 - rustbpe - [32m[1mINFO[0m - Progress: [1m68%[0m (44385/65271 merges) - Last merge: (29758, 3004) -> 44640 (frequency: 570)
+2026-01-11 21:11:40,377 - rustbpe - [32m[1mINFO[0m - Progress: [1m69%[0m (45037/65271 merges) - Last merge: (12204, 1404) -> 45292 (frequency: 555)
+2026-01-11 21:11:40,392 - rustbpe - [32m[1mINFO[0m - Progress: [1m70%[0m (45690/65271 merges) - Last merge: (2806, 259) -> 45945 (frequency: 540)
+2026-01-11 21:11:40,408 - rustbpe - [32m[1mINFO[0m - Progress: [1m71%[0m (46343/65271 merges) - Last merge: (9018, 34477) -> 46598 (frequency: 527)
+2026-01-11 21:11:40,421 - rustbpe - [32m[1mINFO[0m - Progress: [1m72%[0m (46996/65271 merges) - Last merge: (420, 8269) -> 47251 (frequency: 513)
+2026-01-11 21:11:40,435 - rustbpe - [32m[1mINFO[0m - Progress: [1m73%[0m (47648/65271 merges) - Last merge: (7466, 282) -> 47903 (frequency: 501)
+2026-01-11 21:11:40,445 - rustbpe - [32m[1mINFO[0m - Progress: [1m74%[0m (48301/65271 merges) - Last merge: (438, 4996) -> 48556 (frequency: 489)
+2026-01-11 21:11:40,456 - rustbpe - [32m[1mINFO[0m - Progress: [1m75%[0m (48954/65271 merges) - Last merge: (4604, 276) -> 49209 (frequency: 478)
+2026-01-11 21:11:40,474 - rustbpe - [32m[1mINFO[0m - Progress: [1m76%[0m (49606/65271 merges) - Last merge: (1632, 13872) -> 49861 (frequency: 466)
+2026-01-11 21:11:40,485 - rustbpe - [32m[1mINFO[0m - Progress: [1m77%[0m (50259/65271 merges) - Last merge: (3250, 8184) -> 50514 (frequency: 455)
+2026-01-11 21:11:40,497 - rustbpe - [32m[1mINFO[0m - Progress: [1m78%[0m (50912/65271 merges) - Last merge: (560, 3010) -> 51167 (frequency: 445)
+2026-01-11 21:11:40,508 - rustbpe - [32m[1mINFO[0m - Progress: [1m79%[0m (51565/65271 merges) - Last merge: (377, 3255) -> 51820 (frequency: 435)
+2026-01-11 21:11:40,524 - rustbpe - [32m[1mINFO[0m - Progress: [1m80%[0m (52217/65271 merges) - Last merge: (37215, 1508) -> 52472 (frequency: 426)
+2026-01-11 21:11:40,534 - rustbpe - [32m[1mINFO[0m - Progress: [1m81%[0m (52870/65271 merges) - Last merge: (14361, 31789) -> 53125 (frequency: 417)
+2026-01-11 21:11:40,544 - rustbpe - [32m[1mINFO[0m - Progress: [1m82%[0m (53523/65271 merges) - Last merge: (18450, 285) -> 53778 (frequency: 408)
+2026-01-11 21:11:40,554 - rustbpe - [32m[1mINFO[0m - Progress: [1m83%[0m (54175/65271 merges) - Last merge: (18546, 431) -> 54430 (frequency: 399)
+2026-01-11 21:11:40,563 - rustbpe - [32m[1mINFO[0m - Progress: [1m84%[0m (54828/65271 merges) - Last merge: (1191, 105) -> 55083 (frequency: 390)
+2026-01-11 21:11:40,575 - rustbpe - [32m[1mINFO[0m - Progress: [1m85%[0m (55481/65271 merges) - Last merge: (377, 112) -> 55736 (frequency: 382)
+2026-01-11 21:11:40,586 - rustbpe - [32m[1mINFO[0m - Progress: [1m86%[0m (56134/65271 merges) - Last merge: (1554, 97) -> 56389 (frequency: 374)
+2026-01-11 21:11:40,599 - rustbpe - [32m[1mINFO[0m - Progress: [1m87%[0m (56786/65271 merges) - Last merge: (35419, 791) -> 57041 (frequency: 366)
+2026-01-11 21:11:40,611 - rustbpe - [32m[1mINFO[0m - Progress: [1m88%[0m (57439/65271 merges) - Last merge: (1149, 97) -> 57694 (frequency: 358)
+2026-01-11 21:11:40,620 - rustbpe - [32m[1mINFO[0m - Progress: [1m89%[0m (58092/65271 merges) - Last merge: (3105, 755) -> 58347 (frequency: 351)
+2026-01-11 21:11:40,633 - rustbpe - [32m[1mINFO[0m - Progress: [1m90%[0m (58744/65271 merges) - Last merge: (701, 44294) -> 58999 (frequency: 344)
+2026-01-11 21:11:40,644 - rustbpe - [32m[1mINFO[0m - Progress: [1m91%[0m (59397/65271 merges) - Last merge: (441, 431) -> 59652 (frequency: 337)
+2026-01-11 21:11:40,655 - rustbpe - [32m[1mINFO[0m - Progress: [1m92%[0m (60050/65271 merges) - Last merge: (111, 69) -> 60305 (frequency: 330)
+2026-01-11 21:11:40,666 - rustbpe - [32m[1mINFO[0m - Progress: [1m93%[0m (60703/65271 merges) - Last merge: (313, 25817) -> 60958 (frequency: 323)
+2026-01-11 21:11:40,674 - rustbpe - [32m[1mINFO[0m - Progress: [1m94%[0m (61355/65271 merges) - Last merge: (5375, 7100) -> 61610 (frequency: 317)
+2026-01-11 21:11:40,684 - rustbpe - [32m[1mINFO[0m - Progress: [1m95%[0m (62008/65271 merges) - Last merge: (3460, 122) -> 62263 (frequency: 311)
+2026-01-11 21:11:40,694 - rustbpe - [32m[1mINFO[0m - Progress: [1m96%[0m (62661/65271 merges) - Last merge: (4719, 1622) -> 62916 (frequency: 305)
+2026-01-11 21:11:40,702 - rustbpe - [32m[1mINFO[0m - Progress: [1m97%[0m (63313/65271 merges) - Last merge: (58949, 46565) -> 63568 (frequency: 300)
+2026-01-11 21:11:40,711 - rustbpe - [32m[1mINFO[0m - Progress: [1m98%[0m (63966/65271 merges) - Last merge: (45, 391) -> 64221 (frequency: 293)
+2026-01-11 21:11:40,721 - rustbpe - [32m[1mINFO[0m - Progress: [1m99%[0m (64619/65271 merges) - Last merge: (1588, 18644) -> 64874 (frequency: 288)
+2026-01-11 21:11:40,729 - rustbpe - [32m[1mINFO[0m - Progress: [1m100%[0m (65271/65271 merges) - Last merge: (1594, 552) -> 65526 (frequency: 283)
+2026-01-11 21:11:40,730 - rustbpe - [32m[1mINFO[0m - Finished training: 65271 merges completed
+max_chars: 2,000,000,000
+doc_cap: 10,000
+vocab_size: 65,536
+Training time: 41.61s
+Saved tokenizer encoding to /home/rocketegg/.cache/nanochat_d26/tokenizer/tokenizer.pkl
+Saved token_bytes to /home/rocketegg/.cache/nanochat_d26/tokenizer/token_bytes.pt
+
+Vocab sizes:
+GPT-2: 50257
+GPT-4: 100277
+Ours: 65536
+
+Comparison with GPT-2:
+===============================================================================================
+Text Type  Bytes    GPT-2           Ours            Relative     Better    
+                    Tokens  Ratio   Tokens  Ratio   Diff %      
+-----------------------------------------------------------------------------------------------
+news       1819     [91m404    [0m [91m4.50   [0m [92m375    [0m [92m4.85   [0m [92m   +7.2%[0m     Ours      
+korean     893      [91m745    [0m [91m1.20   [0m [92m721    [0m [92m1.24   [0m [92m   +3.2%[0m     Ours      
+code       1259     [91m576    [0m [91m2.19   [0m [92m493    [0m [92m2.55   [0m [92m  +14.4%[0m     Ours      
+math       1834     [92m936    [0m [92m1.96   [0m [91m966    [0m [91m1.90   [0m [91m   -3.2%[0m     GPT-2     
+science    1112     [91m260    [0m [91m4.28   [0m [92m225    [0m [92m4.94   [0m [92m  +13.5%[0m     Ours      
+fwe-train  4208518  [91m900364 [0m [91m4.67   [0m [92m856901 [0m [92m4.91   [0m [92m   +4.8%[0m     Ours      
+fwe-val    4642360  [91m1000660[0m [91m4.64   [0m [92m956855 [0m [92m4.85   [0m [92m   +4.4%[0m     Ours      
+
+Comparison with GPT-4:
+===============================================================================================
+Text Type  Bytes    GPT-4           Ours            Relative     Better    
+                    Tokens  Ratio   Tokens  Ratio   Diff %      
+-----------------------------------------------------------------------------------------------
+news       1819     [91m387    [0m [91m4.70   [0m [92m375    [0m [92m4.85   [0m [92m   +3.1%[0m     Ours      
+korean     893      [92m364    [0m [92m2.45   [0m [91m721    [0m [91m1.24   [0m [91m  -98.1%[0m     GPT-4     
+code       1259     [92m309    [0m [92m4.07   [0m [91m493    [0m [91m2.55   [0m [91m  -59.5%[0m     GPT-4     
+math       1834     [92m832    [0m [92m2.20   [0m [91m966    [0m [91m1.90   [0m [91m  -16.1%[0m     GPT-4     
+science    1112     [91m249    [0m [91m4.47   [0m [92m225    [0m [92m4.94   [0m [92m   +9.6%[0m     Ours      
+fwe-train  4208518  [91m874799 [0m [91m4.81   [0m [92m856901 [0m [92m4.91   [0m [92m   +2.0%[0m     Ours      
+fwe-val    4642360  [91m972573 [0m [91m4.77   [0m [92m956855 [0m [92m4.85   [0m [92m   +1.6%[0m     Ours      
+Waiting for dataset download to complete...
+Base checkpoint found at /home/rocketegg/.cache/nanochat_d26/base_checkpoints/d26/model_040640.pt, skipping base training...
+Mid checkpoint found at /home/rocketegg/.cache/nanochat_d26/mid_checkpoints/d26/model_000801.pt, skipping mid training...
+Overriding: device_batch_size = 16
+Overriding: run = speedrun_d26_local
+Overriding: wandb_project = d26
+Overriding: report_filename = report_d26.md
+Overriding: target_examples_per_step = 512
+Overriding: gradient_checkpointing = True
+Overriding: embedding_lr = 0.04
+Overriding: matrix_lr = 0.004
+Overriding: unembedding_lr = 0.0008
+Overriding: num_epochs = 10
+Autodetected device type: cuda
+2026-01-11 21:11:47,044 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+wandb: Currently logged in as: codeandcodes (codeandcodes-google) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run ho8vs0hf
+wandb: Tracking run with wandb version 0.23.1
+wandb: Run data is saved locally in /home/rocketegg/workspace/nanochat/wandb/run-20260111_211147-ho8vs0hf
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run speedrun_d26_local
+wandb: ⭐️ View project at https://wandb.ai/codeandcodes-google/d26
+wandb: 🚀 View run at https://wandb.ai/codeandcodes-google/d26/runs/ho8vs0hf
+2026-01-11 21:11:48,543 - nanochat.checkpoint_manager - [32m[1mINFO[0m - No model tag provided, guessing model tag: d26
+2026-01-11 21:11:48,543 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /home/rocketegg/.cache/nanochat_d26/mid_checkpoints/d26 with step 801
+2026-01-11 21:11:50,102 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 65536, 'n_layer': 26, 'n_head': 13, 'n_kv_head': 13, 'n_embd': 1664}
+2026-01-11 21:11:50,409 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/allenai/ai2_arc/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-01-11 21:11:50,415 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/allenai/ai2_arc/210d026faf9955653af8916fad021475a3f00453/README.md "HTTP/1.1 200 OK"
+2026-01-11 21:11:50,973 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/allenai/ai2_arc/resolve/210d026faf9955653af8916fad021475a3f00453/ai2_arc.py "HTTP/1.1 404 Not Found"
+2026-01-11 21:11:51,572 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/allenai/ai2_arc/allenai/ai2_arc.py "HTTP/1.1 404 Not Found"
+2026-01-11 21:11:51,843 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://huggingface.co/api/datasets/allenai/ai2_arc/revision/210d026faf9955653af8916fad021475a3f00453 "HTTP/1.1 200 OK"
+2026-01-11 21:11:52,046 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/allenai/ai2_arc/resolve/210d026faf9955653af8916fad021475a3f00453/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-01-11 21:11:52,276 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=allenai/ai2_arc "HTTP/1.1 200 OK"
+2026-01-11 21:11:52,485 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://huggingface.co/api/datasets/allenai/ai2_arc/tree/210d026faf9955653af8916fad021475a3f00453/ARC-Challenge?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-01-11 21:11:52,684 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://huggingface.co/api/datasets/allenai/ai2_arc/tree/210d026faf9955653af8916fad021475a3f00453?recursive=false&expand=false "HTTP/1.1 200 OK"
+2026-01-11 21:11:52,888 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/allenai/ai2_arc/resolve/210d026faf9955653af8916fad021475a3f00453/dataset_infos.json "HTTP/1.1 404 Not Found"
+2026-01-11 21:11:53,088 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://huggingface.co/api/datasets/allenai/ai2_arc/tree/210d026faf9955653af8916fad021475a3f00453/ARC-Easy?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-01-11 21:11:53,293 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/allenai/ai2_arc/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-01-11 21:11:53,299 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/allenai/ai2_arc/210d026faf9955653af8916fad021475a3f00453/README.md "HTTP/1.1 200 OK"
+2026-01-11 21:11:53,500 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/allenai/ai2_arc/resolve/210d026faf9955653af8916fad021475a3f00453/ai2_arc.py "HTTP/1.1 404 Not Found"
+2026-01-11 21:11:53,702 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/allenai/ai2_arc/allenai/ai2_arc.py "HTTP/1.1 404 Not Found"
+2026-01-11 21:11:53,904 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/allenai/ai2_arc/resolve/210d026faf9955653af8916fad021475a3f00453/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-01-11 21:11:54,114 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=allenai/ai2_arc "HTTP/1.1 200 OK"
+2026-01-11 21:11:54,334 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/allenai/ai2_arc/resolve/210d026faf9955653af8916fad021475a3f00453/dataset_infos.json "HTTP/1.1 404 Not Found"
+2026-01-11 21:11:54,536 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/openai/gsm8k/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-01-11 21:11:54,541 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/openai/gsm8k/cc7b047b6e5bb11b4f1af84efc572db110a51b3c/README.md "HTTP/1.1 200 OK"
+2026-01-11 21:11:54,747 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/openai/gsm8k/resolve/cc7b047b6e5bb11b4f1af84efc572db110a51b3c/gsm8k.py "HTTP/1.1 404 Not Found"
+2026-01-11 21:11:54,949 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/openai/gsm8k/openai/gsm8k.py "HTTP/1.1 404 Not Found"
+2026-01-11 21:11:55,510 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://huggingface.co/api/datasets/openai/gsm8k/revision/cc7b047b6e5bb11b4f1af84efc572db110a51b3c "HTTP/1.1 200 OK"
+2026-01-11 21:11:55,710 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/openai/gsm8k/resolve/cc7b047b6e5bb11b4f1af84efc572db110a51b3c/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-01-11 21:11:55,936 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=openai/gsm8k "HTTP/1.1 200 OK"
+2026-01-11 21:11:56,145 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://huggingface.co/api/datasets/openai/gsm8k/tree/cc7b047b6e5bb11b4f1af84efc572db110a51b3c/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-01-11 21:11:56,394 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://huggingface.co/api/datasets/openai/gsm8k/tree/cc7b047b6e5bb11b4f1af84efc572db110a51b3c?recursive=false&expand=false "HTTP/1.1 200 OK"
+2026-01-11 21:11:56,595 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/openai/gsm8k/resolve/cc7b047b6e5bb11b4f1af84efc572db110a51b3c/dataset_infos.json "HTTP/1.1 404 Not Found"
+2026-01-11 21:11:56,802 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/HuggingFaceTB/smol-smoltalk/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-01-11 21:11:56,807 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/HuggingFaceTB/smol-smoltalk/f73fe857d519ff6ac5af2ea67c4d3834da7b8bcc/README.md "HTTP/1.1 200 OK"
+2026-01-11 21:11:57,020 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/HuggingFaceTB/smol-smoltalk/resolve/f73fe857d519ff6ac5af2ea67c4d3834da7b8bcc/smol-smoltalk.py "HTTP/1.1 404 Not Found"
+2026-01-11 21:11:57,220 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/HuggingFaceTB/smol-smoltalk/HuggingFaceTB/smol-smoltalk.py "HTTP/1.1 404 Not Found"
+2026-01-11 21:11:57,434 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://huggingface.co/api/datasets/HuggingFaceTB/smol-smoltalk/revision/f73fe857d519ff6ac5af2ea67c4d3834da7b8bcc "HTTP/1.1 200 OK"
+2026-01-11 21:11:57,807 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/HuggingFaceTB/smol-smoltalk/resolve/f73fe857d519ff6ac5af2ea67c4d3834da7b8bcc/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-01-11 21:11:58,016 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=HuggingFaceTB/smol-smoltalk "HTTP/1.1 200 OK"
+2026-01-11 21:11:58,307 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://huggingface.co/api/datasets/HuggingFaceTB/smol-smoltalk/tree/f73fe857d519ff6ac5af2ea67c4d3834da7b8bcc/data?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-01-11 21:11:58,522 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://huggingface.co/api/datasets/HuggingFaceTB/smol-smoltalk/tree/f73fe857d519ff6ac5af2ea67c4d3834da7b8bcc?recursive=false&expand=false "HTTP/1.1 200 OK"
+2026-01-11 21:11:58,742 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/HuggingFaceTB/smol-smoltalk/resolve/f73fe857d519ff6ac5af2ea67c4d3834da7b8bcc/dataset_infos.json "HTTP/1.1 404 Not Found"
+2026-01-11 21:11:59,104 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/HuggingFaceTB/smol-smoltalk/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-01-11 21:11:59,110 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/HuggingFaceTB/smol-smoltalk/f73fe857d519ff6ac5af2ea67c4d3834da7b8bcc/README.md "HTTP/1.1 200 OK"
+2026-01-11 21:11:59,315 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/HuggingFaceTB/smol-smoltalk/resolve/f73fe857d519ff6ac5af2ea67c4d3834da7b8bcc/smol-smoltalk.py "HTTP/1.1 404 Not Found"
+2026-01-11 21:11:59,517 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/HuggingFaceTB/smol-smoltalk/HuggingFaceTB/smol-smoltalk.py "HTTP/1.1 404 Not Found"
+2026-01-11 21:11:59,718 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/HuggingFaceTB/smol-smoltalk/resolve/f73fe857d519ff6ac5af2ea67c4d3834da7b8bcc/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-01-11 21:12:00,005 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=HuggingFaceTB/smol-smoltalk "HTTP/1.1 200 OK"
+2026-01-11 21:12:00,303 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/HuggingFaceTB/smol-smoltalk/resolve/f73fe857d519ff6ac5af2ea67c4d3834da7b8bcc/dataset_infos.json "HTTP/1.1 404 Not Found"
+Target examples per step: 512
+Device batch size: 16
+Examples per step is device_batch_size * ddp_world_size: 16
+=> Setting grad accum steps: 32
+Scaling the LR for the AdamW parameters ∝1/√(1664/768) = 0.679366
+Muon: Grouping 104 params of shape torch.Size([1664, 1664]), device cuda:0, dtype torch.float32
+Muon: Grouping 26 params of shape torch.Size([1664, 6656]), device cuda:0, dtype torch.float32
+Muon: Grouping 26 params of shape torch.Size([6656, 1664]), device cuda:0, dtype torch.float32
+Step 00000 | Validation loss: 0.897099
+Step 00000/00430 | Training loss: 0.703008| lrm: 1.000000| grad_norm: 0.1337| num_tokens: 173,557
+Step 00001/00430 | Training loss: 0.764297| lrm: 0.997674| grad_norm: 0.1282| num_tokens: 168,282
+Step 00002/00430 | Training loss: 0.835899| lrm: 0.995349| grad_norm: 0.1332| num_tokens: 174,877
+Step 00003/00430 | Training loss: 0.579272| lrm: 0.993023| grad_norm: 0.1292| num_tokens: 164,573
+Step 00004/00430 | Training loss: 0.698999| lrm: 0.990698| grad_norm: 0.1193| num_tokens: 151,925
+Step 00005/00430 | Training loss: 0.642202| lrm: 0.988372| grad_norm: 0.1278| num_tokens: 167,759
+Step 00006/00430 | Training loss: 0.737861| lrm: 0.986047| grad_norm: 0.1236| num_tokens: 167,257
+Step 00007/00430 | Training loss: 0.847472| lrm: 0.983721| grad_norm: 0.1123| num_tokens: 182,482
+Step 00008/00430 | Training loss: 0.711437| lrm: 0.981395| grad_norm: 0.1146| num_tokens: 184,856
+Step 00009/00430 | Training loss: 0.610483| lrm: 0.979070| grad_norm: 0.1319| num_tokens: 185,394
+Step 00010/00430 | Training loss: 0.685390| lrm: 0.976744| grad_norm: 0.1218| num_tokens: 167,684
+Step 00011/00430 | Training loss: 0.902319| lrm: 0.974419| grad_norm: 0.1269| num_tokens: 195,622
+Step 00012/00430 | Training loss: 1.051974| lrm: 0.972093| grad_norm: 0.1220| num_tokens: 181,572
+Step 00013/00430 | Training loss: 0.877508| lrm: 0.969767| grad_norm: 0.1073| num_tokens: 170,687
+Step 00014/00430 | Training loss: 0.696132| lrm: 0.967442| grad_norm: 0.1135| num_tokens: 166,814
+Step 00015/00430 | Training loss: 0.805573| lrm: 0.965116| grad_norm: 0.1134| num_tokens: 174,801
+Step 00016/00430 | Training loss: 0.506875| lrm: 0.962791| grad_norm: 0.1229| num_tokens: 159,012
+Step 00017/00430 | Training loss: 0.861904| lrm: 0.960465| grad_norm: 0.1191| num_tokens: 173,844
+Step 00018/00430 | Training loss: 0.801798| lrm: 0.958140| grad_norm: 0.1145| num_tokens: 172,683
+Step 00019/00430 | Training loss: 0.941912| lrm: 0.955814| grad_norm: 0.1145| num_tokens: 173,008
+Step 00020/00430 | Training loss: 0.605301| lrm: 0.953488| grad_norm: 0.1222| num_tokens: 150,482
+Step 00021/00430 | Training loss: 0.768602| lrm: 0.951163| grad_norm: 0.1183| num_tokens: 161,471
+Step 00022/00430 | Training loss: 0.756178| lrm: 0.948837| grad_norm: 0.1056| num_tokens: 161,280
+Step 00023/00430 | Training loss: 0.809665| lrm: 0.946512| grad_norm: 0.1131| num_tokens: 191,425
+Step 00024/00430 | Training loss: 0.672445| lrm: 0.944186| grad_norm: 0.1088| num_tokens: 180,889
+Step 00025/00430 | Training loss: 0.853985| lrm: 0.941860| grad_norm: 0.1090| num_tokens: 170,334
+Step 00026/00430 | Training loss: 0.855216| lrm: 0.939535| grad_norm: 0.1135| num_tokens: 168,464
+Step 00027/00430 | Training loss: 0.901383| lrm: 0.937209| grad_norm: 0.1121| num_tokens: 192,640
+Step 00028/00430 | Training loss: 0.664185| lrm: 0.934884| grad_norm: 0.1051| num_tokens: 163,250
+Step 00029/00430 | Training loss: 0.635623| lrm: 0.932558| grad_norm: 0.1103| num_tokens: 177,879
+Step 00030/00430 | Training loss: 0.859363| lrm: 0.930233| grad_norm: 0.1097| num_tokens: 163,075
+Step 00031/00430 | Training loss: 0.627673| lrm: 0.927907| grad_norm: 0.1197| num_tokens: 174,312
+Step 00032/00430 | Training loss: 0.826692| lrm: 0.925581| grad_norm: 0.1069| num_tokens: 159,902
+Step 00033/00430 | Training loss: 0.679650| lrm: 0.923256| grad_norm: 0.1068| num_tokens: 176,552
+Step 00034/00430 | Training loss: 0.799574| lrm: 0.920930| grad_norm: 0.1036| num_tokens: 171,012
+Step 00035/00430 | Training loss: 0.780354| lrm: 0.918605| grad_norm: 0.1069| num_tokens: 178,814
+Step 00036/00430 | Training loss: 0.757822| lrm: 0.916279| grad_norm: 0.1059| num_tokens: 171,611
+Step 00037/00430 | Training loss: 0.895355| lrm: 0.913953| grad_norm: 0.1087| num_tokens: 161,386
+Step 00038/00430 | Training loss: 0.679900| lrm: 0.911628| grad_norm: 0.1090| num_tokens: 177,975
+Step 00039/00430 | Training loss: 0.626493| lrm: 0.909302| grad_norm: 0.1037| num_tokens: 165,789
+Step 00040/00430 | Training loss: 0.564914| lrm: 0.906977| grad_norm: 0.1141| num_tokens: 170,607
+Step 00041/00430 | Training loss: 0.814263| lrm: 0.904651| grad_norm: 0.1015| num_tokens: 164,971
+Step 00042/00430 | Training loss: 0.769699| lrm: 0.902326| grad_norm: 0.0953| num_tokens: 179,367
+Step 00043/00430 | Training loss: 0.755600| lrm: 0.900000| grad_norm: 0.1013| num_tokens: 164,686
+Step 00044/00430 | Training loss: 0.798398| lrm: 0.897674| grad_norm: 0.1088| num_tokens: 175,670
+Step 00045/00430 | Training loss: 0.628860| lrm: 0.895349| grad_norm: 0.1041| num_tokens: 165,647
+Step 00046/00430 | Training loss: 0.653481| lrm: 0.893023| grad_norm: 0.1067| num_tokens: 173,185
+Step 00047/00430 | Training loss: 0.657128| lrm: 0.890698| grad_norm: 0.0966| num_tokens: 163,239
+Step 00048/00430 | Training loss: 0.852670| lrm: 0.888372| grad_norm: 0.0991| num_tokens: 155,621
+Step 00049/00430 | Training loss: 0.623436| lrm: 0.886047| grad_norm: 0.1021| num_tokens: 170,566
+Step 00050/00430 | Training loss: 0.744398| lrm: 0.883721| grad_norm: 0.0924| num_tokens: 174,728
+Step 00051/00430 | Training loss: 0.874944| lrm: 0.881395| grad_norm: 0.0919| num_tokens: 169,246
+Step 00052/00430 | Training loss: 0.753631| lrm: 0.879070| grad_norm: 0.0920| num_tokens: 196,661
+Step 00053/00430 | Training loss: 0.743269| lrm: 0.876744| grad_norm: 0.1039| num_tokens: 175,187
+Step 00054/00430 | Training loss: 0.891890| lrm: 0.874419| grad_norm: 0.0933| num_tokens: 172,803
+Step 00055/00430 | Training loss: 0.920423| lrm: 0.872093| grad_norm: 0.0974| num_tokens: 188,311
+Step 00056/00430 | Training loss: 0.633336| lrm: 0.869767| grad_norm: 0.0951| num_tokens: 186,943
+Step 00057/00430 | Training loss: 0.945832| lrm: 0.867442| grad_norm: 0.0858| num_tokens: 165,970
+Step 00058/00430 | Training loss: 0.489894| lrm: 0.865116| grad_norm: 0.0899| num_tokens: 169,383
+Step 00059/00430 | Training loss: 0.704951| lrm: 0.862791| grad_norm: 0.0976| num_tokens: 173,794
+Step 00060/00430 | Training loss: 0.667549| lrm: 0.860465| grad_norm: 0.0941| num_tokens: 160,151
+Step 00061/00430 | Training loss: 0.956149| lrm: 0.858140| grad_norm: 0.0920| num_tokens: 165,905
+Step 00062/00430 | Training loss: 0.913022| lrm: 0.855814| grad_norm: 0.0955| num_tokens: 182,075
+Step 00063/00430 | Training loss: 0.724695| lrm: 0.853488| grad_norm: 0.0892| num_tokens: 160,212
+Step 00064/00430 | Training loss: 0.757429| lrm: 0.851163| grad_norm: 0.0958| num_tokens: 164,683
+Step 00065/00430 | Training loss: 0.860249| lrm: 0.848837| grad_norm: 0.0923| num_tokens: 156,044
+Step 00066/00430 | Training loss: 0.870849| lrm: 0.846512| grad_norm: 0.0897| num_tokens: 167,962
+Step 00067/00430 | Training loss: 0.806690| lrm: 0.844186| grad_norm: 0.0918| num_tokens: 189,148
+Step 00068/00430 | Training loss: 0.762317| lrm: 0.841860| grad_norm: 0.0842| num_tokens: 170,662
+Step 00069/00430 | Training loss: 0.768056| lrm: 0.839535| grad_norm: 0.0890| num_tokens: 175,867
+Step 00070/00430 | Training loss: 0.943807| lrm: 0.837209| grad_norm: 0.0963| num_tokens: 172,756
+Step 00071/00430 | Training loss: 0.847021| lrm: 0.834884| grad_norm: 0.0869| num_tokens: 192,440
+Step 00072/00430 | Training loss: 0.892040| lrm: 0.832558| grad_norm: 0.0909| num_tokens: 157,750
+Step 00073/00430 | Training loss: 0.825758| lrm: 0.830233| grad_norm: 0.0890| num_tokens: 179,635
+Step 00074/00430 | Training loss: 0.865938| lrm: 0.827907| grad_norm: 0.0881| num_tokens: 166,345
+Step 00075/00430 | Training loss: 0.809536| lrm: 0.825581| grad_norm: 0.0965| num_tokens: 170,209
+Step 00076/00430 | Training loss: 0.535558| lrm: 0.823256| grad_norm: 0.0871| num_tokens: 169,248
+Step 00077/00430 | Training loss: 0.761395| lrm: 0.820930| grad_norm: 0.0869| num_tokens: 175,445
+Step 00078/00430 | Training loss: 0.676557| lrm: 0.818605| grad_norm: 0.0864| num_tokens: 162,549
+Step 00079/00430 | Training loss: 0.619923| lrm: 0.816279| grad_norm: 0.0870| num_tokens: 181,590
+Step 00080/00430 | Training loss: 0.578614| lrm: 0.813953| grad_norm: 0.0918| num_tokens: 174,856
+Step 00081/00430 | Training loss: 0.862083| lrm: 0.811628| grad_norm: 0.0863| num_tokens: 161,665
+Step 00082/00430 | Training loss: 0.782735| lrm: 0.809302| grad_norm: 0.0907| num_tokens: 173,690
+Step 00083/00430 | Training loss: 0.846208| lrm: 0.806977| grad_norm: 0.0874| num_tokens: 166,910
+Step 00084/00430 | Training loss: 0.831089| lrm: 0.804651| grad_norm: 0.0942| num_tokens: 170,934
+Step 00085/00430 | Training loss: 0.796870| lrm: 0.802326| grad_norm: 0.0857| num_tokens: 160,621
+Step 00086/00430 | Training loss: 0.629237| lrm: 0.800000| grad_norm: 0.0844| num_tokens: 180,839
+Step 00087/00430 | Training loss: 0.569342| lrm: 0.797674| grad_norm: 0.0880| num_tokens: 167,079
+Step 00088/00430 | Training loss: 0.837432| lrm: 0.795349| grad_norm: 0.0894| num_tokens: 177,216
+Step 00089/00430 | Training loss: 0.714545| lrm: 0.793023| grad_norm: 0.0876| num_tokens: 163,022
+Step 00090/00430 | Training loss: 0.994966| lrm: 0.790698| grad_norm: 0.0877| num_tokens: 170,375
+Step 00091/00430 | Training loss: 0.785286| lrm: 0.788372| grad_norm: 0.0821| num_tokens: 169,320
+Step 00092/00430 | Training loss: 0.688827| lrm: 0.786047| grad_norm: 0.0859| num_tokens: 156,047
+Step 00093/00430 | Training loss: 0.886706| lrm: 0.783721| grad_norm: 0.0880| num_tokens: 165,647
+Step 00094/00430 | Training loss: 0.736999| lrm: 0.781395| grad_norm: 0.0789| num_tokens: 177,985
+Step 00095/00430 | Training loss: 0.832242| lrm: 0.779070| grad_norm: 0.0823| num_tokens: 173,658
+Step 00096/00430 | Training loss: 0.777962| lrm: 0.776744| grad_norm: 0.0806| num_tokens: 190,608
+Step 00097/00430 | Training loss: 0.829479| lrm: 0.774419| grad_norm: 0.0884| num_tokens: 171,180
+Step 00098/00430 | Training loss: 0.929894| lrm: 0.772093| grad_norm: 0.0808| num_tokens: 180,637
+Step 00099/00430 | Training loss: 1.026421| lrm: 0.769767| grad_norm: 0.0844| num_tokens: 190,069
+Step 00100 | Validation loss: 0.898813
+Step 00100/00430 | Training loss: 0.715755| lrm: 0.767442| grad_norm: 0.0808| num_tokens: 189,339
+Step 00101/00430 | Training loss: 0.843904| lrm: 0.765116| grad_norm: 0.0809| num_tokens: 159,178
+Step 00102/00430 | Training loss: 0.743480| lrm: 0.762791| grad_norm: 0.0813| num_tokens: 168,255
+Step 00103/00430 | Training loss: 0.679965| lrm: 0.760465| grad_norm: 0.0849| num_tokens: 171,313
+Step 00104/00430 | Training loss: 0.657687| lrm: 0.758140| grad_norm: 0.0825| num_tokens: 163,669
+Step 00105/00430 | Training loss: 0.802563| lrm: 0.755814| grad_norm: 0.0848| num_tokens: 170,372
+Step 00106/00430 | Training loss: 0.775938| lrm: 0.753488| grad_norm: 0.0827| num_tokens: 174,324
+Step 00107/00430 | Training loss: 0.871054| lrm: 0.751163| grad_norm: 0.0850| num_tokens: 163,150
+Step 00108/00430 | Training loss: 0.863935| lrm: 0.748837| grad_norm: 0.0893| num_tokens: 157,043
+Step 00109/00430 | Training loss: 0.712858| lrm: 0.746512| grad_norm: 0.0814| num_tokens: 160,968
+Step 00110/00430 | Training loss: 0.829932| lrm: 0.744186| grad_norm: 0.0815| num_tokens: 171,101
+Step 00111/00430 | Training loss: 0.818872| lrm: 0.741860| grad_norm: 0.0825| num_tokens: 191,554
+Step 00112/00430 | Training loss: 0.761562| lrm: 0.739535| grad_norm: 0.0788| num_tokens: 169,756
+Step 00113/00430 | Training loss: 0.672010| lrm: 0.737209| grad_norm: 0.0847| num_tokens: 172,070
+Step 00114/00430 | Training loss: 0.736555| lrm: 0.734884| grad_norm: 0.0819| num_tokens: 180,442
+Step 00115/00430 | Training loss: 0.741831| lrm: 0.732558| grad_norm: 0.0778| num_tokens: 186,944
+Step 00116/00430 | Training loss: 0.640544| lrm: 0.730233| grad_norm: 0.0841| num_tokens: 156,347
+Step 00117/00430 | Training loss: 0.924032| lrm: 0.727907| grad_norm: 0.0802| num_tokens: 181,514
+Step 00118/00430 | Training loss: 0.838563| lrm: 0.725581| grad_norm: 0.0796| num_tokens: 174,109
+Step 00119/00430 | Training loss: 0.823764| lrm: 0.723256| grad_norm: 0.0851| num_tokens: 162,949
+Step 00120/00430 | Training loss: 0.727515| lrm: 0.720930| grad_norm: 0.0879| num_tokens: 164,976
+Step 00121/00430 | Training loss: 0.974183| lrm: 0.718605| grad_norm: 0.0791| num_tokens: 177,370
+Step 00122/00430 | Training loss: 0.939130| lrm: 0.716279| grad_norm: 0.0824| num_tokens: 166,312
+Step 00123/00430 | Training loss: 0.996492| lrm: 0.713953| grad_norm: 0.0802| num_tokens: 178,471
+Step 00124/00430 | Training loss: 0.854077| lrm: 0.711628| grad_norm: 0.0842| num_tokens: 167,286
+Step 00125/00430 | Training loss: 0.742207| lrm: 0.709302| grad_norm: 0.0788| num_tokens: 171,003
+Step 00126/00430 | Training loss: 0.967092| lrm: 0.706977| grad_norm: 0.0849| num_tokens: 167,096
+Step 00127/00430 | Training loss: 0.954242| lrm: 0.704651| grad_norm: 0.0820| num_tokens: 170,607
+Step 00128/00430 | Training loss: 0.790576| lrm: 0.702326| grad_norm: 0.0867| num_tokens: 168,452
+Step 00129/00430 | Training loss: 0.789171| lrm: 0.700000| grad_norm: 0.0819| num_tokens: 170,074
+Step 00130/00430 | Training loss: 0.738757| lrm: 0.697674| grad_norm: 0.0804| num_tokens: 177,040
+Step 00131/00430 | Training loss: 0.887408| lrm: 0.695349| grad_norm: 0.0799| num_tokens: 167,493
+Step 00132/00430 | Training loss: 0.836033| lrm: 0.693023| grad_norm: 0.0812| num_tokens: 171,459
+Step 00133/00430 | Training loss: 0.785335| lrm: 0.690698| grad_norm: 0.0847| num_tokens: 157,744
+Step 00134/00430 | Training loss: 0.942533| lrm: 0.688372| grad_norm: 0.0842| num_tokens: 171,965
+Step 00135/00430 | Training loss: 0.850932| lrm: 0.686047| grad_norm: 0.0774| num_tokens: 171,379
+Step 00136/00430 | Training loss: 0.759573| lrm: 0.683721| grad_norm: 0.0815| num_tokens: 159,715
+Step 00137/00430 | Training loss: 0.889472| lrm: 0.681395| grad_norm: 0.0833| num_tokens: 166,669
+Step 00138/00430 | Training loss: 0.745242| lrm: 0.679070| grad_norm: 0.0777| num_tokens: 183,395
+Step 00139/00430 | Training loss: 0.926448| lrm: 0.676744| grad_norm: 0.0807| num_tokens: 174,272
+Step 00140/00430 | Training loss: 0.763338| lrm: 0.674419| grad_norm: 0.0771| num_tokens: 190,208
+Step 00141/00430 | Training loss: 0.719835| lrm: 0.672093| grad_norm: 0.0831| num_tokens: 165,700
+Step 00142/00430 | Training loss: 0.799744| lrm: 0.669767| grad_norm: 0.0780| num_tokens: 185,468
+Step 00143/00430 | Training loss: 0.605344| lrm: 0.667442| grad_norm: 0.0777| num_tokens: 186,543
+Step 00144/00430 | Training loss: 0.525999| lrm: 0.665116| grad_norm: 0.0772| num_tokens: 184,833
+Step 00145/00430 | Training loss: 0.833142| lrm: 0.662791| grad_norm: 0.0819| num_tokens: 158,850
+Step 00146/00430 | Training loss: 0.871650| lrm: 0.660465| grad_norm: 0.0815| num_tokens: 169,204
+Step 00147/00430 | Training loss: 0.870987| lrm: 0.658140| grad_norm: 0.0827| num_tokens: 170,350
+Step 00148/00430 | Training loss: 0.536074| lrm: 0.655814| grad_norm: 0.0792| num_tokens: 166,311
+Step 00149/00430 | Training loss: 0.971755| lrm: 0.653488| grad_norm: 0.0790| num_tokens: 169,400
+Step 00150/00430 | Training loss: 0.626351| lrm: 0.651163| grad_norm: 0.0780| num_tokens: 179,933
+Step 00151/00430 | Training loss: 0.721615| lrm: 0.648837| grad_norm: 0.0843| num_tokens: 158,480
+Step 00152/00430 | Training loss: 0.635740| lrm: 0.646512| grad_norm: 0.0828| num_tokens: 155,003
+Step 00153/00430 | Training loss: 0.718666| lrm: 0.644186| grad_norm: 0.0797| num_tokens: 159,937
+Step 00154/00430 | Training loss: 0.820077| lrm: 0.641860| grad_norm: 0.0791| num_tokens: 178,946
+Step 00155/00430 | Training loss: 0.672466| lrm: 0.639535| grad_norm: 0.0754| num_tokens: 194,274
+Step 00156/00430 | Training loss: 0.754436| lrm: 0.637209| grad_norm: 0.0823| num_tokens: 157,760
+Step 00157/00430 | Training loss: 0.718144| lrm: 0.634884| grad_norm: 0.0779| num_tokens: 188,484
+Step 00158/00430 | Training loss: 0.840490| lrm: 0.632558| grad_norm: 0.0806| num_tokens: 172,657
+Step 00159/00430 | Training loss: 0.884734| lrm: 0.630233| grad_norm: 0.0739| num_tokens: 181,061
+Step 00160/00430 | Training loss: 1.190247| lrm: 0.627907| grad_norm: 0.0820| num_tokens: 161,772
+Step 00161/00430 | Training loss: 0.868944| lrm: 0.625581| grad_norm: 0.0809| num_tokens: 174,936
+Step 00162/00430 | Training loss: 0.897347| lrm: 0.623256| grad_norm: 0.0781| num_tokens: 178,994
+Step 00163/00430 | Training loss: 0.853094| lrm: 0.620930| grad_norm: 0.0793| num_tokens: 159,118
+Step 00164/00430 | Training loss: 0.693462| lrm: 0.618605| grad_norm: 0.0816| num_tokens: 167,065
+Step 00165/00430 | Training loss: 0.707991| lrm: 0.616279| grad_norm: 0.0780| num_tokens: 177,659
+Step 00166/00430 | Training loss: 1.077700| lrm: 0.613953| grad_norm: 0.0780| num_tokens: 179,684
+Step 00167/00430 | Training loss: 0.782793| lrm: 0.611628| grad_norm: 0.0784| num_tokens: 169,866
+Step 00168/00430 | Training loss: 0.873737| lrm: 0.609302| grad_norm: 0.0853| num_tokens: 160,003
+Step 00169/00430 | Training loss: 0.808504| lrm: 0.606977| grad_norm: 0.0763| num_tokens: 181,993
+Step 00170/00430 | Training loss: 0.621374| lrm: 0.604651| grad_norm: 0.0828| num_tokens: 162,219
+Step 00171/00430 | Training loss: 0.794297| lrm: 0.602326| grad_norm: 0.0803| num_tokens: 171,177
+Step 00172/00430 | Training loss: 0.729850| lrm: 0.600000| grad_norm: 0.0801| num_tokens: 161,529
+Step 00173/00430 | Training loss: 0.728226| lrm: 0.597674| grad_norm: 0.0825| num_tokens: 172,500
+Step 00174/00430 | Training loss: 0.705223| lrm: 0.595349| grad_norm: 0.0802| num_tokens: 173,554
+Step 00175/00430 | Training loss: 0.631987| lrm: 0.593023| grad_norm: 0.0760| num_tokens: 172,687
+Step 00176/00430 | Training loss: 0.814338| lrm: 0.590698| grad_norm: 0.0790| num_tokens: 173,786
+Step 00177/00430 | Training loss: 0.613923| lrm: 0.588372| grad_norm: 0.0835| num_tokens: 162,647
+Step 00178/00430 | Training loss: 0.750973| lrm: 0.586047| grad_norm: 0.0813| num_tokens: 166,085
+Step 00179/00430 | Training loss: 0.732265| lrm: 0.583721| grad_norm: 0.0781| num_tokens: 164,192
+Step 00180/00430 | Training loss: 0.777910| lrm: 0.581395| grad_norm: 0.0808| num_tokens: 162,109
+Step 00181/00430 | Training loss: 0.836557| lrm: 0.579070| grad_norm: 0.0802| num_tokens: 167,550
+Step 00182/00430 | Training loss: 0.585436| lrm: 0.576744| grad_norm: 0.0788| num_tokens: 188,398
+Step 00183/00430 | Training loss: 0.685653| lrm: 0.574419| grad_norm: 0.0814| num_tokens: 172,791
+Step 00184/00430 | Training loss: 0.961993| lrm: 0.572093| grad_norm: 0.0746| num_tokens: 188,498
+Step 00185/00430 | Training loss: 0.654057| lrm: 0.569767| grad_norm: 0.0805| num_tokens: 167,822
+Step 00186/00430 | Training loss: 0.892080| lrm: 0.567442| grad_norm: 0.0758| num_tokens: 191,425
+Step 00187/00430 | Training loss: 0.840856| lrm: 0.565116| grad_norm: 0.0770| num_tokens: 186,401
+Step 00188/00430 | Training loss: 0.667884| lrm: 0.562791| grad_norm: 0.0800| num_tokens: 175,618
+Step 00189/00430 | Training loss: 0.800757| lrm: 0.560465| grad_norm: 0.0791| num_tokens: 163,595
+Step 00190/00430 | Training loss: 0.888612| lrm: 0.558140| grad_norm: 0.0792| num_tokens: 168,114
+Step 00191/00430 | Training loss: 0.835048| lrm: 0.555814| grad_norm: 0.0819| num_tokens: 168,542
+Step 00192/00430 | Training loss: 0.705668| lrm: 0.553488| grad_norm: 0.0763| num_tokens: 168,816
+Step 00193/00430 | Training loss: 0.708679| lrm: 0.551163| grad_norm: 0.0793| num_tokens: 173,900
+Step 00194/00430 | Training loss: 0.874237| lrm: 0.548837| grad_norm: 0.0780| num_tokens: 171,012
+Step 00195/00430 | Training loss: 0.434172| lrm: 0.546512| grad_norm: 0.0844| num_tokens: 155,851
+Step 00196/00430 | Training loss: 0.763925| lrm: 0.544186| grad_norm: 0.0785| num_tokens: 157,987
+Step 00197/00430 | Training loss: 0.839234| lrm: 0.541860| grad_norm: 0.0809| num_tokens: 162,542
+Step 00198/00430 | Training loss: 0.810149| lrm: 0.539535| grad_norm: 0.0797| num_tokens: 182,309
+Step 00199/00430 | Training loss: 0.790129| lrm: 0.537209| grad_norm: 0.0745| num_tokens: 196,192
+Step 00200 | Validation loss: 0.900670
+2026-01-11 22:52:40,495 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/cais/mmlu/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-01-11 22:52:40,501 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/cais/mmlu/c30699e8356da336a370243923dbaf21066bb9fe/README.md "HTTP/1.1 200 OK"
+2026-01-11 22:52:40,704 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/cais/mmlu/resolve/c30699e8356da336a370243923dbaf21066bb9fe/mmlu.py "HTTP/1.1 404 Not Found"
+2026-01-11 22:52:41,404 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/cais/mmlu/cais/mmlu.py "HTTP/1.1 404 Not Found"
+2026-01-11 22:52:41,699 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://huggingface.co/api/datasets/cais/mmlu/revision/c30699e8356da336a370243923dbaf21066bb9fe "HTTP/1.1 200 OK"
+2026-01-11 22:52:41,903 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/cais/mmlu/resolve/c30699e8356da336a370243923dbaf21066bb9fe/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-01-11 22:52:42,135 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=cais/mmlu "HTTP/1.1 200 OK"
+2026-01-11 22:52:42,336 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://huggingface.co/api/datasets/cais/mmlu/tree/c30699e8356da336a370243923dbaf21066bb9fe/abstract_algebra?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-01-11 22:52:42,548 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://huggingface.co/api/datasets/cais/mmlu/tree/c30699e8356da336a370243923dbaf21066bb9fe?recursive=false&expand=false "HTTP/1.1 200 OK"
+2026-01-11 22:52:42,762 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://huggingface.co/api/datasets/cais/mmlu/tree/c30699e8356da336a370243923dbaf21066bb9fe/all?recursive=true&expand=false "HTTP/1.1 200 OK"
+Final: 384/1024 (37.50%)
+2026-01-11 22:52:48,013 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/allenai/ai2_arc/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-01-11 22:52:48,019 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/allenai/ai2_arc/210d026faf9955653af8916fad021475a3f00453/README.md "HTTP/1.1 200 OK"
+2026-01-11 22:52:48,221 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/allenai/ai2_arc/resolve/210d026faf9955653af8916fad021475a3f00453/ai2_arc.py "HTTP/1.1 404 Not Found"
+2026-01-11 22:52:48,907 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/allenai/ai2_arc/allenai/ai2_arc.py "HTTP/1.1 404 Not Found"
+2026-01-11 22:52:49,111 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/allenai/ai2_arc/resolve/210d026faf9955653af8916fad021475a3f00453/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-01-11 22:52:49,327 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=allenai/ai2_arc "HTTP/1.1 200 OK"
+2026-01-11 22:52:49,526 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/allenai/ai2_arc/resolve/210d026faf9955653af8916fad021475a3f00453/dataset_infos.json "HTTP/1.1 404 Not Found"
+Final: 597/1024 (58.30%)
+Step 00200 | mmlu_acc: 0.375000, arc_easy_acc: 0.583008
+Step 00200/00430 | Training loss: 0.909068| lrm: 0.534884| grad_norm: 0.0819| num_tokens: 155,814
+Step 00201/00430 | Training loss: 0.785150| lrm: 0.532558| grad_norm: 0.0821| num_tokens: 178,982
+Step 00202/00430 | Training loss: 0.765000| lrm: 0.530233| grad_norm: 0.0762| num_tokens: 179,464
+Step 00203/00430 | Training loss: 0.912322| lrm: 0.527907| grad_norm: 0.0760| num_tokens: 175,157
+Step 00204/00430 | Training loss: 0.616457| lrm: 0.525581| grad_norm: 0.0782| num_tokens: 169,451
+Step 00205/00430 | Training loss: 0.705653| lrm: 0.523256| grad_norm: 0.0800| num_tokens: 171,540
+Step 00206/00430 | Training loss: 0.846370| lrm: 0.520930| grad_norm: 0.0790| num_tokens: 173,011
+Step 00207/00430 | Training loss: 0.687887| lrm: 0.518605| grad_norm: 0.0797| num_tokens: 168,517
+Step 00208/00430 | Training loss: 0.903035| lrm: 0.516279| grad_norm: 0.0799| num_tokens: 161,984
+Step 00209/00430 | Training loss: 0.546964| lrm: 0.513953| grad_norm: 0.0769| num_tokens: 180,138
+Step 00210/00430 | Training loss: 0.807116| lrm: 0.511628| grad_norm: 0.0790| num_tokens: 174,271
+Step 00211/00430 | Training loss: 0.824261| lrm: 0.509302| grad_norm: 0.0754| num_tokens: 175,397
+Step 00212/00430 | Training loss: 0.672715| lrm: 0.506977| grad_norm: 0.0824| num_tokens: 155,896
+Step 00213/00430 | Training loss: 0.616266| lrm: 0.504651| grad_norm: 0.0768| num_tokens: 182,122
+Step 00214/00430 | Training loss: 0.638690| lrm: 0.502326| grad_norm: 0.0809| num_tokens: 162,744
+Step 00215/00430 | Training loss: 0.831087| lrm: 0.500000| grad_norm: 0.0780| num_tokens: 170,738
+Step 00216/00430 | Training loss: 0.916447| lrm: 0.497674| grad_norm: 0.0816| num_tokens: 162,502
+Step 00217/00430 | Training loss: 0.556623| lrm: 0.495349| grad_norm: 0.0782| num_tokens: 180,077
+Step 00218/00430 | Training loss: 0.801595| lrm: 0.493023| grad_norm: 0.0792| num_tokens: 168,655
+Step 00219/00430 | Training loss: 0.668337| lrm: 0.490698| grad_norm: 0.0752| num_tokens: 174,639
+Step 00220/00430 | Training loss: 0.716550| lrm: 0.488372| grad_norm: 0.0791| num_tokens: 169,267
+Step 00221/00430 | Training loss: 0.957342| lrm: 0.486047| grad_norm: 0.0802| num_tokens: 168,466
+Step 00222/00430 | Training loss: 0.849278| lrm: 0.483721| grad_norm: 0.0781| num_tokens: 164,539
+Step 00223/00430 | Training loss: 0.735752| lrm: 0.481395| grad_norm: 0.0802| num_tokens: 154,090
+Step 00224/00430 | Training loss: 0.742648| lrm: 0.479070| grad_norm: 0.0789| num_tokens: 169,071
+Step 00225/00430 | Training loss: 0.756171| lrm: 0.476744| grad_norm: 0.0796| num_tokens: 163,685
+Step 00226/00430 | Training loss: 0.636578| lrm: 0.474419| grad_norm: 0.0784| num_tokens: 185,601
+Step 00227/00430 | Training loss: 0.695464| lrm: 0.472093| grad_norm: 0.0769| num_tokens: 183,640
+Step 00228/00430 | Training loss: 0.859369| lrm: 0.469767| grad_norm: 0.0754| num_tokens: 189,271
+Step 00229/00430 | Training loss: 0.805776| lrm: 0.467442| grad_norm: 0.0787| num_tokens: 164,878
+Step 00230/00430 | Training loss: 0.731648| lrm: 0.465116| grad_norm: 0.0777| num_tokens: 186,438
+Step 00231/00430 | Training loss: 0.730037| lrm: 0.462791| grad_norm: 0.0782| num_tokens: 187,488
+Step 00232/00430 | Training loss: 0.691619| lrm: 0.460465| grad_norm: 0.0806| num_tokens: 174,305
+Step 00233/00430 | Training loss: 0.890092| lrm: 0.458140| grad_norm: 0.0804| num_tokens: 161,070
+Step 00234/00430 | Training loss: 0.775212| lrm: 0.455814| grad_norm: 0.0758| num_tokens: 181,461
+Step 00235/00430 | Training loss: 0.850210| lrm: 0.453488| grad_norm: 0.0861| num_tokens: 159,499
+Step 00236/00430 | Training loss: 0.929543| lrm: 0.451163| grad_norm: 0.0766| num_tokens: 170,132
+Step 00237/00430 | Training loss: 0.675138| lrm: 0.448837| grad_norm: 0.0851| num_tokens: 170,298
+Step 00238/00430 | Training loss: 0.572742| lrm: 0.446512| grad_norm: 0.0752| num_tokens: 174,743
+Step 00239/00430 | Training loss: 0.827804| lrm: 0.444186| grad_norm: 0.0877| num_tokens: 153,323
+Step 00240/00430 | Training loss: 0.782380| lrm: 0.441860| grad_norm: 0.0798| num_tokens: 159,129
+Step 00241/00430 | Training loss: 0.685684| lrm: 0.439535| grad_norm: 0.0797| num_tokens: 163,514
+Step 00242/00430 | Training loss: 0.741641| lrm: 0.437209| grad_norm: 0.0802| num_tokens: 183,121
+Step 00243/00430 | Training loss: 0.866962| lrm: 0.434884| grad_norm: 0.0748| num_tokens: 193,060
+Step 00244/00430 | Training loss: 0.733061| lrm: 0.432558| grad_norm: 0.0824| num_tokens: 158,307
+Step 00245/00430 | Training loss: 0.684700| lrm: 0.430233| grad_norm: 0.0814| num_tokens: 174,576
+Step 00246/00430 | Training loss: 0.791278| lrm: 0.427907| grad_norm: 0.0743| num_tokens: 186,095
+Step 00247/00430 | Training loss: 0.864283| lrm: 0.425581| grad_norm: 0.0758| num_tokens: 173,913
+Step 00248/00430 | Training loss: 0.947765| lrm: 0.423256| grad_norm: 0.0765| num_tokens: 175,222
+Step 00249/00430 | Training loss: 0.732427| lrm: 0.420930| grad_norm: 0.0811| num_tokens: 164,747
+Step 00250/00430 | Training loss: 0.837908| lrm: 0.418605| grad_norm: 0.0804| num_tokens: 176,806
+Step 00251/00430 | Training loss: 0.746821| lrm: 0.416279| grad_norm: 0.0808| num_tokens: 162,672
+Step 00252/00430 | Training loss: 0.904964| lrm: 0.413953| grad_norm: 0.0802| num_tokens: 166,909
+Step 00253/00430 | Training loss: 0.927844| lrm: 0.411628| grad_norm: 0.0765| num_tokens: 175,598
+Step 00254/00430 | Training loss: 0.812780| lrm: 0.409302| grad_norm: 0.0785| num_tokens: 173,930
+Step 00255/00430 | Training loss: 0.835315| lrm: 0.406977| grad_norm: 0.0745| num_tokens: 175,400
+Step 00256/00430 | Training loss: 0.902240| lrm: 0.404651| grad_norm: 0.0784| num_tokens: 159,532
+Step 00257/00430 | Training loss: 0.828529| lrm: 0.402326| grad_norm: 0.0781| num_tokens: 176,293
+Step 00258/00430 | Training loss: 0.775991| lrm: 0.400000| grad_norm: 0.0802| num_tokens: 168,045
+Step 00259/00430 | Training loss: 0.832512| lrm: 0.397674| grad_norm: 0.0770| num_tokens: 171,069
+Step 00260/00430 | Training loss: 0.859708| lrm: 0.395349| grad_norm: 0.0804| num_tokens: 164,651
+Step 00261/00430 | Training loss: 0.709307| lrm: 0.393023| grad_norm: 0.0818| num_tokens: 177,180
+Step 00262/00430 | Training loss: 0.684379| lrm: 0.390698| grad_norm: 0.0770| num_tokens: 165,467
+Step 00263/00430 | Training loss: 0.895069| lrm: 0.388372| grad_norm: 0.0795| num_tokens: 174,024
+Step 00264/00430 | Training loss: 0.714937| lrm: 0.386047| grad_norm: 0.0793| num_tokens: 168,711
+Step 00265/00430 | Training loss: 0.782684| lrm: 0.383721| grad_norm: 0.0818| num_tokens: 174,569
+Step 00266/00430 | Training loss: 0.611126| lrm: 0.381395| grad_norm: 0.0775| num_tokens: 162,428
+Step 00267/00430 | Training loss: 0.944641| lrm: 0.379070| grad_norm: 0.0813| num_tokens: 156,573
+Step 00268/00430 | Training loss: 0.828496| lrm: 0.376744| grad_norm: 0.0805| num_tokens: 166,222
+Step 00269/00430 | Training loss: 0.972309| lrm: 0.374419| grad_norm: 0.0792| num_tokens: 167,709
+Step 00270/00430 | Training loss: 0.640606| lrm: 0.372093| grad_norm: 0.0781| num_tokens: 180,858
+Step 00271/00430 | Training loss: 0.872817| lrm: 0.369767| grad_norm: 0.0757| num_tokens: 187,835
+Step 00272/00430 | Training loss: 0.845493| lrm: 0.367442| grad_norm: 0.0775| num_tokens: 180,625
+Step 00273/00430 | Training loss: 0.601435| lrm: 0.365116| grad_norm: 0.0774| num_tokens: 168,184
+Step 00274/00430 | Training loss: 0.646756| lrm: 0.362791| grad_norm: 0.0747| num_tokens: 195,036
+Step 00275/00430 | Training loss: 0.925733| lrm: 0.360465| grad_norm: 0.0801| num_tokens: 184,973
+Step 00276/00430 | Training loss: 0.716595| lrm: 0.358140| grad_norm: 0.0786| num_tokens: 167,556
+Step 00277/00430 | Training loss: 0.584194| lrm: 0.355814| grad_norm: 0.0804| num_tokens: 169,476
+Step 00278/00430 | Training loss: 0.974205| lrm: 0.353488| grad_norm: 0.0764| num_tokens: 173,893
+Step 00279/00430 | Training loss: 0.987713| lrm: 0.351163| grad_norm: 0.0850| num_tokens: 160,774
+Step 00280/00430 | Training loss: 0.547631| lrm: 0.348837| grad_norm: 0.0765| num_tokens: 168,406
+Step 00281/00430 | Training loss: 0.547497| lrm: 0.346512| grad_norm: 0.0802| num_tokens: 173,546
+Step 00282/00430 | Training loss: 0.624218| lrm: 0.344186| grad_norm: 0.0768| num_tokens: 172,417
+Step 00283/00430 | Training loss: 0.779482| lrm: 0.341860| grad_norm: 0.0822| num_tokens: 155,168
+Step 00284/00430 | Training loss: 0.546919| lrm: 0.339535| grad_norm: 0.0775| num_tokens: 159,375
+Step 00285/00430 | Training loss: 0.766706| lrm: 0.337209| grad_norm: 0.0811| num_tokens: 163,381
+Step 00286/00430 | Training loss: 0.841356| lrm: 0.334884| grad_norm: 0.0788| num_tokens: 189,962
+Step 00287/00430 | Training loss: 0.766752| lrm: 0.332558| grad_norm: 0.0767| num_tokens: 181,331
+Step 00288/00430 | Training loss: 0.704410| lrm: 0.330233| grad_norm: 0.0793| num_tokens: 171,875
+Step 00289/00430 | Training loss: 0.726613| lrm: 0.327907| grad_norm: 0.0815| num_tokens: 166,800
+Step 00290/00430 | Training loss: 0.804148| lrm: 0.325581| grad_norm: 0.0732| num_tokens: 191,214
+Step 00291/00430 | Training loss: 0.696572| lrm: 0.323256| grad_norm: 0.0782| num_tokens: 163,687
+Step 00292/00430 | Training loss: 0.932771| lrm: 0.320930| grad_norm: 0.0744| num_tokens: 181,238
+Step 00293/00430 | Training loss: 0.854676| lrm: 0.318605| grad_norm: 0.0819| num_tokens: 161,140
+Step 00294/00430 | Training loss: 0.686627| lrm: 0.316279| grad_norm: 0.0822| num_tokens: 174,048
+Step 00295/00430 | Training loss: 0.809677| lrm: 0.313953| grad_norm: 0.0833| num_tokens: 162,153
+Step 00296/00430 | Training loss: 0.664733| lrm: 0.311628| grad_norm: 0.0759| num_tokens: 173,914
+Step 00297/00430 | Training loss: 0.634908| lrm: 0.309302| grad_norm: 0.0776| num_tokens: 172,072
+Step 00298/00430 | Training loss: 0.696083| lrm: 0.306977| grad_norm: 0.0779| num_tokens: 177,097
+Step 00299/00430 | Training loss: 0.879890| lrm: 0.304651| grad_norm: 0.0797| num_tokens: 172,582
+Step 00300 | Validation loss: 0.901106
+Step 00300/00430 | Training loss: 0.874236| lrm: 0.302326| grad_norm: 0.0792| num_tokens: 160,590
+Step 00301/00430 | Training loss: 1.039322| lrm: 0.300000| grad_norm: 0.0804| num_tokens: 178,565
+Step 00302/00430 | Training loss: 1.013534| lrm: 0.297674| grad_norm: 0.0781| num_tokens: 166,664
+Step 00303/00430 | Training loss: 0.692617| lrm: 0.295349| grad_norm: 0.0795| num_tokens: 168,835
+Step 00304/00430 | Training loss: 0.593274| lrm: 0.293023| grad_norm: 0.0799| num_tokens: 164,715
+Step 00305/00430 | Training loss: 0.569803| lrm: 0.290698| grad_norm: 0.0789| num_tokens: 179,395
+Step 00306/00430 | Training loss: 0.881022| lrm: 0.288372| grad_norm: 0.0779| num_tokens: 167,825
+Step 00307/00430 | Training loss: 0.723790| lrm: 0.286047| grad_norm: 0.0789| num_tokens: 173,013
+Step 00308/00430 | Training loss: 0.847106| lrm: 0.283721| grad_norm: 0.0773| num_tokens: 167,460
+Step 00309/00430 | Training loss: 0.566290| lrm: 0.281395| grad_norm: 0.0773| num_tokens: 170,974
+Step 00310/00430 | Training loss: 0.776837| lrm: 0.279070| grad_norm: 0.0773| num_tokens: 163,094
+Step 00311/00430 | Training loss: 0.747158| lrm: 0.276744| grad_norm: 0.0797| num_tokens: 157,839
+Step 00312/00430 | Training loss: 0.729475| lrm: 0.274419| grad_norm: 0.0783| num_tokens: 168,349
+Step 00313/00430 | Training loss: 0.871024| lrm: 0.272093| grad_norm: 0.0787| num_tokens: 176,955
+Step 00314/00430 | Training loss: 0.774376| lrm: 0.269767| grad_norm: 0.0809| num_tokens: 169,773
+Step 00315/00430 | Training loss: 0.697303| lrm: 0.267442| grad_norm: 0.0735| num_tokens: 193,544
+Step 00316/00430 | Training loss: 0.388321| lrm: 0.265116| grad_norm: 0.0773| num_tokens: 172,690
+Step 00317/00430 | Training loss: 0.736283| lrm: 0.262791| grad_norm: 0.0767| num_tokens: 176,404
+Step 00318/00430 | Training loss: 0.874402| lrm: 0.260465| grad_norm: 0.0767| num_tokens: 188,508
+Step 00319/00430 | Training loss: 0.680607| lrm: 0.258140| grad_norm: 0.0759| num_tokens: 188,608
+Step 00320/00430 | Training loss: 0.721098| lrm: 0.255814| grad_norm: 0.0794| num_tokens: 163,925
+Step 00321/00430 | Training loss: 0.722206| lrm: 0.253488| grad_norm: 0.0796| num_tokens: 169,306
+Step 00322/00430 | Training loss: 0.864189| lrm: 0.251163| grad_norm: 0.0796| num_tokens: 171,525
+Step 00323/00430 | Training loss: 0.692237| lrm: 0.248837| grad_norm: 0.0811| num_tokens: 164,444
+Step 00324/00430 | Training loss: 0.737100| lrm: 0.246512| grad_norm: 0.0787| num_tokens: 165,783
+Step 00325/00430 | Training loss: 0.734421| lrm: 0.244186| grad_norm: 0.0794| num_tokens: 179,371
+Step 00326/00430 | Training loss: 0.769494| lrm: 0.241860| grad_norm: 0.0811| num_tokens: 159,131
+Step 00327/00430 | Training loss: 0.653816| lrm: 0.239535| grad_norm: 0.0851| num_tokens: 163,303
+Step 00328/00430 | Training loss: 0.630206| lrm: 0.237209| grad_norm: 0.0805| num_tokens: 159,841
+Step 00329/00430 | Training loss: 0.894142| lrm: 0.234884| grad_norm: 0.0783| num_tokens: 168,973
+Step 00330/00430 | Training loss: 0.803174| lrm: 0.232558| grad_norm: 0.0798| num_tokens: 186,475
+Step 00331/00430 | Training loss: 0.774675| lrm: 0.230233| grad_norm: 0.0776| num_tokens: 173,577
+Step 00332/00430 | Training loss: 0.841610| lrm: 0.227907| grad_norm: 0.0811| num_tokens: 173,300
+Step 00333/00430 | Training loss: 0.765827| lrm: 0.225581| grad_norm: 0.0800| num_tokens: 176,770
+Step 00334/00430 | Training loss: 0.488833| lrm: 0.223256| grad_norm: 0.0728| num_tokens: 188,815
+Step 00335/00430 | Training loss: 0.755786| lrm: 0.220930| grad_norm: 0.0816| num_tokens: 157,742
+Step 00336/00430 | Training loss: 0.638816| lrm: 0.218605| grad_norm: 0.0748| num_tokens: 178,911
+Step 00337/00430 | Training loss: 0.732729| lrm: 0.216279| grad_norm: 0.0773| num_tokens: 171,404
+Step 00338/00430 | Training loss: 0.968952| lrm: 0.213953| grad_norm: 0.0839| num_tokens: 167,667
+Step 00339/00430 | Training loss: 0.665666| lrm: 0.211628| grad_norm: 0.0826| num_tokens: 167,919
+Step 00340/00430 | Training loss: 0.682788| lrm: 0.209302| grad_norm: 0.0781| num_tokens: 174,289
+Step 00341/00430 | Training loss: 0.782095| lrm: 0.206977| grad_norm: 0.0800| num_tokens: 163,808
+Step 00342/00430 | Training loss: 0.762077| lrm: 0.204651| grad_norm: 0.0763| num_tokens: 180,190
+Step 00343/00430 | Training loss: 0.685951| lrm: 0.202326| grad_norm: 0.0779| num_tokens: 175,765
+Step 00344/00430 | Training loss: 0.663997| lrm: 0.200000| grad_norm: 0.0795| num_tokens: 161,245
+Step 00345/00430 | Training loss: 0.998755| lrm: 0.197674| grad_norm: 0.0799| num_tokens: 173,725
+Step 00346/00430 | Training loss: 0.634721| lrm: 0.195349| grad_norm: 0.0772| num_tokens: 168,830
+Step 00347/00430 | Training loss: 0.741805| lrm: 0.193023| grad_norm: 0.0820| num_tokens: 167,027
+Step 00348/00430 | Training loss: 0.756459| lrm: 0.190698| grad_norm: 0.0823| num_tokens: 165,619
+Step 00349/00430 | Training loss: 0.953129| lrm: 0.188372| grad_norm: 0.0796| num_tokens: 177,882
+Step 00350/00430 | Training loss: 0.698656| lrm: 0.186047| grad_norm: 0.0783| num_tokens: 167,479
+Step 00351/00430 | Training loss: 0.893311| lrm: 0.183721| grad_norm: 0.0786| num_tokens: 177,992
+Step 00352/00430 | Training loss: 0.448944| lrm: 0.181395| grad_norm: 0.0779| num_tokens: 162,544
+Step 00353/00430 | Training loss: 0.774182| lrm: 0.179070| grad_norm: 0.0800| num_tokens: 168,816
+Step 00354/00430 | Training loss: 0.718361| lrm: 0.176744| grad_norm: 0.0756| num_tokens: 167,107
+Step 00355/00430 | Training loss: 0.544510| lrm: 0.174419| grad_norm: 0.0812| num_tokens: 157,626
+Step 00356/00430 | Training loss: 0.720302| lrm: 0.172093| grad_norm: 0.0783| num_tokens: 166,681
+Step 00357/00430 | Training loss: 0.864841| lrm: 0.169767| grad_norm: 0.0792| num_tokens: 180,000
+Step 00358/00430 | Training loss: 0.871077| lrm: 0.167442| grad_norm: 0.0801| num_tokens: 178,037
+Step 00359/00430 | Training loss: 0.672947| lrm: 0.165116| grad_norm: 0.0748| num_tokens: 185,545
+Step 00360/00430 | Training loss: 0.788361| lrm: 0.162791| grad_norm: 0.0813| num_tokens: 174,366
+Step 00361/00430 | Training loss: 0.779321| lrm: 0.160465| grad_norm: 0.0764| num_tokens: 180,420
+Step 00362/00430 | Training loss: 0.733921| lrm: 0.158140| grad_norm: 0.0762| num_tokens: 185,356
+Step 00363/00430 | Training loss: 0.961976| lrm: 0.155814| grad_norm: 0.0755| num_tokens: 188,969
+Step 00364/00430 | Training loss: 0.714136| lrm: 0.153488| grad_norm: 0.0800| num_tokens: 160,309
+Step 00365/00430 | Training loss: 0.809151| lrm: 0.151163| grad_norm: 0.0802| num_tokens: 167,304
+Step 00366/00430 | Training loss: 0.801940| lrm: 0.148837| grad_norm: 0.0823| num_tokens: 173,165
+Step 00367/00430 | Training loss: 0.670634| lrm: 0.146512| grad_norm: 0.0781| num_tokens: 162,751
+Step 00368/00430 | Training loss: 0.701488| lrm: 0.144186| grad_norm: 0.0769| num_tokens: 171,093
+Step 00369/00430 | Training loss: 0.774575| lrm: 0.141860| grad_norm: 0.0784| num_tokens: 175,482
+Step 00370/00430 | Training loss: 0.658274| lrm: 0.139535| grad_norm: 0.0829| num_tokens: 159,613
+Step 00371/00430 | Training loss: 0.733542| lrm: 0.137209| grad_norm: 0.0806| num_tokens: 160,098
+Step 00372/00430 | Training loss: 0.731399| lrm: 0.134884| grad_norm: 0.0818| num_tokens: 159,934
+Step 00373/00430 | Training loss: 0.895448| lrm: 0.132558| grad_norm: 0.0789| num_tokens: 173,706
+Step 00374/00430 | Training loss: 0.683744| lrm: 0.130233| grad_norm: 0.0754| num_tokens: 192,704
+Step 00375/00430 | Training loss: 0.681183| lrm: 0.127907| grad_norm: 0.0786| num_tokens: 167,394
+Step 00376/00430 | Training loss: 0.562076| lrm: 0.125581| grad_norm: 0.0807| num_tokens: 171,057
+Step 00377/00430 | Training loss: 1.048010| lrm: 0.123256| grad_norm: 0.0781| num_tokens: 182,153
+Step 00378/00430 | Training loss: 0.760687| lrm: 0.120930| grad_norm: 0.0735| num_tokens: 186,004
+Step 00379/00430 | Training loss: 1.001666| lrm: 0.118605| grad_norm: 0.0818| num_tokens: 154,140
+Step 00380/00430 | Training loss: 0.738439| lrm: 0.116279| grad_norm: 0.0757| num_tokens: 183,537
+Step 00381/00430 | Training loss: 0.828990| lrm: 0.113953| grad_norm: 0.0800| num_tokens: 169,718
+Step 00382/00430 | Training loss: 0.898330| lrm: 0.111628| grad_norm: 0.0808| num_tokens: 167,932
+Step 00383/00430 | Training loss: 1.003996| lrm: 0.109302| grad_norm: 0.0845| num_tokens: 165,065
+Step 00384/00430 | Training loss: 0.653229| lrm: 0.106977| grad_norm: 0.0758| num_tokens: 175,798
+Step 00385/00430 | Training loss: 0.751936| lrm: 0.104651| grad_norm: 0.0801| num_tokens: 169,705
+Step 00386/00430 | Training loss: 0.636787| lrm: 0.102326| grad_norm: 0.0782| num_tokens: 174,208
+Step 00387/00430 | Training loss: 0.733906| lrm: 0.100000| grad_norm: 0.0844| num_tokens: 169,339
+Step 00388/00430 | Training loss: 0.863540| lrm: 0.097674| grad_norm: 0.0770| num_tokens: 172,561
+Step 00389/00430 | Training loss: 0.867019| lrm: 0.095349| grad_norm: 0.0815| num_tokens: 165,714
+Step 00390/00430 | Training loss: 0.898339| lrm: 0.093023| grad_norm: 0.0770| num_tokens: 171,726
+Step 00391/00430 | Training loss: 0.828710| lrm: 0.090698| grad_norm: 0.0801| num_tokens: 166,341
+Step 00392/00430 | Training loss: 0.760002| lrm: 0.088372| grad_norm: 0.0829| num_tokens: 173,053
+Step 00393/00430 | Training loss: 1.079992| lrm: 0.086047| grad_norm: 0.0814| num_tokens: 171,130
+Step 00394/00430 | Training loss: 0.813805| lrm: 0.083721| grad_norm: 0.0777| num_tokens: 167,446
+Step 00395/00430 | Training loss: 0.817511| lrm: 0.081395| grad_norm: 0.0780| num_tokens: 174,595
+Step 00396/00430 | Training loss: 0.760561| lrm: 0.079070| grad_norm: 0.0807| num_tokens: 160,455
+Step 00397/00430 | Training loss: 0.852954| lrm: 0.076744| grad_norm: 0.0805| num_tokens: 169,495
+Step 00398/00430 | Training loss: 0.854716| lrm: 0.074419| grad_norm: 0.0754| num_tokens: 171,256
+Step 00399/00430 | Training loss: 0.989281| lrm: 0.072093| grad_norm: 0.0799| num_tokens: 160,022
+Step 00400 | Validation loss: 0.901550
+2026-01-12 00:32:53,893 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/cais/mmlu/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-01-12 00:32:53,898 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/cais/mmlu/c30699e8356da336a370243923dbaf21066bb9fe/README.md "HTTP/1.1 200 OK"
+2026-01-12 00:32:54,100 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/cais/mmlu/resolve/c30699e8356da336a370243923dbaf21066bb9fe/mmlu.py "HTTP/1.1 404 Not Found"
+2026-01-12 00:32:54,722 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/cais/mmlu/cais/mmlu.py "HTTP/1.1 404 Not Found"
+2026-01-12 00:32:55,004 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/cais/mmlu/resolve/c30699e8356da336a370243923dbaf21066bb9fe/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-01-12 00:32:55,249 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=cais/mmlu "HTTP/1.1 200 OK"
+Final: 388/1024 (37.89%)
+2026-01-12 00:33:00,496 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/allenai/ai2_arc/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-01-12 00:33:00,501 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/allenai/ai2_arc/210d026faf9955653af8916fad021475a3f00453/README.md "HTTP/1.1 200 OK"
+2026-01-12 00:33:00,714 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/allenai/ai2_arc/resolve/210d026faf9955653af8916fad021475a3f00453/ai2_arc.py "HTTP/1.1 404 Not Found"
+2026-01-12 00:33:01,303 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/allenai/ai2_arc/allenai/ai2_arc.py "HTTP/1.1 404 Not Found"
+2026-01-12 00:33:01,506 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/allenai/ai2_arc/resolve/210d026faf9955653af8916fad021475a3f00453/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-01-12 00:33:01,728 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=allenai/ai2_arc "HTTP/1.1 200 OK"
+2026-01-12 00:33:01,927 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/allenai/ai2_arc/resolve/210d026faf9955653af8916fad021475a3f00453/dataset_infos.json "HTTP/1.1 404 Not Found"
+Final: 597/1024 (58.30%)
+Step 00400 | mmlu_acc: 0.378906, arc_easy_acc: 0.583008
+Step 00400/00430 | Training loss: 0.440745| lrm: 0.069767| grad_norm: 0.0799| num_tokens: 164,231
+Step 00401/00430 | Training loss: 0.836217| lrm: 0.067442| grad_norm: 0.0767| num_tokens: 187,070
+Step 00402/00430 | Training loss: 0.775990| lrm: 0.065116| grad_norm: 0.0822| num_tokens: 172,470
+Step 00403/00430 | Training loss: 0.635307| lrm: 0.062791| grad_norm: 0.0709| num_tokens: 189,009
+Step 00404/00430 | Training loss: 0.962337| lrm: 0.060465| grad_norm: 0.0805| num_tokens: 168,046
+Step 00405/00430 | Training loss: 0.901001| lrm: 0.058140| grad_norm: 0.0758| num_tokens: 187,459
+Step 00406/00430 | Training loss: 0.710819| lrm: 0.055814| grad_norm: 0.0750| num_tokens: 187,919
+Step 00407/00430 | Training loss: 0.837609| lrm: 0.053488| grad_norm: 0.0784| num_tokens: 179,855
+Step 00408/00430 | Training loss: 0.647443| lrm: 0.051163| grad_norm: 0.0816| num_tokens: 159,886
+Step 00409/00430 | Training loss: 0.943279| lrm: 0.048837| grad_norm: 0.0794| num_tokens: 171,779
+Step 00410/00430 | Training loss: 0.744835| lrm: 0.046512| grad_norm: 0.0816| num_tokens: 165,787
+Step 00411/00430 | Training loss: 0.833203| lrm: 0.044186| grad_norm: 0.0774| num_tokens: 167,392
+Step 00412/00430 | Training loss: 0.773811| lrm: 0.041860| grad_norm: 0.0765| num_tokens: 170,588
+Step 00413/00430 | Training loss: 0.783015| lrm: 0.039535| grad_norm: 0.0767| num_tokens: 179,789
+Step 00414/00430 | Training loss: 0.842606| lrm: 0.037209| grad_norm: 0.0842| num_tokens: 157,608
+Step 00415/00430 | Training loss: 0.649435| lrm: 0.034884| grad_norm: 0.0832| num_tokens: 152,594
+Step 00416/00430 | Training loss: 0.730751| lrm: 0.032558| grad_norm: 0.0788| num_tokens: 160,819
+Step 00417/00430 | Training loss: 0.984694| lrm: 0.030233| grad_norm: 0.0767| num_tokens: 181,654
+Step 00418/00430 | Training loss: 0.915913| lrm: 0.027907| grad_norm: 0.0754| num_tokens: 193,868
+Step 00419/00430 | Training loss: 0.809471| lrm: 0.025581| grad_norm: 0.0804| num_tokens: 160,197
+Step 00420/00430 | Training loss: 0.920549| lrm: 0.023256| grad_norm: 0.0787| num_tokens: 187,229
+Step 00421/00430 | Training loss: 0.624591| lrm: 0.020930| grad_norm: 0.0764| num_tokens: 171,375
+Step 00422/00430 | Training loss: 0.577101| lrm: 0.018605| grad_norm: 0.0733| num_tokens: 179,063
+Step 00423/00430 | Training loss: 0.704198| lrm: 0.016279| grad_norm: 0.0799| num_tokens: 164,682
+Step 00424/00430 | Training loss: 0.584141| lrm: 0.013953| grad_norm: 0.0803| num_tokens: 174,401
+Step 00425/00430 | Training loss: 0.666993| lrm: 0.011628| grad_norm: 0.0756| num_tokens: 177,255
+Step 00426/00430 | Training loss: 0.726435| lrm: 0.009302| grad_norm: 0.0800| num_tokens: 160,090
+Step 00427/00430 | Training loss: 0.631447| lrm: 0.006977| grad_norm: 0.0801| num_tokens: 168,293
+Step 00428/00430 | Training loss: 0.755161| lrm: 0.004651| grad_norm: 0.0781| num_tokens: 175,980
+Step 00429 | Validation loss: 0.901441
+2026-01-12 00:48:01,244 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/cais/mmlu/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-01-12 00:48:01,248 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/cais/mmlu/c30699e8356da336a370243923dbaf21066bb9fe/README.md "HTTP/1.1 200 OK"
+2026-01-12 00:48:01,446 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/cais/mmlu/resolve/c30699e8356da336a370243923dbaf21066bb9fe/mmlu.py "HTTP/1.1 404 Not Found"
+2026-01-12 00:48:02,059 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/cais/mmlu/cais/mmlu.py "HTTP/1.1 404 Not Found"
+2026-01-12 00:48:02,343 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/cais/mmlu/resolve/c30699e8356da336a370243923dbaf21066bb9fe/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-01-12 00:48:02,584 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=cais/mmlu "HTTP/1.1 200 OK"
+Final: 380/1024 (37.11%)
+2026-01-12 00:48:07,840 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/allenai/ai2_arc/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-01-12 00:48:07,844 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/allenai/ai2_arc/210d026faf9955653af8916fad021475a3f00453/README.md "HTTP/1.1 200 OK"
+2026-01-12 00:48:08,045 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/allenai/ai2_arc/resolve/210d026faf9955653af8916fad021475a3f00453/ai2_arc.py "HTTP/1.1 404 Not Found"
+2026-01-12 00:48:08,695 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/allenai/ai2_arc/allenai/ai2_arc.py "HTTP/1.1 404 Not Found"
+2026-01-12 00:48:08,901 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/allenai/ai2_arc/resolve/210d026faf9955653af8916fad021475a3f00453/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-01-12 00:48:09,113 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=allenai/ai2_arc "HTTP/1.1 200 OK"
+2026-01-12 00:48:09,314 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/allenai/ai2_arc/resolve/210d026faf9955653af8916fad021475a3f00453/dataset_infos.json "HTTP/1.1 404 Not Found"
+Final: 600/1024 (58.59%)
+Step 00429 | mmlu_acc: 0.371094, arc_easy_acc: 0.585938
+2026-01-12 00:48:14,005 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Saved model parameters to: /home/rocketegg/.cache/nanochat_d26/chatsft_checkpoints/d26/model_000429.pt
+2026-01-12 00:48:14,005 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Saved metadata to: /home/rocketegg/.cache/nanochat_d26/chatsft_checkpoints/d26/meta_000429.json
+✅ Saved model checkpoint to /home/rocketegg/.cache/nanochat_d26/chatsft_checkpoints/d26
+wandb: updating run metadata
+wandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml
+wandb: uploading output.log; uploading config.yaml
+wandb: 
+wandb: Run history:
+wandb: arc_easy_acc ▁▁█
+wandb:    grad_norm ▇█▆▇▆▅▄▅▆▃▃▃▂▃▂▃▂▂▃▂▁▂▁▂▁▂▂▁▂▁▁▁▁▁▁▂▂▂▂▂
+wandb:          lrm █████▇▇▇▇▇▇▇▇▆▆▆▆▆▆▆▆▅▅▅▅▅▅▅▅▄▄▄▄▄▃▂▂▂▂▁
+wandb:     mmlu_acc ▅█▁
+wandb:   num_tokens ▃▃▄▄▇▁▄▂▄▃▃▄▁▃▄▆█▂▅▄▆▇▁▅▃█▃▇▄▁▃▂▅▆▄▃▄▂▄▄
+wandb:         step ▁▁▂▂▂▂▃▃▃▃▃▄▄▄▄▄▄▄▄▄▅▅▅▅▅▅▅▅▆▇▇▇▇▇▇▇████
+wandb:   train_loss ▅▁▇▃▆▆▅▄▄▅▄▄▅▆▄▅▃▇▄▃▃▃▃▄▄▄▆▆█▃▇▆▄▅▄▅▅█▆█
+wandb:     val_loss ▁▄▇▇██
+wandb: 
+wandb: Run summary:
+wandb: arc_easy_acc 0.58594
+wandb:    grad_norm 0.07812
+wandb:          lrm 0.00465
+wandb:     mmlu_acc 0.37109
+wandb:   num_tokens 175980
+wandb:         step 429
+wandb:   train_loss 0.75516
+wandb:     val_loss 0.90144
+wandb: 
+wandb: 🚀 View run speedrun_d26_local at: https://wandb.ai/codeandcodes-google/d26/runs/ho8vs0hf
+wandb: ⭐️ View project at: https://wandb.ai/codeandcodes-google/d26
+wandb: Synced 7 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20260111_211147-ho8vs0hf/logs
+[W112 00:48:16.141829346 AllocatorConfig.cpp:28] Warning: PYTORCH_CUDA_ALLOC_CONF is deprecated, use PYTORCH_ALLOC_CONF instead (function operator())
+Autodetected device type: cuda
+2026-01-12 00:48:20,117 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-01-12 00:48:20,117 - nanochat.checkpoint_manager - [32m[1mINFO[0m - No model tag provided, guessing model tag: d26
+2026-01-12 00:48:20,117 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /home/rocketegg/.cache/nanochat_d26/chatsft_checkpoints/d26 with step 429
+2026-01-12 00:48:21,714 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 65536, 'n_layer': 26, 'n_head': 13, 'n_kv_head': 13, 'n_embd': 1664, 'gradient_checkpointing': True}
+2026-01-12 00:48:22,116 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/allenai/ai2_arc/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-01-12 00:48:22,121 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/allenai/ai2_arc/210d026faf9955653af8916fad021475a3f00453/README.md "HTTP/1.1 200 OK"
+2026-01-12 00:48:22,335 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/allenai/ai2_arc/resolve/210d026faf9955653af8916fad021475a3f00453/ai2_arc.py "HTTP/1.1 404 Not Found"
+2026-01-12 00:48:22,988 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/allenai/ai2_arc/allenai/ai2_arc.py "HTTP/1.1 404 Not Found"
+2026-01-12 00:48:23,196 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://huggingface.co/api/datasets/allenai/ai2_arc/revision/210d026faf9955653af8916fad021475a3f00453 "HTTP/1.1 200 OK"
+2026-01-12 00:48:23,578 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/allenai/ai2_arc/resolve/210d026faf9955653af8916fad021475a3f00453/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-01-12 00:48:23,795 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=allenai/ai2_arc "HTTP/1.1 200 OK"
+2026-01-12 00:48:23,998 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://huggingface.co/api/datasets/allenai/ai2_arc/tree/210d026faf9955653af8916fad021475a3f00453/ARC-Challenge?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-01-12 00:48:24,199 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://huggingface.co/api/datasets/allenai/ai2_arc/tree/210d026faf9955653af8916fad021475a3f00453?recursive=false&expand=false "HTTP/1.1 200 OK"
+2026-01-12 00:48:24,397 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/allenai/ai2_arc/resolve/210d026faf9955653af8916fad021475a3f00453/dataset_infos.json "HTTP/1.1 404 Not Found"
+2026-01-12 00:48:24,596 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://huggingface.co/api/datasets/allenai/ai2_arc/tree/210d026faf9955653af8916fad021475a3f00453/ARC-Easy?recursive=true&expand=false "HTTP/1.1 200 OK"
+Final: 1396/2376 (58.75%)
+ARC-Easy accuracy: 58.75%
+2026-01-12 00:48:29,137 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/allenai/ai2_arc/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-01-12 00:48:29,143 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/allenai/ai2_arc/210d026faf9955653af8916fad021475a3f00453/README.md "HTTP/1.1 200 OK"
+2026-01-12 00:48:29,355 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/allenai/ai2_arc/resolve/210d026faf9955653af8916fad021475a3f00453/ai2_arc.py "HTTP/1.1 404 Not Found"
+2026-01-12 00:48:29,941 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/allenai/ai2_arc/allenai/ai2_arc.py "HTTP/1.1 404 Not Found"
+2026-01-12 00:48:30,142 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/allenai/ai2_arc/resolve/210d026faf9955653af8916fad021475a3f00453/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-01-12 00:48:30,362 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=allenai/ai2_arc "HTTP/1.1 200 OK"
+2026-01-12 00:48:30,553 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/allenai/ai2_arc/resolve/210d026faf9955653af8916fad021475a3f00453/dataset_infos.json "HTTP/1.1 404 Not Found"
+Final: 478/1172 (40.78%)
+ARC-Challenge accuracy: 40.78%
+2026-01-12 00:48:33,044 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/cais/mmlu/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-01-12 00:48:33,048 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/cais/mmlu/c30699e8356da336a370243923dbaf21066bb9fe/README.md "HTTP/1.1 200 OK"
+2026-01-12 00:48:33,242 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/cais/mmlu/resolve/c30699e8356da336a370243923dbaf21066bb9fe/mmlu.py "HTTP/1.1 404 Not Found"
+2026-01-12 00:48:33,462 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/cais/mmlu/cais/mmlu.py "HTTP/1.1 404 Not Found"
+2026-01-12 00:48:33,756 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://huggingface.co/api/datasets/cais/mmlu/revision/c30699e8356da336a370243923dbaf21066bb9fe "HTTP/1.1 200 OK"
+2026-01-12 00:48:33,950 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/cais/mmlu/resolve/c30699e8356da336a370243923dbaf21066bb9fe/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-01-12 00:48:34,191 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=cais/mmlu "HTTP/1.1 200 OK"
+2026-01-12 00:48:34,390 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://huggingface.co/api/datasets/cais/mmlu/tree/c30699e8356da336a370243923dbaf21066bb9fe/abstract_algebra?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-01-12 00:48:34,601 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://huggingface.co/api/datasets/cais/mmlu/tree/c30699e8356da336a370243923dbaf21066bb9fe?recursive=false&expand=false "HTTP/1.1 200 OK"
+2026-01-12 00:48:34,799 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://huggingface.co/api/datasets/cais/mmlu/tree/c30699e8356da336a370243923dbaf21066bb9fe/all?recursive=true&expand=false "HTTP/1.1 200 OK"
+Final: 5252/14042 (37.40%)
+MMLU accuracy: 37.40%
+2026-01-12 00:49:23,262 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/openai/gsm8k/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-01-12 00:49:23,268 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/openai/gsm8k/cc7b047b6e5bb11b4f1af84efc572db110a51b3c/README.md "HTTP/1.1 200 OK"
+2026-01-12 00:49:23,475 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/openai/gsm8k/resolve/cc7b047b6e5bb11b4f1af84efc572db110a51b3c/gsm8k.py "HTTP/1.1 404 Not Found"
+2026-01-12 00:49:24,066 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/openai/gsm8k/openai/gsm8k.py "HTTP/1.1 404 Not Found"
+2026-01-12 00:49:24,301 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://huggingface.co/api/datasets/openai/gsm8k/revision/cc7b047b6e5bb11b4f1af84efc572db110a51b3c "HTTP/1.1 200 OK"
+2026-01-12 00:49:24,503 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/openai/gsm8k/resolve/cc7b047b6e5bb11b4f1af84efc572db110a51b3c/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-01-12 00:49:24,726 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=openai/gsm8k "HTTP/1.1 200 OK"
+2026-01-12 00:49:24,927 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://huggingface.co/api/datasets/openai/gsm8k/tree/cc7b047b6e5bb11b4f1af84efc572db110a51b3c/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-01-12 00:49:25,213 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://huggingface.co/api/datasets/openai/gsm8k/tree/cc7b047b6e5bb11b4f1af84efc572db110a51b3c?recursive=false&expand=false "HTTP/1.1 200 OK"
+2026-01-12 00:49:25,417 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/openai/gsm8k/resolve/cc7b047b6e5bb11b4f1af84efc572db110a51b3c/dataset_infos.json "HTTP/1.1 404 Not Found"
+[KRank 0 | 0/1 (0.00%)[KRank 0 | 0/2 (0.00%)[KRank 0 | 0/3 (0.00%)[KRank 0 | 0/4 (0.00%)[KRank 0 | 0/5 (0.00%)[KRank 0 | 0/6 (0.00%)[KRank 0 | 0/7 (0.00%)[KRank 0 | 0/8 (0.00%)[KRank 0 | 0/9 (0.00%)[KRank 0 | 0/10 (0.00%)[KRank 0 | 0/11 (0.00%)[KRank 0 | 1/12 (8.33%)[KRank 0 | 1/13 (7.69%)[KRank 0 | 2/14 (14.29%)[KRank 0 | 2/15 (13.33%)[KRank 0 | 3/16 (18.75%)[KRank 0 | 3/17 (17.65%)[KRank 0 | 4/18 (22.22%)[KRank 0 | 5/19 (26.32%)[KRank 0 | 5/20 (25.00%)[KRank 0 | 5/21 (23.81%)[KRank 0 | 5/22 (22.73%)[KRank 0 | 5/23 (21.74%)[KRank 0 | 5/24 (20.83%)[KRank 0 | 5/25 (20.00%)[KRank 0 | 5/26 (19.23%)[KRank 0 | 5/27 (18.52%)[KRank 0 | 5/28 (17.86%)[KRank 0 | 5/29 (17.24%)[KRank 0 | 5/30 (16.67%)[KRank 0 | 5/31 (16.13%)[KRank 0 | 5/32 (15.62%)[KRank 0 | 5/33 (15.15%)[KRank 0 | 5/34 (14.71%)[KRank 0 | 5/35 (14.29%)[KRank 0 | 5/36 (13.89%)[KRank 0 | 5/37 (13.51%)[KRank 0 | 5/38 (13.16%)[KRank 0 | 5/39 (12.82%)[KRank 0 | 5/40 (12.50%)[KRank 0 | 5/41 (12.20%)[KRank 0 | 5/42 (11.90%)[KRank 0 | 5/43 (11.63%)[KRank 0 | 5/44 (11.36%)[KRank 0 | 5/45 (11.11%)[KRank 0 | 6/46 (13.04%)[KRank 0 | 6/47 (12.77%)[KRank 0 | 6/48 (12.50%)[KRank 0 | 6/49 (12.24%)[KRank 0 | 6/50 (12.00%)[KRank 0 | 6/51 (11.76%)[KRank 0 | 6/52 (11.54%)[KRank 0 | 6/53 (11.32%)[KRank 0 | 6/54 (11.11%)[KRank 0 | 6/55 (10.91%)[KRank 0 | 7/56 (12.50%)[KRank 0 | 7/57 (12.28%)[KRank 0 | 7/58 (12.07%)[KRank 0 | 7/59 (11.86%)[KRank 0 | 7/60 (11.67%)[KRank 0 | 7/61 (11.48%)[KRank 0 | 7/62 (11.29%)[KRank 0 | 8/63 (12.70%)[KRank 0 | 8/64 (12.50%)[KRank 0 | 8/65 (12.31%)[KRank 0 | 8/66 (12.12%)[KRank 0 | 8/67 (11.94%)[KRank 0 | 8/68 (11.76%)[KRank 0 | 8/69 (11.59%)[KRank 0 | 8/70 (11.43%)[KRank 0 | 8/71 (11.27%)[KRank 0 | 8/72 (11.11%)[KRank 0 | 9/73 (12.33%)[KRank 0 | 9/74 (12.16%)[KRank 0 | 10/75 (13.33%)[KRank 0 | 10/76 (13.16%)[KRank 0 | 10/77 (12.99%)[KRank 0 | 10/78 (12.82%)[KRank 0 | 10/79 (12.66%)[KRank 0 | 10/80 (12.50%)[KRank 0 | 10/81 (12.35%)[KRank 0 | 10/82 (12.20%)[KRank 0 | 10/83 (12.05%)[KRank 0 | 10/84 (11.90%)[KRank 0 | 11/85 (12.94%)[KRank 0 | 11/86 (12.79%)[KRank 0 | 11/87 (12.64%)[KRank 0 | 11/88 (12.50%)[KRank 0 | 11/89 (12.36%)[KRank 0 | 11/90 (12.22%)[KRank 0 | 11/91 (12.09%)[KRank 0 | 11/92 (11.96%)[KRank 0 | 11/93 (11.83%)[KRank 0 | 11/94 (11.70%)[KRank 0 | 11/95 (11.58%)[KRank 0 | 12/96 (12.50%)[KRank 0 | 12/97 (12.37%)[KRank 0 | 12/98 (12.24%)[KRank 0 | 13/99 (13.13%)[KRank 0 | 13/100 (13.00%)[KRank 0 | 13/101 (12.87%)[KRank 0 | 13/102 (12.75%)[KRank 0 | 13/103 (12.62%)[KRank 0 | 13/104 (12.50%)[KRank 0 | 13/105 (12.38%)[KRank 0 | 13/106 (12.26%)[KRank 0 | 13/107 (12.15%)[KRank 0 | 13/108 (12.04%)[KRank 0 | 13/109 (11.93%)[KRank 0 | 13/110 (11.82%)[KRank 0 | 13/111 (11.71%)[KRank 0 | 13/112 (11.61%)[KRank 0 | 13/113 (11.50%)[KRank 0 | 13/114 (11.40%)[KRank 0 | 13/115 (11.30%)[KRank 0 | 13/116 (11.21%)[KRank 0 | 13/117 (11.11%)[KRank 0 | 13/118 (11.02%)[KRank 0 | 13/119 (10.92%)[KRank 0 | 13/120 (10.83%)[KRank 0 | 13/121 (10.74%)[KRank 0 | 13/122 (10.66%)[KRank 0 | 13/123 (10.57%)[KRank 0 | 13/124 (10.48%)[KRank 0 | 13/125 (10.40%)[KRank 0 | 13/126 (10.32%)[KRank 0 | 13/127 (10.24%)[KRank 0 | 13/128 (10.16%)[KRank 0 | 13/129 (10.08%)[KRank 0 | 13/130 (10.00%)[KRank 0 | 13/131 (9.92%)[KRank 0 | 13/132 (9.85%)[KRank 0 | 13/133 (9.77%)[KRank 0 | 13/134 (9.70%)[KRank 0 | 13/135 (9.63%)[KRank 0 | 13/136 (9.56%)[KRank 0 | 13/137 (9.49%)[KRank 0 | 13/138 (9.42%)[KRank 0 | 13/139 (9.35%)[KRank 0 | 13/140 (9.29%)[KRank 0 | 13/141 (9.22%)[KRank 0 | 13/142 (9.15%)[KRank 0 | 13/143 (9.09%)[KRank 0 | 13/144 (9.03%)[KRank 0 | 13/145 (8.97%)[KRank 0 | 13/146 (8.90%)[KRank 0 | 13/147 (8.84%)[KRank 0 | 13/148 (8.78%)[KRank 0 | 13/149 (8.72%)[KRank 0 | 13/150 (8.67%)[KRank 0 | 13/151 (8.61%)[KRank 0 | 13/152 (8.55%)[KRank 0 | 13/153 (8.50%)[KRank 0 | 13/154 (8.44%)[KRank 0 | 13/155 (8.39%)[KRank 0 | 13/156 (8.33%)[KRank 0 | 13/157 (8.28%)[KRank 0 | 13/158 (8.23%)[KRank 0 | 13/159 (8.18%)[KRank 0 | 13/160 (8.12%)[KRank 0 | 13/161 (8.07%)[KRank 0 | 14/162 (8.64%)[KRank 0 | 14/163 (8.59%)[KRank 0 | 14/164 (8.54%)[KRank 0 | 14/165 (8.48%)[KRank 0 | 14/166 (8.43%)[KRank 0 | 14/167 (8.38%)[KRank 0 | 14/168 (8.33%)[KRank 0 | 14/169 (8.28%)[KRank 0 | 14/170 (8.24%)[KRank 0 | 14/171 (8.19%)[KRank 0 | 14/172 (8.14%)[KRank 0 | 14/173 (8.09%)[KRank 0 | 14/174 (8.05%)[KRank 0 | 14/175 (8.00%)[KRank 0 | 14/176 (7.95%)[KRank 0 | 14/177 (7.91%)[KRank 0 | 14/178 (7.87%)[KRank 0 | 14/179 (7.82%)[KRank 0 | 14/180 (7.78%)[KRank 0 | 14/181 (7.73%)[KRank 0 | 14/182 (7.69%)[KRank 0 | 14/183 (7.65%)[KRank 0 | 14/184 (7.61%)[KRank 0 | 14/185 (7.57%)[KRank 0 | 14/186 (7.53%)[KRank 0 | 14/187 (7.49%)[KRank 0 | 14/188 (7.45%)[KRank 0 | 14/189 (7.41%)[KRank 0 | 14/190 (7.37%)[KRank 0 | 15/191 (7.85%)[KRank 0 | 16/192 (8.33%)[KRank 0 | 16/193 (8.29%)[KRank 0 | 16/194 (8.25%)[KRank 0 | 16/195 (8.21%)[KRank 0 | 16/196 (8.16%)[KRank 0 | 16/197 (8.12%)[KRank 0 | 17/198 (8.59%)[KRank 0 | 17/199 (8.54%)[KRank 0 | 17/200 (8.50%)[KRank 0 | 17/201 (8.46%)[KRank 0 | 17/202 (8.42%)[KRank 0 | 17/203 (8.37%)[KRank 0 | 17/204 (8.33%)[KRank 0 | 18/205 (8.78%)[KRank 0 | 18/206 (8.74%)[KRank 0 | 18/207 (8.70%)[KRank 0 | 18/208 (8.65%)[KRank 0 | 18/209 (8.61%)[KRank 0 | 18/210 (8.57%)[KRank 0 | 18/211 (8.53%)[KRank 0 | 19/212 (8.96%)[KRank 0 | 19/213 (8.92%)[KRank 0 | 19/214 (8.88%)[KRank 0 | 19/215 (8.84%)[KRank 0 | 19/216 (8.80%)[KRank 0 | 19/217 (8.76%)[KRank 0 | 19/218 (8.72%)[KRank 0 | 19/219 (8.68%)[KRank 0 | 19/220 (8.64%)[KRank 0 | 20/221 (9.05%)[KRank 0 | 20/222 (9.01%)[KRank 0 | 20/223 (8.97%)[KRank 0 | 20/224 (8.93%)[KRank 0 | 21/225 (9.33%)[KRank 0 | 22/226 (9.73%)[KRank 0 | 22/227 (9.69%)[KRank 0 | 23/228 (10.09%)[KRank 0 | 24/229 (10.48%)[KRank 0 | 25/230 (10.87%)[KRank 0 | 25/231 (10.82%)[KRank 0 | 25/232 (10.78%)[KRank 0 | 26/233 (11.16%)[KRank 0 | 26/234 (11.11%)[KRank 0 | 26/235 (11.06%)[KRank 0 | 27/236 (11.44%)[KRank 0 | 27/237 (11.39%)[KRank 0 | 27/238 (11.34%)[KRank 0 | 27/239 (11.30%)[KRank 0 | 27/240 (11.25%)[KRank 0 | 27/241 (11.20%)[KRank 0 | 27/242 (11.16%)[KRank 0 | 27/243 (11.11%)[KRank 0 | 27/244 (11.07%)[KRank 0 | 27/245 (11.02%)[KRank 0 | 27/246 (10.98%)[KRank 0 | 27/247 (10.93%)[KRank 0 | 28/248 (11.29%)[KRank 0 | 28/249 (11.24%)[KRank 0 | 28/250 (11.20%)[KRank 0 | 28/251 (11.16%)[KRank 0 | 28/252 (11.11%)[KRank 0 | 28/253 (11.07%)[KRank 0 | 28/254 (11.02%)[KRank 0 | 28/255 (10.98%)[KRank 0 | 28/256 (10.94%)[KRank 0 | 28/257 (10.89%)[KRank 0 | 28/258 (10.85%)[KRank 0 | 28/259 (10.81%)[KRank 0 | 28/260 (10.77%)[KRank 0 | 28/261 (10.73%)[KRank 0 | 28/262 (10.69%)[KRank 0 | 28/263 (10.65%)[KRank 0 | 28/264 (10.61%)[KRank 0 | 28/265 (10.57%)[KRank 0 | 28/266 (10.53%)[KRank 0 | 28/267 (10.49%)[KRank 0 | 28/268 (10.45%)[KRank 0 | 28/269 (10.41%)[KRank 0 | 28/270 (10.37%)[KRank 0 | 28/271 (10.33%)[KRank 0 | 28/272 (10.29%)[KRank 0 | 28/273 (10.26%)[KRank 0 | 28/274 (10.22%)[KRank 0 | 28/275 (10.18%)[KRank 0 | 28/276 (10.14%)[KRank 0 | 28/277 (10.11%)[KRank 0 | 28/278 (10.07%)[KRank 0 | 28/279 (10.04%)[KRank 0 | 28/280 (10.00%)[KRank 0 | 28/281 (9.96%)[KRank 0 | 28/282 (9.93%)[KRank 0 | 28/283 (9.89%)[KRank 0 | 28/284 (9.86%)[KRank 0 | 28/285 (9.82%)[KRank 0 | 28/286 (9.79%)[KRank 0 | 28/287 (9.76%)[KRank 0 | 28/288 (9.72%)[KRank 0 | 28/289 (9.69%)[KRank 0 | 28/290 (9.66%)[KRank 0 | 28/291 (9.62%)[KRank 0 | 28/292 (9.59%)[KRank 0 | 28/293 (9.56%)[KRank 0 | 28/294 (9.52%)[KRank 0 | 28/295 (9.49%)[KRank 0 | 28/296 (9.46%)[KRank 0 | 28/297 (9.43%)[KRank 0 | 28/298 (9.40%)[KRank 0 | 28/299 (9.36%)[KRank 0 | 28/300 (9.33%)[KRank 0 | 28/301 (9.30%)[KRank 0 | 28/302 (9.27%)[KRank 0 | 28/303 (9.24%)[KRank 0 | 28/304 (9.21%)[KRank 0 | 28/305 (9.18%)[KRank 0 | 28/306 (9.15%)[KRank 0 | 28/307 (9.12%)[KRank 0 | 29/308 (9.42%)[KRank 0 | 29/309 (9.39%)[KRank 0 | 29/310 (9.35%)[KRank 0 | 29/311 (9.32%)[KRank 0 | 29/312 (9.29%)[KRank 0 | 29/313 (9.27%)[KRank 0 | 29/314 (9.24%)[KRank 0 | 29/315 (9.21%)[KRank 0 | 29/316 (9.18%)[KRank 0 | 29/317 (9.15%)[KRank 0 | 30/318 (9.43%)[KRank 0 | 30/319 (9.40%)[KRank 0 | 30/320 (9.38%)[KRank 0 | 30/321 (9.35%)[KRank 0 | 30/322 (9.32%)[KRank 0 | 31/323 (9.60%)[KRank 0 | 32/324 (9.88%)[KRank 0 | 32/325 (9.85%)[KRank 0 | 32/326 (9.82%)[KRank 0 | 32/327 (9.79%)[KRank 0 | 32/328 (9.76%)[KRank 0 | 32/329 (9.73%)[KRank 0 | 32/330 (9.70%)[KRank 0 | 32/331 (9.67%)[KRank 0 | 32/332 (9.64%)[KRank 0 | 32/333 (9.61%)[KRank 0 | 32/334 (9.58%)[KRank 0 | 32/335 (9.55%)[KRank 0 | 32/336 (9.52%)[KRank 0 | 32/337 (9.50%)[KRank 0 | 32/338 (9.47%)[KRank 0 | 32/339 (9.44%)[KRank 0 | 32/340 (9.41%)[KRank 0 | 32/341 (9.38%)[KRank 0 | 32/342 (9.36%)[KRank 0 | 32/343 (9.33%)[KRank 0 | 32/344 (9.30%)[KRank 0 | 32/345 (9.28%)[KRank 0 | 32/346 (9.25%)[KRank 0 | 32/347 (9.22%)[KRank 0 | 32/348 (9.20%)[KRank 0 | 32/349 (9.17%)[KRank 0 | 32/350 (9.14%)[KRank 0 | 32/351 (9.12%)[KRank 0 | 32/352 (9.09%)[KRank 0 | 32/353 (9.07%)[KRank 0 | 32/354 (9.04%)[KRank 0 | 32/355 (9.01%)[KRank 0 | 32/356 (8.99%)[KRank 0 | 32/357 (8.96%)[KRank 0 | 32/358 (8.94%)[KRank 0 | 32/359 (8.91%)[KRank 0 | 32/360 (8.89%)[KRank 0 | 32/361 (8.86%)[KRank 0 | 32/362 (8.84%)[KRank 0 | 32/363 (8.82%)[KRank 0 | 32/364 (8.79%)[KRank 0 | 32/365 (8.77%)[KRank 0 | 32/366 (8.74%)[KRank 0 | 32/367 (8.72%)[KRank 0 | 32/368 (8.70%)[KRank 0 | 32/369 (8.67%)[KRank 0 | 32/370 (8.65%)[KRank 0 | 32/371 (8.63%)[KRank 0 | 32/372 (8.60%)[KRank 0 | 32/373 (8.58%)[KRank 0 | 32/374 (8.56%)[KRank 0 | 32/375 (8.53%)[KRank 0 | 32/376 (8.51%)[KRank 0 | 32/377 (8.49%)[KRank 0 | 32/378 (8.47%)[KRank 0 | 32/379 (8.44%)[KRank 0 | 32/380 (8.42%)[KRank 0 | 32/381 (8.40%)[KRank 0 | 32/382 (8.38%)[KRank 0 | 32/383 (8.36%)[KRank 0 | 32/384 (8.33%)[KRank 0 | 32/385 (8.31%)[KRank 0 | 32/386 (8.29%)[KRank 0 | 32/387 (8.27%)[KRank 0 | 32/388 (8.25%)[KRank 0 | 32/389 (8.23%)[KRank 0 | 32/390 (8.21%)[KRank 0 | 32/391 (8.18%)[KRank 0 | 32/392 (8.16%)[KRank 0 | 32/393 (8.14%)[KRank 0 | 32/394 (8.12%)[KRank 0 | 32/395 (8.10%)[KRank 0 | 32/396 (8.08%)[KRank 0 | 32/397 (8.06%)[KRank 0 | 32/398 (8.04%)[KRank 0 | 32/399 (8.02%)[KRank 0 | 32/400 (8.00%)[KRank 0 | 32/401 (7.98%)[KRank 0 | 32/402 (7.96%)[KRank 0 | 32/403 (7.94%)[KRank 0 | 33/404 (8.17%)[KRank 0 | 33/405 (8.15%)[KRank 0 | 33/406 (8.13%)[KRank 0 | 33/407 (8.11%)[KRank 0 | 33/408 (8.09%)[KRank 0 | 33/409 (8.07%)[KRank 0 | 33/410 (8.05%)[KRank 0 | 33/411 (8.03%)[KRank 0 | 34/412 (8.25%)[KRank 0 | 34/413 (8.23%)[KRank 0 | 34/414 (8.21%)[KRank 0 | 34/415 (8.19%)[KRank 0 | 34/416 (8.17%)[KRank 0 | 34/417 (8.15%)[KRank 0 | 34/418 (8.13%)[KRank 0 | 34/419 (8.11%)[KRank 0 | 34/420 (8.10%)[KRank 0 | 34/421 (8.08%)[KRank 0 | 34/422 (8.06%)[KRank 0 | 35/423 (8.27%)[KRank 0 | 35/424 (8.25%)[KRank 0 | 36/425 (8.47%)[KRank 0 | 36/426 (8.45%)[KRank 0 | 36/427 (8.43%)[KRank 0 | 36/428 (8.41%)[KRank 0 | 36/429 (8.39%)[KRank 0 | 36/430 (8.37%)[KRank 0 | 36/431 (8.35%)[KRank 0 | 36/432 (8.33%)[KRank 0 | 36/433 (8.31%)[KRank 0 | 37/434 (8.53%)[KRank 0 | 37/435 (8.51%)[KRank 0 | 37/436 (8.49%)[KRank 0 | 37/437 (8.47%)[KRank 0 | 37/438 (8.45%)[KRank 0 | 37/439 (8.43%)[KRank 0 | 37/440 (8.41%)[KRank 0 | 37/441 (8.39%)[KRank 0 | 37/442 (8.37%)[KRank 0 | 38/443 (8.58%)[KRank 0 | 38/444 (8.56%)[KRank 0 | 39/445 (8.76%)[KRank 0 | 40/446 (8.97%)[KRank 0 | 40/447 (8.95%)[KRank 0 | 41/448 (9.15%)[KRank 0 | 41/449 (9.13%)[KRank 0 | 41/450 (9.11%)[KRank 0 | 42/451 (9.31%)[KRank 0 | 42/452 (9.29%)[KRank 0 | 42/453 (9.27%)[KRank 0 | 42/454 (9.25%)[KRank 0 | 42/455 (9.23%)[KRank 0 | 42/456 (9.21%)[KRank 0 | 42/457 (9.19%)[KRank 0 | 42/458 (9.17%)[KRank 0 | 42/459 (9.15%)[KRank 0 | 43/460 (9.35%)[KRank 0 | 43/461 (9.33%)[KRank 0 | 43/462 (9.31%)[KRank 0 | 43/463 (9.29%)[KRank 0 | 43/464 (9.27%)[KRank 0 | 44/465 (9.46%)[KRank 0 | 44/466 (9.44%)[KRank 0 | 44/467 (9.42%)[KRank 0 | 44/468 (9.40%)[KRank 0 | 44/469 (9.38%)[KRank 0 | 44/470 (9.36%)[KRank 0 | 44/471 (9.34%)[KRank 0 | 45/472 (9.53%)[KRank 0 | 45/473 (9.51%)[KRank 0 | 45/474 (9.49%)[KRank 0 | 45/475 (9.47%)[KRank 0 | 45/476 (9.45%)[KRank 0 | 45/477 (9.43%)[KRank 0 | 45/478 (9.41%)[KRank 0 | 45/479 (9.39%)[KRank 0 | 45/480 (9.38%)[KRank 0 | 45/481 (9.36%)[KRank 0 | 46/482 (9.54%)[KRank 0 | 46/483 (9.52%)[KRank 0 | 46/484 (9.50%)[KRank 0 | 47/485 (9.69%)[KRank 0 | 47/486 (9.67%)[KRank 0 | 47/487 (9.65%)[KRank 0 | 47/488 (9.63%)[KRank 0 | 47/489 (9.61%)[KRank 0 | 47/490 (9.59%)[KRank 0 | 47/491 (9.57%)[KRank 0 | 47/492 (9.55%)[KRank 0 | 47/493 (9.53%)[KRank 0 | 47/494 (9.51%)[KRank 0 | 48/495 (9.70%)[KRank 0 | 48/496 (9.68%)[KRank 0 | 48/497 (9.66%)[KRank 0 | 48/498 (9.64%)[KRank 0 | 48/499 (9.62%)[KRank 0 | 48/500 (9.60%)[KRank 0 | 48/501 (9.58%)[KRank 0 | 48/502 (9.56%)[KRank 0 | 48/503 (9.54%)[KRank 0 | 48/504 (9.52%)[KRank 0 | 48/505 (9.50%)[KRank 0 | 48/506 (9.49%)[KRank 0 | 48/507 (9.47%)[KRank 0 | 48/508 (9.45%)[KRank 0 | 48/509 (9.43%)[KRank 0 | 48/510 (9.41%)[KRank 0 | 48/511 (9.39%)[KRank 0 | 48/512 (9.38%)[KRank 0 | 48/513 (9.36%)[KRank 0 | 48/514 (9.34%)[KRank 0 | 48/515 (9.32%)[KRank 0 | 48/516 (9.30%)[KRank 0 | 48/517 (9.28%)[KRank 0 | 48/518 (9.27%)[KRank 0 | 48/519 (9.25%)[KRank 0 | 48/520 (9.23%)[KRank 0 | 48/521 (9.21%)[KRank 0 | 48/522 (9.20%)[KRank 0 | 48/523 (9.18%)[KRank 0 | 48/524 (9.16%)[KRank 0 | 48/525 (9.14%)[KRank 0 | 48/526 (9.13%)[KRank 0 | 48/527 (9.11%)[KRank 0 | 48/528 (9.09%)[KRank 0 | 48/529 (9.07%)[KRank 0 | 49/530 (9.25%)[KRank 0 | 49/531 (9.23%)[KRank 0 | 49/532 (9.21%)[KRank 0 | 50/533 (9.38%)[KRank 0 | 50/534 (9.36%)[KRank 0 | 50/535 (9.35%)[KRank 0 | 50/536 (9.33%)[KRank 0 | 50/537 (9.31%)[KRank 0 | 50/538 (9.29%)[KRank 0 | 50/539 (9.28%)[KRank 0 | 50/540 (9.26%)[KRank 0 | 50/541 (9.24%)[KRank 0 | 50/542 (9.23%)[KRank 0 | 51/543 (9.39%)[KRank 0 | 51/544 (9.38%)[KRank 0 | 51/545 (9.36%)[KRank 0 | 51/546 (9.34%)[KRank 0 | 52/547 (9.51%)[KRank 0 | 52/548 (9.49%)[KRank 0 | 52/549 (9.47%)[KRank 0 | 52/550 (9.45%)[KRank 0 | 52/551 (9.44%)[KRank 0 | 52/552 (9.42%)[KRank 0 | 52/553 (9.40%)[KRank 0 | 52/554 (9.39%)[KRank 0 | 52/555 (9.37%)[KRank 0 | 52/556 (9.35%)[KRank 0 | 52/557 (9.34%)[KRank 0 | 52/558 (9.32%)[KRank 0 | 52/559 (9.30%)[KRank 0 | 52/560 (9.29%)[KRank 0 | 52/561 (9.27%)[KRank 0 | 52/562 (9.25%)[KRank 0 | 52/563 (9.24%)[KRank 0 | 52/564 (9.22%)[KRank 0 | 52/565 (9.20%)[KRank 0 | 52/566 (9.19%)[KRank 0 | 52/567 (9.17%)[KRank 0 | 52/568 (9.15%)[KRank 0 | 52/569 (9.14%)[KRank 0 | 52/570 (9.12%)[KRank 0 | 52/571 (9.11%)[KRank 0 | 52/572 (9.09%)[KRank 0 | 52/573 (9.08%)[KRank 0 | 53/574 (9.23%)[KRank 0 | 53/575 (9.22%)[KRank 0 | 53/576 (9.20%)[KRank 0 | 53/577 (9.19%)[KRank 0 | 53/578 (9.17%)[KRank 0 | 53/579 (9.15%)[KRank 0 | 53/580 (9.14%)[KRank 0 | 53/581 (9.12%)[KRank 0 | 53/582 (9.11%)[KRank 0 | 53/583 (9.09%)[KRank 0 | 53/584 (9.08%)[KRank 0 | 53/585 (9.06%)[KRank 0 | 53/586 (9.04%)[KRank 0 | 53/587 (9.03%)[KRank 0 | 53/588 (9.01%)[KRank 0 | 53/589 (9.00%)[KRank 0 | 53/590 (8.98%)[KRank 0 | 53/591 (8.97%)[KRank 0 | 53/592 (8.95%)[KRank 0 | 53/593 (8.94%)[KRank 0 | 53/594 (8.92%)[KRank 0 | 53/595 (8.91%)[KRank 0 | 53/596 (8.89%)[KRank 0 | 54/597 (9.05%)[KRank 0 | 55/598 (9.20%)[KRank 0 | 55/599 (9.18%)[KRank 0 | 55/600 (9.17%)[KRank 0 | 55/601 (9.15%)[KRank 0 | 55/602 (9.14%)[KRank 0 | 55/603 (9.12%)[KRank 0 | 55/604 (9.11%)[KRank 0 | 55/605 (9.09%)[KRank 0 | 55/606 (9.08%)[KRank 0 | 55/607 (9.06%)[KRank 0 | 55/608 (9.05%)[KRank 0 | 55/609 (9.03%)[KRank 0 | 55/610 (9.02%)[KRank 0 | 55/611 (9.00%)[KRank 0 | 55/612 (8.99%)[KRank 0 | 55/613 (8.97%)[KRank 0 | 55/614 (8.96%)[KRank 0 | 55/615 (8.94%)[KRank 0 | 55/616 (8.93%)[KRank 0 | 55/617 (8.91%)[KRank 0 | 55/618 (8.90%)[KRank 0 | 55/619 (8.89%)[KRank 0 | 55/620 (8.87%)[KRank 0 | 55/621 (8.86%)[KRank 0 | 55/622 (8.84%)[KRank 0 | 55/623 (8.83%)[KRank 0 | 55/624 (8.81%)[KRank 0 | 55/625 (8.80%)[KRank 0 | 55/626 (8.79%)[KRank 0 | 55/627 (8.77%)[KRank 0 | 55/628 (8.76%)[KRank 0 | 55/629 (8.74%)[KRank 0 | 55/630 (8.73%)[KRank 0 | 55/631 (8.72%)[KRank 0 | 55/632 (8.70%)[KRank 0 | 55/633 (8.69%)[KRank 0 | 55/634 (8.68%)[KRank 0 | 55/635 (8.66%)[KRank 0 | 55/636 (8.65%)[KRank 0 | 55/637 (8.63%)[KRank 0 | 55/638 (8.62%)[KRank 0 | 55/639 (8.61%)[KRank 0 | 55/640 (8.59%)[KRank 0 | 56/641 (8.74%)[KRank 0 | 56/642 (8.72%)[KRank 0 | 56/643 (8.71%)[KRank 0 | 56/644 (8.70%)[KRank 0 | 56/645 (8.68%)[KRank 0 | 56/646 (8.67%)[KRank 0 | 56/647 (8.66%)[KRank 0 | 56/648 (8.64%)[KRank 0 | 56/649 (8.63%)[KRank 0 | 56/650 (8.62%)[KRank 0 | 56/651 (8.60%)[KRank 0 | 56/652 (8.59%)[KRank 0 | 56/653 (8.58%)[KRank 0 | 56/654 (8.56%)[KRank 0 | 56/655 (8.55%)[KRank 0 | 57/656 (8.69%)[KRank 0 | 57/657 (8.68%)[KRank 0 | 57/658 (8.66%)[KRank 0 | 57/659 (8.65%)[KRank 0 | 57/660 (8.64%)[KRank 0 | 57/661 (8.62%)[KRank 0 | 57/662 (8.61%)[KRank 0 | 57/663 (8.60%)[KRank 0 | 57/664 (8.58%)[KRank 0 | 57/665 (8.57%)[KRank 0 | 58/666 (8.71%)[KRank 0 | 59/667 (8.85%)[KRank 0 | 59/668 (8.83%)[KRank 0 | 59/669 (8.82%)[KRank 0 | 59/670 (8.81%)[KRank 0 | 60/671 (8.94%)[KRank 0 | 60/672 (8.93%)[KRank 0 | 60/673 (8.92%)[KRank 0 | 60/674 (8.90%)[KRank 0 | 61/675 (9.04%)[KRank 0 | 61/676 (9.02%)[KRank 0 | 61/677 (9.01%)[KRank 0 | 61/678 (9.00%)[KRank 0 | 61/679 (8.98%)[KRank 0 | 61/680 (8.97%)[KRank 0 | 61/681 (8.96%)[KRank 0 | 61/682 (8.94%)[KRank 0 | 61/683 (8.93%)[KRank 0 | 61/684 (8.92%)[KRank 0 | 62/685 (9.05%)[KRank 0 | 62/686 (9.04%)[KRank 0 | 62/687 (9.02%)[KRank 0 | 62/688 (9.01%)[KRank 0 | 62/689 (9.00%)[KRank 0 | 62/690 (8.99%)[KRank 0 | 62/691 (8.97%)[KRank 0 | 62/692 (8.96%)[KRank 0 | 62/693 (8.95%)[KRank 0 | 62/694 (8.93%)[KRank 0 | 62/695 (8.92%)[KRank 0 | 62/696 (8.91%)[KRank 0 | 62/697 (8.90%)[KRank 0 | 62/698 (8.88%)[KRank 0 | 62/699 (8.87%)[KRank 0 | 62/700 (8.86%)[KRank 0 | 62/701 (8.84%)[KRank 0 | 62/702 (8.83%)[KRank 0 | 62/703 (8.82%)[KRank 0 | 62/704 (8.81%)[KRank 0 | 62/705 (8.79%)[KRank 0 | 62/706 (8.78%)[KRank 0 | 62/707 (8.77%)[KRank 0 | 62/708 (8.76%)[KRank 0 | 62/709 (8.74%)[KRank 0 | 62/710 (8.73%)[KRank 0 | 62/711 (8.72%)[KRank 0 | 62/712 (8.71%)[KRank 0 | 62/713 (8.70%)[KRank 0 | 62/714 (8.68%)[KRank 0 | 62/715 (8.67%)[KRank 0 | 62/716 (8.66%)[KRank 0 | 62/717 (8.65%)[KRank 0 | 62/718 (8.64%)[KRank 0 | 62/719 (8.62%)[KRank 0 | 62/720 (8.61%)[KRank 0 | 62/721 (8.60%)[KRank 0 | 62/722 (8.59%)[KRank 0 | 62/723 (8.58%)[KRank 0 | 62/724 (8.56%)[KRank 0 | 62/725 (8.55%)[KRank 0 | 62/726 (8.54%)[KRank 0 | 63/727 (8.67%)[KRank 0 | 63/728 (8.65%)[KRank 0 | 63/729 (8.64%)[KRank 0 | 63/730 (8.63%)[KRank 0 | 63/731 (8.62%)[KRank 0 | 63/732 (8.61%)[KRank 0 | 63/733 (8.59%)[KRank 0 | 63/734 (8.58%)[KRank 0 | 63/735 (8.57%)[KRank 0 | 63/736 (8.56%)[KRank 0 | 63/737 (8.55%)[KRank 0 | 63/738 (8.54%)[KRank 0 | 63/739 (8.53%)[KRank 0 | 63/740 (8.51%)[KRank 0 | 63/741 (8.50%)[KRank 0 | 63/742 (8.49%)[KRank 0 | 63/743 (8.48%)[KRank 0 | 63/744 (8.47%)[KRank 0 | 63/745 (8.46%)[KRank 0 | 63/746 (8.45%)[KRank 0 | 63/747 (8.43%)[KRank 0 | 63/748 (8.42%)[KRank 0 | 63/749 (8.41%)[KRank 0 | 63/750 (8.40%)[KRank 0 | 64/751 (8.52%)[KRank 0 | 64/752 (8.51%)[KRank 0 | 64/753 (8.50%)[KRank 0 | 64/754 (8.49%)[KRank 0 | 64/755 (8.48%)[KRank 0 | 64/756 (8.47%)[KRank 0 | 64/757 (8.45%)[KRank 0 | 64/758 (8.44%)[KRank 0 | 64/759 (8.43%)[KRank 0 | 65/760 (8.55%)[KRank 0 | 65/761 (8.54%)[KRank 0 | 65/762 (8.53%)[KRank 0 | 65/763 (8.52%)[KRank 0 | 65/764 (8.51%)[KRank 0 | 65/765 (8.50%)[KRank 0 | 65/766 (8.49%)[KRank 0 | 65/767 (8.47%)[KRank 0 | 65/768 (8.46%)[KRank 0 | 65/769 (8.45%)[KRank 0 | 65/770 (8.44%)[KRank 0 | 65/771 (8.43%)[KRank 0 | 65/772 (8.42%)[KRank 0 | 65/773 (8.41%)[KRank 0 | 65/774 (8.40%)[KRank 0 | 65/775 (8.39%)[KRank 0 | 65/776 (8.38%)[KRank 0 | 65/777 (8.37%)[KRank 0 | 65/778 (8.35%)[KRank 0 | 65/779 (8.34%)[KRank 0 | 65/780 (8.33%)[KRank 0 | 65/781 (8.32%)[KRank 0 | 65/782 (8.31%)[KRank 0 | 65/783 (8.30%)[KRank 0 | 65/784 (8.29%)[KRank 0 | 65/785 (8.28%)[KRank 0 | 65/786 (8.27%)[KRank 0 | 65/787 (8.26%)[KRank 0 | 65/788 (8.25%)[KRank 0 | 65/789 (8.24%)[KRank 0 | 66/790 (8.35%)[KRank 0 | 66/791 (8.34%)[KRank 0 | 66/792 (8.33%)[KRank 0 | 66/793 (8.32%)[KRank 0 | 66/794 (8.31%)[KRank 0 | 66/795 (8.30%)[KRank 0 | 66/796 (8.29%)[KRank 0 | 66/797 (8.28%)[KRank 0 | 66/798 (8.27%)[KRank 0 | 66/799 (8.26%)[KRank 0 | 66/800 (8.25%)[KRank 0 | 66/801 (8.24%)[KRank 0 | 66/802 (8.23%)[KRank 0 | 67/803 (8.34%)[KRank 0 | 68/804 (8.46%)[KRank 0 | 68/805 (8.45%)[KRank 0 | 68/806 (8.44%)[KRank 0 | 68/807 (8.43%)[KRank 0 | 68/808 (8.42%)[KRank 0 | 68/809 (8.41%)[KRank 0 | 68/810 (8.40%)[KRank 0 | 69/811 (8.51%)[KRank 0 | 69/812 (8.50%)[KRank 0 | 70/813 (8.61%)[KRank 0 | 70/814 (8.60%)[KRank 0 | 71/815 (8.71%)[KRank 0 | 71/816 (8.70%)[KRank 0 | 71/817 (8.69%)[KRank 0 | 72/818 (8.80%)[KRank 0 | 72/819 (8.79%)[KRank 0 | 73/820 (8.90%)[KRank 0 | 73/821 (8.89%)[KRank 0 | 73/822 (8.88%)[KRank 0 | 73/823 (8.87%)[KRank 0 | 73/824 (8.86%)[KRank 0 | 73/825 (8.85%)[KRank 0 | 73/826 (8.84%)[KRank 0 | 73/827 (8.83%)[KRank 0 | 73/828 (8.82%)[KRank 0 | 73/829 (8.81%)[KRank 0 | 73/830 (8.80%)[KRank 0 | 73/831 (8.78%)[KRank 0 | 73/832 (8.77%)[KRank 0 | 73/833 (8.76%)[KRank 0 | 73/834 (8.75%)[KRank 0 | 73/835 (8.74%)[KRank 0 | 73/836 (8.73%)[KRank 0 | 73/837 (8.72%)[KRank 0 | 73/838 (8.71%)[KRank 0 | 73/839 (8.70%)[KRank 0 | 73/840 (8.69%)[KRank 0 | 73/841 (8.68%)[KRank 0 | 73/842 (8.67%)[KRank 0 | 73/843 (8.66%)[KRank 0 | 73/844 (8.65%)[KRank 0 | 73/845 (8.64%)[KRank 0 | 73/846 (8.63%)[KRank 0 | 73/847 (8.62%)[KRank 0 | 73/848 (8.61%)[KRank 0 | 73/849 (8.60%)[KRank 0 | 73/850 (8.59%)[KRank 0 | 73/851 (8.58%)[KRank 0 | 73/852 (8.57%)[KRank 0 | 73/853 (8.56%)[KRank 0 | 73/854 (8.55%)[KRank 0 | 73/855 (8.54%)[KRank 0 | 74/856 (8.64%)[KRank 0 | 74/857 (8.63%)[KRank 0 | 75/858 (8.74%)[KRank 0 | 75/859 (8.73%)[KRank 0 | 75/860 (8.72%)[KRank 0 | 75/861 (8.71%)[KRank 0 | 75/862 (8.70%)[KRank 0 | 75/863 (8.69%)[KRank 0 | 75/864 (8.68%)[KRank 0 | 75/865 (8.67%)[KRank 0 | 75/866 (8.66%)[KRank 0 | 75/867 (8.65%)[KRank 0 | 75/868 (8.64%)[KRank 0 | 75/869 (8.63%)[KRank 0 | 75/870 (8.62%)[KRank 0 | 75/871 (8.61%)[KRank 0 | 75/872 (8.60%)[KRank 0 | 75/873 (8.59%)[KRank 0 | 75/874 (8.58%)[KRank 0 | 75/875 (8.57%)[KRank 0 | 75/876 (8.56%)[KRank 0 | 75/877 (8.55%)[KRank 0 | 75/878 (8.54%)[KRank 0 | 75/879 (8.53%)[KRank 0 | 76/880 (8.64%)[KRank 0 | 76/881 (8.63%)[KRank 0 | 76/882 (8.62%)[KRank 0 | 76/883 (8.61%)[KRank 0 | 76/884 (8.60%)[KRank 0 | 76/885 (8.59%)[KRank 0 | 77/886 (8.69%)[KRank 0 | 77/887 (8.68%)[KRank 0 | 77/888 (8.67%)[KRank 0 | 77/889 (8.66%)[KRank 0 | 77/890 (8.65%)[KRank 0 | 77/891 (8.64%)[KRank 0 | 78/892 (8.74%)[KRank 0 | 78/893 (8.73%)[KRank 0 | 78/894 (8.72%)[KRank 0 | 78/895 (8.72%)[KRank 0 | 78/896 (8.71%)[KRank 0 | 78/897 (8.70%)[KRank 0 | 78/898 (8.69%)[KRank 0 | 78/899 (8.68%)[KRank 0 | 78/900 (8.67%)[KRank 0 | 78/901 (8.66%)[KRank 0 | 78/902 (8.65%)[KRank 0 | 78/903 (8.64%)[KRank 0 | 78/904 (8.63%)[KRank 0 | 78/905 (8.62%)[KRank 0 | 78/906 (8.61%)[KRank 0 | 78/907 (8.60%)[KRank 0 | 78/908 (8.59%)[KRank 0 | 78/909 (8.58%)[KRank 0 | 78/910 (8.57%)[KRank 0 | 78/911 (8.56%)[KRank 0 | 78/912 (8.55%)[KRank 0 | 78/913 (8.54%)[KRank 0 | 78/914 (8.53%)[KRank 0 | 78/915 (8.52%)[KRank 0 | 78/916 (8.52%)[KRank 0 | 78/917 (8.51%)[KRank 0 | 78/918 (8.50%)[KRank 0 | 78/919 (8.49%)[KRank 0 | 78/920 (8.48%)[KRank 0 | 79/921 (8.58%)[KRank 0 | 79/922 (8.57%)[KRank 0 | 79/923 (8.56%)[KRank 0 | 80/924 (8.66%)[KRank 0 | 80/925 (8.65%)[KRank 0 | 81/926 (8.75%)[KRank 0 | 81/927 (8.74%)[KRank 0 | 81/928 (8.73%)[KRank 0 | 82/929 (8.83%)[KRank 0 | 82/930 (8.82%)[KRank 0 | 82/931 (8.81%)[KRank 0 | 82/932 (8.80%)[KRank 0 | 82/933 (8.79%)[KRank 0 | 82/934 (8.78%)[KRank 0 | 82/935 (8.77%)[KRank 0 | 82/936 (8.76%)[KRank 0 | 82/937 (8.75%)[KRank 0 | 83/938 (8.85%)[KRank 0 | 83/939 (8.84%)[KRank 0 | 83/940 (8.83%)[KRank 0 | 83/941 (8.82%)[KRank 0 | 83/942 (8.81%)[KRank 0 | 83/943 (8.80%)[KRank 0 | 83/944 (8.79%)[KRank 0 | 83/945 (8.78%)[KRank 0 | 84/946 (8.88%)[KRank 0 | 84/947 (8.87%)[KRank 0 | 84/948 (8.86%)[KRank 0 | 84/949 (8.85%)[KRank 0 | 84/950 (8.84%)[KRank 0 | 84/951 (8.83%)[KRank 0 | 84/952 (8.82%)[KRank 0 | 84/953 (8.81%)[KRank 0 | 84/954 (8.81%)[KRank 0 | 84/955 (8.80%)[KRank 0 | 84/956 (8.79%)[KRank 0 | 84/957 (8.78%)[KRank 0 | 84/958 (8.77%)[KRank 0 | 84/959 (8.76%)[KRank 0 | 84/960 (8.75%)[KRank 0 | 84/961 (8.74%)[KRank 0 | 84/962 (8.73%)[KRank 0 | 84/963 (8.72%)[KRank 0 | 84/964 (8.71%)[KRank 0 | 84/965 (8.70%)[KRank 0 | 84/966 (8.70%)[KRank 0 | 84/967 (8.69%)[KRank 0 | 84/968 (8.68%)[KRank 0 | 84/969 (8.67%)[KRank 0 | 84/970 (8.66%)[KRank 0 | 84/971 (8.65%)[KRank 0 | 84/972 (8.64%)[KRank 0 | 85/973 (8.74%)[KRank 0 | 85/974 (8.73%)[KRank 0 | 85/975 (8.72%)[KRank 0 | 85/976 (8.71%)[KRank 0 | 85/977 (8.70%)[KRank 0 | 85/978 (8.69%)[KRank 0 | 85/979 (8.68%)[KRank 0 | 85/980 (8.67%)[KRank 0 | 85/981 (8.66%)[KRank 0 | 85/982 (8.66%)[KRank 0 | 85/983 (8.65%)[KRank 0 | 85/984 (8.64%)[KRank 0 | 85/985 (8.63%)[KRank 0 | 85/986 (8.62%)[KRank 0 | 85/987 (8.61%)[KRank 0 | 85/988 (8.60%)[KRank 0 | 85/989 (8.59%)[KRank 0 | 85/990 (8.59%)[KRank 0 | 85/991 (8.58%)[KRank 0 | 85/992 (8.57%)[KRank 0 | 85/993 (8.56%)[KRank 0 | 85/994 (8.55%)[KRank 0 | 85/995 (8.54%)[KRank 0 | 85/996 (8.53%)[KRank 0 | 85/997 (8.53%)[KRank 0 | 85/998 (8.52%)[KRank 0 | 85/999 (8.51%)[KRank 0 | 85/1000 (8.50%)[KRank 0 | 85/1001 (8.49%)[KRank 0 | 85/1002 (8.48%)[KRank 0 | 85/1003 (8.47%)[KRank 0 | 85/1004 (8.47%)[KRank 0 | 85/1005 (8.46%)[KRank 0 | 85/1006 (8.45%)[KRank 0 | 85/1007 (8.44%)[KRank 0 | 85/1008 (8.43%)[KRank 0 | 85/1009 (8.42%)[KRank 0 | 85/1010 (8.42%)[KRank 0 | 85/1011 (8.41%)[KRank 0 | 85/1012 (8.40%)[KRank 0 | 85/1013 (8.39%)[KRank 0 | 85/1014 (8.38%)[KRank 0 | 85/1015 (8.37%)[KRank 0 | 85/1016 (8.37%)[KRank 0 | 85/1017 (8.36%)[KRank 0 | 85/1018 (8.35%)[KRank 0 | 85/1019 (8.34%)[KRank 0 | 85/1020 (8.33%)[KRank 0 | 85/1021 (8.33%)[KRank 0 | 86/1022 (8.41%)[KRank 0 | 86/1023 (8.41%)[KRank 0 | 86/1024 (8.40%)[KRank 0 | 86/1025 (8.39%)[KRank 0 | 86/1026 (8.38%)[KRank 0 | 86/1027 (8.37%)[KRank 0 | 86/1028 (8.37%)[KRank 0 | 86/1029 (8.36%)[KRank 0 | 86/1030 (8.35%)[KRank 0 | 86/1031 (8.34%)[KRank 0 | 86/1032 (8.33%)[KRank 0 | 86/1033 (8.33%)[KRank 0 | 86/1034 (8.32%)[KRank 0 | 86/1035 (8.31%)[KRank 0 | 86/1036 (8.30%)[KRank 0 | 86/1037 (8.29%)[KRank 0 | 86/1038 (8.29%)[KRank 0 | 86/1039 (8.28%)[KRank 0 | 86/1040 (8.27%)[KRank 0 | 86/1041 (8.26%)[KRank 0 | 86/1042 (8.25%)[KRank 0 | 86/1043 (8.25%)[KRank 0 | 86/1044 (8.24%)[KRank 0 | 86/1045 (8.23%)[KRank 0 | 86/1046 (8.22%)[KRank 0 | 86/1047 (8.21%)[KRank 0 | 86/1048 (8.21%)[KRank 0 | 86/1049 (8.20%)[KRank 0 | 86/1050 (8.19%)[KRank 0 | 86/1051 (8.18%)[KRank 0 | 87/1052 (8.27%)[KRank 0 | 87/1053 (8.26%)[KRank 0 | 87/1054 (8.25%)[KRank 0 | 87/1055 (8.25%)[KRank 0 | 87/1056 (8.24%)[KRank 0 | 87/1057 (8.23%)[KRank 0 | 87/1058 (8.22%)[KRank 0 | 87/1059 (8.22%)[KRank 0 | 87/1060 (8.21%)[KRank 0 | 87/1061 (8.20%)[KRank 0 | 87/1062 (8.19%)[KRank 0 | 87/1063 (8.18%)[KRank 0 | 87/1064 (8.18%)[KRank 0 | 87/1065 (8.17%)[KRank 0 | 87/1066 (8.16%)[KRank 0 | 87/1067 (8.15%)[KRank 0 | 87/1068 (8.15%)[KRank 0 | 87/1069 (8.14%)[KRank 0 | 87/1070 (8.13%)[KRank 0 | 87/1071 (8.12%)[KRank 0 | 87/1072 (8.12%)[KRank 0 | 88/1073 (8.20%)[KRank 0 | 88/1074 (8.19%)[KRank 0 | 88/1075 (8.19%)[KRank 0 | 88/1076 (8.18%)[KRank 0 | 88/1077 (8.17%)[KRank 0 | 88/1078 (8.16%)[KRank 0 | 88/1079 (8.16%)[KRank 0 | 88/1080 (8.15%)[KRank 0 | 88/1081 (8.14%)[KRank 0 | 88/1082 (8.13%)[KRank 0 | 88/1083 (8.13%)[KRank 0 | 88/1084 (8.12%)[KRank 0 | 88/1085 (8.11%)[KRank 0 | 88/1086 (8.10%)[KRank 0 | 88/1087 (8.10%)[KRank 0 | 89/1088 (8.18%)[KRank 0 | 89/1089 (8.17%)[KRank 0 | 89/1090 (8.17%)[KRank 0 | 90/1091 (8.25%)[KRank 0 | 90/1092 (8.24%)[KRank 0 | 91/1093 (8.33%)[KRank 0 | 91/1094 (8.32%)[KRank 0 | 92/1095 (8.40%)[KRank 0 | 92/1096 (8.39%)[KRank 0 | 92/1097 (8.39%)[KRank 0 | 92/1098 (8.38%)[KRank 0 | 92/1099 (8.37%)[KRank 0 | 92/1100 (8.36%)[KRank 0 | 92/1101 (8.36%)[KRank 0 | 92/1102 (8.35%)[KRank 0 | 92/1103 (8.34%)[KRank 0 | 92/1104 (8.33%)[KRank 0 | 92/1105 (8.33%)[KRank 0 | 92/1106 (8.32%)[KRank 0 | 92/1107 (8.31%)[KRank 0 | 92/1108 (8.30%)[KRank 0 | 92/1109 (8.30%)[KRank 0 | 92/1110 (8.29%)[KRank 0 | 92/1111 (8.28%)[KRank 0 | 92/1112 (8.27%)[KRank 0 | 92/1113 (8.27%)[KRank 0 | 92/1114 (8.26%)[KRank 0 | 93/1115 (8.34%)[KRank 0 | 93/1116 (8.33%)[KRank 0 | 93/1117 (8.33%)[KRank 0 | 94/1118 (8.41%)[KRank 0 | 94/1119 (8.40%)[KRank 0 | 94/1120 (8.39%)[KRank 0 | 94/1121 (8.39%)[KRank 0 | 94/1122 (8.38%)[KRank 0 | 94/1123 (8.37%)[KRank 0 | 94/1124 (8.36%)[KRank 0 | 94/1125 (8.36%)[KRank 0 | 94/1126 (8.35%)[KRank 0 | 94/1127 (8.34%)[KRank 0 | 94/1128 (8.33%)[KRank 0 | 94/1129 (8.33%)[KRank 0 | 94/1130 (8.32%)[KRank 0 | 94/1131 (8.31%)[KRank 0 | 94/1132 (8.30%)[KRank 0 | 94/1133 (8.30%)[KRank 0 | 94/1134 (8.29%)[KRank 0 | 94/1135 (8.28%)[KRank 0 | 94/1136 (8.27%)[KRank 0 | 94/1137 (8.27%)[KRank 0 | 94/1138 (8.26%)[KRank 0 | 94/1139 (8.25%)[KRank 0 | 94/1140 (8.25%)[KRank 0 | 94/1141 (8.24%)[KRank 0 | 94/1142 (8.23%)[KRank 0 | 94/1143 (8.22%)[KRank 0 | 94/1144 (8.22%)[KRank 0 | 94/1145 (8.21%)[KRank 0 | 94/1146 (8.20%)[KRank 0 | 94/1147 (8.20%)[KRank 0 | 94/1148 (8.19%)[KRank 0 | 94/1149 (8.18%)[KRank 0 | 94/1150 (8.17%)[KRank 0 | 94/1151 (8.17%)[KRank 0 | 94/1152 (8.16%)[KRank 0 | 94/1153 (8.15%)[KRank 0 | 94/1154 (8.15%)[KRank 0 | 94/1155 (8.14%)[KRank 0 | 94/1156 (8.13%)[KRank 0 | 94/1157 (8.12%)[KRank 0 | 94/1158 (8.12%)[KRank 0 | 94/1159 (8.11%)[KRank 0 | 94/1160 (8.10%)[KRank 0 | 94/1161 (8.10%)[KRank 0 | 94/1162 (8.09%)[KRank 0 | 94/1163 (8.08%)[KRank 0 | 94/1164 (8.08%)[KRank 0 | 94/1165 (8.07%)[KRank 0 | 94/1166 (8.06%)[KRank 0 | 94/1167 (8.05%)[KRank 0 | 94/1168 (8.05%)[KRank 0 | 94/1169 (8.04%)[KRank 0 | 94/1170 (8.03%)[KRank 0 | 94/1171 (8.03%)[KRank 0 | 94/1172 (8.02%)[KRank 0 | 95/1173 (8.10%)[KRank 0 | 95/1174 (8.09%)[KRank 0 | 95/1175 (8.09%)[KRank 0 | 95/1176 (8.08%)[KRank 0 | 95/1177 (8.07%)[KRank 0 | 95/1178 (8.06%)[KRank 0 | 95/1179 (8.06%)[KRank 0 | 95/1180 (8.05%)[KRank 0 | 95/1181 (8.04%)[KRank 0 | 95/1182 (8.04%)[KRank 0 | 96/1183 (8.11%)[KRank 0 | 96/1184 (8.11%)[KRank 0 | 96/1185 (8.10%)[KRank 0 | 96/1186 (8.09%)[KRank 0 | 96/1187 (8.09%)[KRank 0 | 96/1188 (8.08%)[KRank 0 | 96/1189 (8.07%)[KRank 0 | 96/1190 (8.07%)[KRank 0 | 96/1191 (8.06%)[KRank 0 | 97/1192 (8.14%)[KRank 0 | 97/1193 (8.13%)[KRank 0 | 97/1194 (8.12%)[KRank 0 | 97/1195 (8.12%)[KRank 0 | 97/1196 (8.11%)[KRank 0 | 97/1197 (8.10%)[KRank 0 | 97/1198 (8.10%)[KRank 0 | 97/1199 (8.09%)[KRank 0 | 97/1200 (8.08%)[KRank 0 | 97/1201 (8.08%)[KRank 0 | 97/1202 (8.07%)[KRank 0 | 97/1203 (8.06%)[KRank 0 | 97/1204 (8.06%)[KRank 0 | 97/1205 (8.05%)[KRank 0 | 97/1206 (8.04%)[KRank 0 | 98/1207 (8.12%)[KRank 0 | 98/1208 (8.11%)[KRank 0 | 98/1209 (8.11%)[KRank 0 | 98/1210 (8.10%)[KRank 0 | 99/1211 (8.18%)[KRank 0 | 99/1212 (8.17%)[KRank 0 | 99/1213 (8.16%)[KRank 0 | 100/1214 (8.24%)[KRank 0 | 100/1215 (8.23%)[KRank 0 | 100/1216 (8.22%)[KRank 0 | 100/1217 (8.22%)[KRank 0 | 100/1218 (8.21%)[KRank 0 | 100/1219 (8.20%)[KRank 0 | 100/1220 (8.20%)[KRank 0 | 100/1221 (8.19%)[KRank 0 | 100/1222 (8.18%)[KRank 0 | 100/1223 (8.18%)[KRank 0 | 100/1224 (8.17%)[KRank 0 | 100/1225 (8.16%)[KRank 0 | 100/1226 (8.16%)[KRank 0 | 100/1227 (8.15%)[KRank 0 | 100/1228 (8.14%)[KRank 0 | 100/1229 (8.14%)[KRank 0 | 100/1230 (8.13%)[KRank 0 | 100/1231 (8.12%)[KRank 0 | 100/1232 (8.12%)[KRank 0 | 100/1233 (8.11%)[KRank 0 | 100/1234 (8.10%)[KRank 0 | 100/1235 (8.10%)[KRank 0 | 100/1236 (8.09%)[KRank 0 | 100/1237 (8.08%)[KRank 0 | 100/1238 (8.08%)[KRank 0 | 100/1239 (8.07%)[KRank 0 | 100/1240 (8.06%)[KRank 0 | 100/1241 (8.06%)[KRank 0 | 100/1242 (8.05%)[KRank 0 | 100/1243 (8.05%)[KRank 0 | 100/1244 (8.04%)[KRank 0 | 100/1245 (8.03%)[KRank 0 | 100/1246 (8.03%)[KRank 0 | 100/1247 (8.02%)[KRank 0 | 100/1248 (8.01%)[KRank 0 | 100/1249 (8.01%)[KRank 0 | 100/1250 (8.00%)[KRank 0 | 100/1251 (7.99%)[KRank 0 | 100/1252 (7.99%)[KRank 0 | 100/1253 (7.98%)[KRank 0 | 100/1254 (7.97%)[KRank 0 | 100/1255 (7.97%)[KRank 0 | 101/1256 (8.04%)[KRank 0 | 101/1257 (8.04%)[KRank 0 | 102/1258 (8.11%)[KRank 0 | 102/1259 (8.10%)[KRank 0 | 103/1260 (8.17%)[KRank 0 | 103/1261 (8.17%)[KRank 0 | 103/1262 (8.16%)[KRank 0 | 103/1263 (8.16%)[KRank 0 | 103/1264 (8.15%)[KRank 0 | 103/1265 (8.14%)[KRank 0 | 103/1266 (8.14%)[KRank 0 | 103/1267 (8.13%)[KRank 0 | 103/1268 (8.12%)[KRank 0 | 103/1269 (8.12%)[KRank 0 | 103/1270 (8.11%)[KRank 0 | 103/1271 (8.10%)[KRank 0 | 104/1272 (8.18%)[KRank 0 | 105/1273 (8.25%)[KRank 0 | 105/1274 (8.24%)[KRank 0 | 105/1275 (8.24%)[KRank 0 | 106/1276 (8.31%)[KRank 0 | 106/1277 (8.30%)[KRank 0 | 106/1278 (8.29%)[KRank 0 | 106/1279 (8.29%)[KRank 0 | 106/1280 (8.28%)[KRank 0 | 106/1281 (8.27%)[KRank 0 | 106/1282 (8.27%)[KRank 0 | 106/1283 (8.26%)[KRank 0 | 106/1284 (8.26%)[KRank 0 | 106/1285 (8.25%)[KRank 0 | 106/1286 (8.24%)[KRank 0 | 106/1287 (8.24%)[KRank 0 | 106/1288 (8.23%)[KRank 0 | 106/1289 (8.22%)[KRank 0 | 106/1290 (8.22%)[KRank 0 | 106/1291 (8.21%)[KRank 0 | 106/1292 (8.20%)[KRank 0 | 106/1293 (8.20%)[KRank 0 | 106/1294 (8.19%)[KRank 0 | 106/1295 (8.19%)[KRank 0 | 106/1296 (8.18%)[KRank 0 | 106/1297 (8.17%)[KRank 0 | 106/1298 (8.17%)[KRank 0 | 106/1299 (8.16%)[KRank 0 | 106/1300 (8.15%)[KRank 0 | 106/1301 (8.15%)[KRank 0 | 106/1302 (8.14%)[KRank 0 | 106/1303 (8.14%)[KRank 0 | 106/1304 (8.13%)[KRank 0 | 106/1305 (8.12%)[KRank 0 | 106/1306 (8.12%)[KRank 0 | 106/1307 (8.11%)[KRank 0 | 106/1308 (8.10%)[KRank 0 | 106/1309 (8.10%)[KRank 0 | 106/1310 (8.09%)[KRank 0 | 106/1311 (8.09%)[KRank 0 | 106/1312 (8.08%)[KRank 0 | 106/1313 (8.07%)[KRank 0 | 106/1314 (8.07%)[KRank 0 | 106/1315 (8.06%)[KRank 0 | 106/1316 (8.05%)[KRank 0 | 106/1317 (8.05%)[KRank 0 | 106/1318 (8.04%)[KRank 0 | 106/1319 (8.04%)
+==================================================
+Final: 106/1319 (8.04%)
+GSM8K accuracy: 8.04%
+2026-01-12 01:16:58,898 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/openai/openai_humaneval/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-01-12 01:16:58,903 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/openai/openai_humaneval/7dce6050a7d6d172f3cc5c32aa97f52fa1a2e544/README.md "HTTP/1.1 200 OK"
+2026-01-12 01:16:59,102 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/openai/openai_humaneval/resolve/7dce6050a7d6d172f3cc5c32aa97f52fa1a2e544/openai_humaneval.py "HTTP/1.1 404 Not Found"
+2026-01-12 01:16:59,676 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/openai/openai_humaneval/openai/openai_humaneval.py "HTTP/1.1 404 Not Found"
+2026-01-12 01:16:59,980 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://huggingface.co/api/datasets/openai/openai_humaneval/revision/7dce6050a7d6d172f3cc5c32aa97f52fa1a2e544 "HTTP/1.1 200 OK"
+2026-01-12 01:17:00,183 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/openai/openai_humaneval/resolve/7dce6050a7d6d172f3cc5c32aa97f52fa1a2e544/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-01-12 01:17:00,430 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=openai/openai_humaneval "HTTP/1.1 200 OK"
+2026-01-12 01:17:00,668 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://huggingface.co/api/datasets/openai/openai_humaneval/tree/7dce6050a7d6d172f3cc5c32aa97f52fa1a2e544/openai_humaneval?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-01-12 01:17:00,862 - httpx - [32m[1mINFO[0m - HTTP Request: GET https://huggingface.co/api/datasets/openai/openai_humaneval/tree/7dce6050a7d6d172f3cc5c32aa97f52fa1a2e544?recursive=false&expand=false "HTTP/1.1 200 OK"
+2026-01-12 01:17:01,058 - httpx - [32m[1mINFO[0m - HTTP Request: HEAD https://huggingface.co/datasets/openai/openai_humaneval/resolve/7dce6050a7d6d172f3cc5c32aa97f52fa1a2e544/dataset_infos.json "HTTP/1.1 404 Not Found"
+[KRank 0 | 0/1 (0.00%)[KRank 0 | 0/2 (0.00%)[KRank 0 | 1/3 (33.33%)[KRank 0 | 1/4 (25.00%)[KRank 0 | 1/5 (20.00%)[KRank 0 | 1/6 (16.67%)[KRank 0 | 1/7 (14.29%)[KRank 0 | 1/8 (12.50%)[KRank 0 | 1/9 (11.11%)[KRank 0 | 1/10 (10.00%)[KRank 0 | 2/11 (18.18%)[KRank 0 | 2/12 (16.67%)[KRank 0 | 2/13 (15.38%)[KRank 0 | 2/14 (14.29%)[KRank 0 | 2/15 (13.33%)[KRank 0 | 3/16 (18.75%)[KRank 0 | 3/17 (17.65%)[KRank 0 | 3/18 (16.67%)[KRank 0 | 3/19 (15.79%)[KRank 0 | 3/20 (15.00%)[KRank 0 | 3/21 (14.29%)[KRank 0 | 3/22 (13.64%)[KRank 0 | 3/23 (13.04%)[KRank 0 | 3/24 (12.50%)[KRank 0 | 3/25 (12.00%)[KRank 0 | 3/26 (11.54%)[KRank 0 | 3/27 (11.11%)[KRank 0 | 3/28 (10.71%)[KRank 0 | 3/29 (10.34%)[KRank 0 | 3/30 (10.00%)[KRank 0 | 3/31 (9.68%)[KRank 0 | 3/32 (9.38%)[KRank 0 | 3/33 (9.09%)[KRank 0 | 3/34 (8.82%)[KRank 0 | 3/35 (8.57%)[KRank 0 | 3/36 (8.33%)[KRank 0 | 3/37 (8.11%)[KRank 0 | 3/38 (7.89%)[KRank 0 | 3/39 (7.69%)[KRank 0 | 3/40 (7.50%)[KRank 0 | 3/41 (7.32%)[KRank 0 | 3/42 (7.14%)[KRank 0 | 3/43 (6.98%)[KRank 0 | 3/44 (6.82%)[KRank 0 | 3/45 (6.67%)[KRank 0 | 4/46 (8.70%)[KRank 0 | 4/47 (8.51%)[KRank 0 | 4/48 (8.33%)[KRank 0 | 4/49 (8.16%)[KRank 0 | 5/50 (10.00%)[KRank 0 | 5/51 (9.80%)[KRank 0 | 5/52 (9.62%)[KRank 0 | 5/53 (9.43%)[KRank 0 | 5/54 (9.26%)[KRank 0 | 5/55 (9.09%)[KRank 0 | 5/56 (8.93%)[KRank 0 | 5/57 (8.77%)[KRank 0 | 5/58 (8.62%)[KRank 0 | 5/59 (8.47%)[KRank 0 | 5/60 (8.33%)[KRank 0 | 5/61 (8.20%)[KRank 0 | 5/62 (8.06%)[KRank 0 | 5/63 (7.94%)[KRank 0 | 5/64 (7.81%)[KRank 0 | 6/65 (9.23%)[KRank 0 | 6/66 (9.09%)[KRank 0 | 6/67 (8.96%)[KRank 0 | 6/68 (8.82%)[KRank 0 | 6/69 (8.70%)[KRank 0 | 7/70 (10.00%)[KRank 0 | 7/71 (9.86%)[KRank 0 | 7/72 (9.72%)[KRank 0 | 7/73 (9.59%)[KRank 0 | 7/74 (9.46%)[KRank 0 | 7/75 (9.33%)[KRank 0 | 7/76 (9.21%)[KRank 0 | 7/77 (9.09%)[KRank 0 | 7/78 (8.97%)[KRank 0 | 7/79 (8.86%)[KRank 0 | 7/80 (8.75%)[KRank 0 | 7/81 (8.64%)[KRank 0 | 7/82 (8.54%)[KRank 0 | 7/83 (8.43%)[KRank 0 | 7/84 (8.33%)[KRank 0 | 7/85 (8.24%)[KRank 0 | 7/86 (8.14%)[KRank 0 | 7/87 (8.05%)[KRank 0 | 7/88 (7.95%)[KRank 0 | 7/89 (7.87%)[KRank 0 | 7/90 (7.78%)[KRank 0 | 7/91 (7.69%)[KRank 0 | 7/92 (7.61%)[KRank 0 | 7/93 (7.53%)[KRank 0 | 7/94 (7.45%)[KRank 0 | 7/95 (7.37%)[KRank 0 | 7/96 (7.29%)[KRank 0 | 8/97 (8.25%)[KRank 0 | 8/98 (8.16%)[KRank 0 | 8/99 (8.08%)[KRank 0 | 8/100 (8.00%)[KRank 0 | 8/101 (7.92%)[KRank 0 | 9/102 (8.82%)[KRank 0 | 9/103 (8.74%)[KRank 0 | 9/104 (8.65%)[KRank 0 | 9/105 (8.57%)[KRank 0 | 9/106 (8.49%)[KRank 0 | 10/107 (9.35%)[KRank 0 | 10/108 (9.26%)[KRank 0 | 10/109 (9.17%)[KRank 0 | 10/110 (9.09%)[KRank 0 | 11/111 (9.91%)[KRank 0 | 11/112 (9.82%)[KRank 0 | 11/113 (9.73%)[KRank 0 | 11/114 (9.65%)[KRank 0 | 11/115 (9.57%)[KRank 0 | 11/116 (9.48%)[KRank 0 | 11/117 (9.40%)[KRank 0 | 11/118 (9.32%)[KRank 0 | 11/119 (9.24%)[KRank 0 | 11/120 (9.17%)[KRank 0 | 11/121 (9.09%)[KRank 0 | 11/122 (9.02%)[KRank 0 | 11/123 (8.94%)[KRank 0 | 11/124 (8.87%)[KRank 0 | 11/125 (8.80%)[KRank 0 | 11/126 (8.73%)[KRank 0 | 11/127 (8.66%)[KRank 0 | 11/128 (8.59%)[KRank 0 | 11/129 (8.53%)[KRank 0 | 11/130 (8.46%)[KRank 0 | 11/131 (8.40%)[KRank 0 | 11/132 (8.33%)[KRank 0 | 12/133 (9.02%)[KRank 0 | 12/134 (8.96%)[KRank 0 | 12/135 (8.89%)[KRank 0 | 13/136 (9.56%)[KRank 0 | 13/137 (9.49%)[KRank 0 | 14/138 (10.14%)[KRank 0 | 14/139 (10.07%)[KRank 0 | 14/140 (10.00%)[KRank 0 | 14/141 (9.93%)[KRank 0 | 15/142 (10.56%)[KRank 0 | 16/143 (11.19%)[KRank 0 | 17/144 (11.81%)[KRank 0 | 17/145 (11.72%)[KRank 0 | 17/146 (11.64%)[KRank 0 | 17/147 (11.56%)[KRank 0 | 17/148 (11.49%)[KRank 0 | 17/149 (11.41%)[KRank 0 | 17/150 (11.33%)[KRank 0 | 17/151 (11.26%)[KRank 0 | 17/152 (11.18%)[KRank 0 | 17/153 (11.11%)[KRank 0 | 17/154 (11.04%)[KRank 0 | 17/155 (10.97%)[KRank 0 | 17/156 (10.90%)[KRank 0 | 17/157 (10.83%)[KRank 0 | 17/158 (10.76%)[KRank 0 | 17/159 (10.69%)[KRank 0 | 17/160 (10.62%)[KRank 0 | 17/161 (10.56%)[KRank 0 | 17/162 (10.49%)[KRank 0 | 17/163 (10.43%)[KRank 0 | 17/164 (10.37%)
+==================================================
+Final: 17/164 (10.37%)
+HumanEval accuracy: 10.37%
+[KRank 0 | 1/1 (100.00%)[KRank 0 | 2/2 (100.00%)[KRank 0 | 3/3 (100.00%)[KRank 0 | 4/4 (100.00%)[KRank 0 | 5/5 (100.00%)[KRank 0 | 6/6 (100.00%)[KRank 0 | 7/7 (100.00%)[KRank 0 | 8/8 (100.00%)[KRank 0 | 9/9 (100.00%)[KRank 0 | 10/10 (100.00%)[KRank 0 | 11/11 (100.00%)[KRank 0 | 12/12 (100.00%)[KRank 0 | 13/13 (100.00%)[KRank 0 | 14/14 (100.00%)[KRank 0 | 15/15 (100.00%)[KRank 0 | 16/16 (100.00%)[KRank 0 | 17/17 (100.00%)[KRank 0 | 18/18 (100.00%)[KRank 0 | 19/19 (100.00%)[KRank 0 | 20/20 (100.00%)[KRank 0 | 21/21 (100.00%)[KRank 0 | 22/22 (100.00%)[KRank 0 | 23/23 (100.00%)[KRank 0 | 24/24 (100.00%)[KRank 0 | 25/25 (100.00%)[KRank 0 | 26/26 (100.00%)[KRank 0 | 27/27 (100.00%)[KRank 0 | 28/28 (100.00%)[KRank 0 | 28/29 (96.55%)[KRank 0 | 29/30 (96.67%)[KRank 0 | 30/31 (96.77%)[KRank 0 | 31/32 (96.88%)[KRank 0 | 32/33 (96.97%)[KRank 0 | 33/34 (97.06%)[KRank 0 | 34/35 (97.14%)[KRank 0 | 35/36 (97.22%)[KRank 0 | 36/37 (97.30%)[KRank 0 | 37/38 (97.37%)[KRank 0 | 38/39 (97.44%)[KRank 0 | 39/40 (97.50%)[KRank 0 | 40/41 (97.56%)[KRank 0 | 41/42 (97.62%)[KRank 0 | 42/43 (97.67%)[KRank 0 | 43/44 (97.73%)[KRank 0 | 44/45 (97.78%)[KRank 0 | 45/46 (97.83%)[KRank 0 | 46/47 (97.87%)[KRank 0 | 47/48 (97.92%)[KRank 0 | 48/49 (97.96%)[KRank 0 | 49/50 (98.00%)[KRank 0 | 50/51 (98.04%)[KRank 0 | 51/52 (98.08%)[KRank 0 | 52/53 (98.11%)[KRank 0 | 53/54 (98.15%)[KRank 0 | 54/55 (98.18%)[KRank 0 | 55/56 (98.21%)[KRank 0 | 56/57 (98.25%)[KRank 0 | 57/58 (98.28%)[KRank 0 | 58/59 (98.31%)[KRank 0 | 59/60 (98.33%)[KRank 0 | 60/61 (98.36%)[KRank 0 | 61/62 (98.39%)[KRank 0 | 62/63 (98.41%)[KRank 0 | 63/64 (98.44%)[KRank 0 | 64/65 (98.46%)[KRank 0 | 65/66 (98.48%)[KRank 0 | 66/67 (98.51%)[KRank 0 | 67/68 (98.53%)[KRank 0 | 68/69 (98.55%)[KRank 0 | 69/70 (98.57%)[KRank 0 | 70/71 (98.59%)[KRank 0 | 71/72 (98.61%)[KRank 0 | 72/73 (98.63%)[KRank 0 | 73/74 (98.65%)[KRank 0 | 73/75 (97.33%)[KRank 0 | 74/76 (97.37%)[KRank 0 | 75/77 (97.40%)[KRank 0 | 76/78 (97.44%)[KRank 0 | 77/79 (97.47%)[KRank 0 | 78/80 (97.50%)[KRank 0 | 79/81 (97.53%)[KRank 0 | 80/82 (97.56%)[KRank 0 | 81/83 (97.59%)[KRank 0 | 82/84 (97.62%)[KRank 0 | 83/85 (97.65%)[KRank 0 | 84/86 (97.67%)[KRank 0 | 85/87 (97.70%)[KRank 0 | 86/88 (97.73%)[KRank 0 | 87/89 (97.75%)[KRank 0 | 88/90 (97.78%)[KRank 0 | 89/91 (97.80%)[KRank 0 | 90/92 (97.83%)[KRank 0 | 91/93 (97.85%)[KRank 0 | 92/94 (97.87%)[KRank 0 | 93/95 (97.89%)[KRank 0 | 94/96 (97.92%)[KRank 0 | 95/97 (97.94%)[KRank 0 | 96/98 (97.96%)[KRank 0 | 97/99 (97.98%)[KRank 0 | 98/100 (98.00%)[KRank 0 | 99/101 (98.02%)[KRank 0 | 100/102 (98.04%)[KRank 0 | 101/103 (98.06%)[KRank 0 | 102/104 (98.08%)[KRank 0 | 103/105 (98.10%)[KRank 0 | 104/106 (98.11%)[KRank 0 | 105/107 (98.13%)[KRank 0 | 106/108 (98.15%)[KRank 0 | 107/109 (98.17%)[KRank 0 | 108/110 (98.18%)[KRank 0 | 109/111 (98.20%)[KRank 0 | 110/112 (98.21%)[KRank 0 | 111/113 (98.23%)[KRank 0 | 112/114 (98.25%)[KRank 0 | 113/115 (98.26%)[KRank 0 | 114/116 (98.28%)[KRank 0 | 115/117 (98.29%)[KRank 0 | 116/118 (98.31%)[KRank 0 | 117/119 (98.32%)[KRank 0 | 118/120 (98.33%)[KRank 0 | 119/121 (98.35%)[KRank 0 | 120/122 (98.36%)[KRank 0 | 121/123 (98.37%)[KRank 0 | 122/124 (98.39%)[KRank 0 | 123/125 (98.40%)[KRank 0 | 124/126 (98.41%)[KRank 0 | 125/127 (98.43%)[KRank 0 | 126/128 (98.44%)[KRank 0 | 127/129 (98.45%)[KRank 0 | 128/130 (98.46%)[KRank 0 | 129/131 (98.47%)[KRank 0 | 130/132 (98.48%)[KRank 0 | 131/133 (98.50%)[KRank 0 | 132/134 (98.51%)[KRank 0 | 133/135 (98.52%)[KRank 0 | 134/136 (98.53%)[KRank 0 | 135/137 (98.54%)[KRank 0 | 136/138 (98.55%)[KRank 0 | 137/139 (98.56%)[KRank 0 | 138/140 (98.57%)[KRank 0 | 139/141 (98.58%)[KRank 0 | 140/142 (98.59%)[KRank 0 | 141/143 (98.60%)[KRank 0 | 142/144 (98.61%)[KRank 0 | 143/145 (98.62%)[KRank 0 | 144/146 (98.63%)[KRank 0 | 145/147 (98.64%)[KRank 0 | 146/148 (98.65%)[KRank 0 | 147/149 (98.66%)[KRank 0 | 148/150 (98.67%)[KRank 0 | 149/151 (98.68%)[KRank 0 | 150/152 (98.68%)[KRank 0 | 151/153 (98.69%)[KRank 0 | 152/154 (98.70%)[KRank 0 | 153/155 (98.71%)[KRank 0 | 154/156 (98.72%)[KRank 0 | 155/157 (98.73%)[KRank 0 | 156/158 (98.73%)[KRank 0 | 157/159 (98.74%)[KRank 0 | 158/160 (98.75%)[KRank 0 | 159/161 (98.76%)[KRank 0 | 160/162 (98.77%)[KRank 0 | 161/163 (98.77%)[KRank 0 | 162/164 (98.78%)[KRank 0 | 163/165 (98.79%)[KRank 0 | 164/166 (98.80%)[KRank 0 | 165/167 (98.80%)[KRank 0 | 166/168 (98.81%)[KRank 0 | 167/169 (98.82%)[KRank 0 | 168/170 (98.82%)[KRank 0 | 169/171 (98.83%)[KRank 0 | 170/172 (98.84%)[KRank 0 | 171/173 (98.84%)[KRank 0 | 172/174 (98.85%)[KRank 0 | 173/175 (98.86%)[KRank 0 | 174/176 (98.86%)[KRank 0 | 175/177 (98.87%)[KRank 0 | 176/178 (98.88%)[KRank 0 | 177/179 (98.88%)[KRank 0 | 178/180 (98.89%)[KRank 0 | 179/181 (98.90%)[KRank 0 | 180/182 (98.90%)[KRank 0 | 181/183 (98.91%)[KRank 0 | 182/184 (98.91%)[KRank 0 | 183/185 (98.92%)[KRank 0 | 184/186 (98.92%)[KRank 0 | 185/187 (98.93%)[KRank 0 | 186/188 (98.94%)[KRank 0 | 187/189 (98.94%)[KRank 0 | 188/190 (98.95%)[KRank 0 | 189/191 (98.95%)[KRank 0 | 190/192 (98.96%)[KRank 0 | 191/193 (98.96%)[KRank 0 | 192/194 (98.97%)[KRank 0 | 193/195 (98.97%)[KRank 0 | 194/196 (98.98%)[KRank 0 | 195/197 (98.98%)[KRank 0 | 196/198 (98.99%)[KRank 0 | 197/199 (98.99%)[KRank 0 | 197/200 (98.50%)[KRank 0 | 198/201 (98.51%)[KRank 0 | 199/202 (98.51%)[KRank 0 | 200/203 (98.52%)[KRank 0 | 201/204 (98.53%)[KRank 0 | 202/205 (98.54%)[KRank 0 | 203/206 (98.54%)[KRank 0 | 204/207 (98.55%)[KRank 0 | 205/208 (98.56%)[KRank 0 | 206/209 (98.56%)[KRank 0 | 207/210 (98.57%)[KRank 0 | 208/211 (98.58%)[KRank 0 | 209/212 (98.58%)[KRank 0 | 210/213 (98.59%)[KRank 0 | 211/214 (98.60%)[KRank 0 | 212/215 (98.60%)[KRank 0 | 213/216 (98.61%)[KRank 0 | 214/217 (98.62%)[KRank 0 | 215/218 (98.62%)[KRank 0 | 216/219 (98.63%)[KRank 0 | 217/220 (98.64%)[KRank 0 | 218/221 (98.64%)[KRank 0 | 219/222 (98.65%)[KRank 0 | 220/223 (98.65%)[KRank 0 | 221/224 (98.66%)[KRank 0 | 222/225 (98.67%)[KRank 0 | 223/226 (98.67%)[KRank 0 | 224/227 (98.68%)[KRank 0 | 225/228 (98.68%)[KRank 0 | 226/229 (98.69%)[KRank 0 | 227/230 (98.70%)[KRank 0 | 228/231 (98.70%)[KRank 0 | 229/232 (98.71%)[KRank 0 | 230/233 (98.71%)[KRank 0 | 231/234 (98.72%)[KRank 0 | 232/235 (98.72%)[KRank 0 | 233/236 (98.73%)[KRank 0 | 234/237 (98.73%)[KRank 0 | 235/238 (98.74%)[KRank 0 | 236/239 (98.74%)[KRank 0 | 237/240 (98.75%)[KRank 0 | 238/241 (98.76%)[KRank 0 | 239/242 (98.76%)[KRank 0 | 240/243 (98.77%)[KRank 0 | 241/244 (98.77%)[KRank 0 | 242/245 (98.78%)[KRank 0 | 243/246 (98.78%)[KRank 0 | 244/247 (98.79%)[KRank 0 | 245/248 (98.79%)[KRank 0 | 246/249 (98.80%)[KRank 0 | 247/250 (98.80%)[KRank 0 | 248/251 (98.80%)[KRank 0 | 249/252 (98.81%)[KRank 0 | 250/253 (98.81%)[KRank 0 | 251/254 (98.82%)[KRank 0 | 252/255 (98.82%)[KRank 0 | 253/256 (98.83%)
+==================================================
+Final: 253/256 (98.83%)
+SpellingBee accuracy: 98.83%
+Generating report to /home/rocketegg/.cache/nanochat_d26/report/report_d26.md
+Warning: /home/rocketegg/.cache/nanochat_d26/report/base-model-training.md does not exist, skipping
+Warning: /home/rocketegg/.cache/nanochat_d26/report/base-model-loss.md does not exist, skipping
+Warning: /home/rocketegg/.cache/nanochat_d26/report/base-model-evaluation.md does not exist, skipping
+Warning: /home/rocketegg/.cache/nanochat_d26/report/midtraining.md does not exist, skipping
+Warning: /home/rocketegg/.cache/nanochat_d26/report/chat-evaluation-mid.md does not exist, skipping
+Warning: /home/rocketegg/.cache/nanochat_d26/report/chat-rl.md does not exist, skipping
+Warning: /home/rocketegg/.cache/nanochat_d26/report/chat-evaluation-rl.md does not exist, skipping
+Copying report_d26.md to current directory for convenience
+Speedrun completed!
